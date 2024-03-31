@@ -3701,6 +3701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41897341ac5d05844b48ebc71b9cbbef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 0}
   levelConcierge: {fileID: 0}
 --- !u!114 &805320356
 MonoBehaviour:
@@ -9782,8 +9783,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.7219062, y: 1, z: 1.2722056}
+  m_Center: {x: 0.19151215, y: 0, z: -0.13610283}
 --- !u!23 &1865535175
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9846,6 +9847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042c2856e626d9f4888d5b6eb6bb5155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToPillar: 5
+  pillarCollider: {fileID: 1865535174}
 --- !u!1 &1878121479
 GameObject:
   m_ObjectHideFlags: 0
