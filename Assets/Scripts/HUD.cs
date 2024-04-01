@@ -1,19 +1,28 @@
+using JSO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using Unity.VisualScripting;
+using UnityEngine.UIElements;
 using UnityEngine;
 
+/*
+*//*
+*/
+
+namespace HUD
 /*
 @namespace HUD
 @accessor namespace HUD
     using HUD;
 */
-
-namespace HUD
 {
-    public enum SequenceType
+    public enum SequenceType 
+/*
+    @enum SequenceType
+        used to keep track of the elemental type of a sequence
+*/
     {
         Neutral,
         Fire,
@@ -22,18 +31,55 @@ namespace HUD
         Air
     }
 
-    public class Sequence : Dictionary<int, bool>
+    public class Sequence // : JSO.IndexJSO<int, bool>
+/*
+    @class Sequence : Dictionary<int, bool>
+    @property {int} Capacity
+        The maximum number of values is always 8
+    @property {SequenceType} type 
+        label to identify the elemental type of the sequence
+    @default {SequenceType} _type
+        default value for the type property is Neutral
+*/
     {
         public SequenceType type;
         private readonly SequenceType _type = SequenceType.Neutral;
+        private readonly bool[] sequence = new bool[8];
 
-        public Sequence(SequenceType type) : base(8)
+        public Sequence(SequenceType type)
         {
             this.type = type;
         }
+
+        public Sequence(SequenceType type, bool[] sequence)
+        {
+            if(sequence.LongLength != 8)
+            {
+                throw new Exception("Sequence length must be 8");
+            }
+            this.type = type;
+            this.sequence = sequence;
+        }
+
+        public bool[] GetSequence()
+        {
+            return this.sequence;
+        }
+
+        public void ToggleIndex(int index)
+        {
+            this.sequence[index] = !this.sequence[index];
+        }
+
+        public void SetIndex(int index, bool value)
+        {
+            this.sequence[index] = value;
+        }
     }
 
-    public class Runesong : Dictionary<string, Sequence>
+
+
+    public class Runesong
     {
         private readonly string alias = "";
         private Sequence neutral = new(SequenceType.Neutral);
