@@ -24,13 +24,13 @@
 
 .healthTotal {
     flex-grow: 1;
-    background-image: url('project://database/Assets/Sprites/UI/4k/healthTotal.png?fileID=2800000&guid=275b46d50af759b47832d9568eaba257&type=3#healthTotal');
+    background-image: url('project://database/Assets/Sprites/HUD/4k/healthTotal.png?fileID=2800000&guid=275b46d50af759b47832d9568eaba257&type=3#healthTotal');
     max-width: 33%;
 }
 
 .healthCurrent {
     flex-grow: 1;
-    background-image: url('project://database/Assets/Sprites/UI/4k/healthCurrent.png?fileID=2800000&guid=70065efd72023c444914aaedf47b8fe5&type=3#healthCurrent');
+    background-image: url('project://database/Assets/Sprites/HUD/4k/healthCurrent.png?fileID=2800000&guid=70065efd72023c444914aaedf47b8fe5&type=3#healthCurrent');
     scale: 0.75 1;
     transform-origin: left;
 }
@@ -58,21 +58,35 @@
 }
 
 .inventory {
-    background-image: url('project://database/Assets/Sprites/UI/4k/inventory.png?fileID=2800000&guid=fedbba59cd323134a9a8fee5dd6756f1&type=3#inventory');
-    padding-top: 6px;
-    padding-right: 6px;
-    padding-bottom: 6px;
-    padding-left: 6px;
+    background-image: url('project://database/Assets/Sprites/HUD/4k/inventory.png?fileID=2800000&guid=fedbba59cd323134a9a8fee5dd6756f1&type=3#inventory');
     flex-direction: row;
-    width: 33%;
+    width: 11%;
+    max-width: 256px;
+    min-width: 64px;
 }
 
 .slot {
     flex-grow: 1;
-    max-width: 15px;
-    max-height: 15px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.slot-selected {
+    flex-grow: 1;
+    border-left-color: rgb(0, 0, 255);
+    border-right-color: rgb(0, 0, 255);
+    border-top-color: rgb(0, 0, 255);
+    border-bottom-color: rgb(0, 0, 255);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
 }
 
 .slot1 {
@@ -115,8 +129,8 @@ Label {
 
 .sequencers {
     flex-grow: 1;
-    background-image: url('project://database/Assets/Sprites/UI/4k/sequencers.png?fileID=2800000&guid=1959a7824ad8bbb45adcd8c1d9d0b9f5&type=3#sequencers');
-    cursor: url('project://database/Assets/Sprites/UI/4k/pip.png?fileID=2800000&guid=bb5f1aab2bb13a5468f9623d22ede6c9&type=3#pip');
+    background-image: url('project://database/Assets/Sprites/HUD/4k/sequencers.png?fileID=2800000&guid=1959a7824ad8bbb45adcd8c1d9d0b9f5&type=3#sequencers');
+    cursor: url('project://database/Assets/Sprites/HUD/4k/pip.png?fileID=2800000&guid=bb5f1aab2bb13a5468f9623d22ede6c9&type=3#pip');
 }
 
 .library {
@@ -130,7 +144,7 @@ Label {
 }
 
 .sequencers {
-    cursor: url('project://database/Assets/Sprites/UI/4k/pip.png?fileID=2800000&guid=bb5f1aab2bb13a5468f9623d22ede6c9&type=3#pip');
+    cursor: url('project://database/Assets/Sprites/HUD/4k/pip.png?fileID=2800000&guid=bb5f1aab2bb13a5468f9623d22ede6c9&type=3#pip');
 }
 
 .spot1 {

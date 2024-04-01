@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Sprites/UI/ui.uss?fileID=7433441132597879392&amp;guid=6801f9bb72574da419890ed682e611b9&amp;type=3#ui" />
+    <Style src="project://database/Assets/Sprites/HUD/ui.uss?fileID=7433441132597879392&amp;guid=6801f9bb72574da419890ed682e611b9&amp;type=3#ui" />
     <ui:VisualElement name="Top" class="top" style="top: 0; position: absolute; flex-direction: row; width: 100%; max-height: 64px; height: 10%;">
         <ui:VisualElement name="healthTotal" class="healthTotal" style="flex-grow: 1;">
             <ui:VisualElement name="healthCurrent" class="healthCurrent" style="flex-grow: 1;" />
@@ -8,7 +8,7 @@
             <ui:VisualElement name="portrait" class="portrait" />
         </ui:VisualElement>
         <ui:VisualElement name="inventory" class="inventory">
-            <ui:VisualElement name="slot1" class="slot slot1" style="flex-grow: 1; background-color: rgb(0, 0, 0); -unity-background-scale-mode: scale-to-fit;" />
+            <ui:VisualElement name="slot1" class="slot slot1 slot-selected" style="background-color: rgba(0, 0, 0, 0);" />
             <ui:VisualElement name="slot2" class="slot slot2" style="flex-grow: 1;" />
             <ui:VisualElement name="slot3" class="slot slot3" style="flex-grow: 1;" />
             <ui:VisualElement name="slot4" class="slot slot4" style="flex-grow: 1;" />
