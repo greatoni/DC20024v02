@@ -11,7 +11,7 @@ public enum SequenceType {
     Ice,
     Earth,
     Air
-}
+};
 
 public class Sequence : Dictionary<int,bool> {
     public SequenceType type;
@@ -100,7 +100,7 @@ public class HUD : EditorWindow
     {
         void OnGUI () {
             // The actual window code goes here
-            var hud = 
+            //var hud = 
            }
     }
 
