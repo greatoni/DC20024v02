@@ -8,7 +8,7 @@
             <ui:VisualElement name="portrait" class="portrait" />
         </ui:VisualElement>
         <ui:VisualElement name="inventory" class="inventory">
-            <ui:VisualElement name="slot1" class="slot slot1 slot-selected" style="background-color: rgba(0, 0, 0, 0);" />
+            <ui:VisualElement name="slot1" class="slot slot1 slot-selected" />
             <ui:VisualElement name="slot2" class="slot slot2" style="flex-grow: 1;" />
             <ui:VisualElement name="slot3" class="slot slot3" style="flex-grow: 1;" />
             <ui:VisualElement name="slot4" class="slot slot4" style="flex-grow: 1;" />
@@ -16,68 +16,148 @@
             <ui:VisualElement name="slot6" class="slot slot6" style="flex-grow: 1;" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="Bottom" class="bottom" style="bottom: 0; position: absolute; width: 100%; height: 24%;">
+    <ui:VisualElement name="Bottom" class="bottom" style="bottom: 0; position: absolute;">
         <ui:VisualElement name="SequenceInput" class="sequence-input">
-            <ui:VisualElement name="Sequencers" class="sequencers">
-                <ui:VisualElement name="neutral" class="sequence sequence-netural" style="flex-grow: 1; flex-direction: row;">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot3" class="spot3 spot3" />
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1; width: 32px; max-width: 32px;" />
+            <ui:VisualElement name="Sequencers" class="sequencers" style="height: 60%;">
+                <ui:VisualElement name="neutral" class="sequence sequence-neutral">
+                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot3" class="spot3 spot">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="fire" style="flex-grow: 1; flex-direction: row;">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot3" class="spot spot3" />
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1; width: 32px; max-width: 32px;" />
+                <ui:VisualElement name="fire" class="sequence sequence-fire" style="flex-grow: 1; flex-direction: row;">
+                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot3" class="spot3 spot">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="ice" class="sequence sequence-ice" style="flex-grow: 1; flex-direction: row;">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot3" class="spot spot3" />
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1; width: 32px; max-width: 32px;" />
+                <ui:VisualElement name="ice" class="sequence sequence-ice">
+                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot3" class="spot3 spot">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="earth" class="sequence sequence-earth" style="flex-grow: 1; flex-direction: row;">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot3" class="spot spot3" />
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1; width: 32px; max-width: 32px;" />
+                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot3" class="spot3 spot">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="earth" class="sequence sequence-air" style="flex-grow: 1; flex-direction: row;">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot3" class="spot spot3" />
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1; width: 32px; max-width: 32px;" />
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1; width: 32px; max-width: 32px;" />
+                <ui:VisualElement name="air" class="sequence sequence-air" style="flex-grow: 1; flex-direction: row;">
+                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot3" class="spot3 spot">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                        <ui:VisualElement name="Pip" class="pip hidden" />
+                    </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="Saver" class="sequence-saver" style="flex-grow: 1; flex-direction: row; min-height: 24px; height: 1%; max-height: 32px;">
-                <ui:TextField picking-mode="Ignore" label="sequence-alias" value="Name Sequence" max-length="8" name="SequenceAlias" class="sequence-save" />
+            <ui:VisualElement name="SequenceCommander" class="sequence-commander" style="max-height: 24px;">
                 <ui:Button text="Execute" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SequenceRun" tooltip="Click to use this sequence" class="sequence-run btn" />
-                <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SequenceSave" tooltip="Click to use this sequence" class="sequence-save btn" style="width: 48px; height: 24px;" />
+                <ui:TextField picking-mode="Ignore" label="Runesong Alias" value="Runesong Alias" name="Runesong-Alias" class="runesong-alias" />
+                <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SequenceSave" tooltip="Click to use this sequence" class="sequence-save btn" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Library" class="library" style="flex-grow: 1;">
-            <ui:ListView focusable="true" name="catalog" fixed-item-height="32" class="sequence-catalog" />
+            <ui:ListView focusable="true" name="catalog" fixed-item-height="32" class="sequence-catalog catalog" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
