@@ -58,6 +58,7 @@ namespace zombisoft
 		{
 			if (!doorOpen && !doorOpening) // Door is not opened and opening
 			{
+				gameObject.GetComponent<BoxCollider>().enabled = false;
 				StartCoroutine("OpenDoor");
 			}
 		}
@@ -119,6 +120,8 @@ namespace zombisoft
 
 				yield return null;
 			}
+
+			gameObject.GetComponent<BoxCollider>().enabled = true;
 
 			doorOpen = false;
 		}

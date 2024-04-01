@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3408438598147656275
+--- !u!114 &-8899007612572674001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,22 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TimeEvents90/SequenceStep01
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/exploration_sounds/player_uses_pickaxe
   m_EditorClassIdentifier: 
-  Name: SequenceStep01
-  StudioPath: 
-  Min: 0
-  Max: 17
-  Default: 17
-  ID:
-    data1: 1049841807
-    data2: 118522038
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &11400000
+  Path: event:/sound_effects/exploration_sounds/player_uses_pickaxe
+  Guid:
+    Data1: 1913567988
+    Data2: 1195420043
+    Data3: 1659205795
+    Data4: 1738164862
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1478
+--- !u!114 &-7768801585158393214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,22 +36,106 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/exploration_sounds/player_opens_door_with_rune
   m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 4366234092758531765}
-  - {fileID: 204026345990851227}
-  EditorEvents:
-  - {fileID: 6345721665253639461}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 204026345990851227}
-  StringsBanks:
-  - {fileID: 4366234092758531765}
-  cacheTime: 638473545865128428
-  cacheVersion: 131608
---- !u!114 &204026345990851227
+  Path: event:/sound_effects/exploration_sounds/player_opens_door_with_rune
+  Guid:
+    Data1: 171882418
+    Data2: 1338985813
+    Data3: -866366306
+    Data4: -1174682491
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-7532402988590284970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music/Level_2_ExplorationMusic
+  m_EditorClassIdentifier: 
+  Path: event:/music/Level_2_ExplorationMusic
+  Guid:
+    Data1: -1558669379
+    Data2: 1157257753
+    Data3: 1810748045
+    Data4: -1464614071
+  Banks:
+  - {fileID: 6687724470705687362}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 60000
+--- !u!114 &-5943855121974990660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/important_exploration_sounds/player_heals_using_rune_pillar
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/important_exploration_sounds/player_heals_using_rune_pillar
+  Guid:
+    Data1: -426434303
+    Data2: 1311282526
+    Data3: 927858595
+    Data4: 232604220
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4444
+--- !u!114 &-4943698698818880496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/player_movement/player_movement_wood
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/player_movement/player_movement_wood
+  Guid:
+    Data1: 1094360183
+    Data2: 1320963822
+    Data3: 1141963702
+    Data4: -740911937
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 373
+--- !u!114 &-4452952285724076194
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,15 +147,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: fmod/Build/Desktop/Master.bank
+  Path: C:/Users/Desktop-PC/Downloads/Master Project/Master Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638473545865128428
+  lastModified: 638474301967264183
   FileSizes:
   - Name: Desktop
-    Value: 28768
+    Value: 1036
   Exists: 1
---- !u!114 &1616813994792452382
+--- !u!114 &-3730568627254376956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep05
+  m_EditorClassIdentifier: 
+  Name: SequenceStep05
+  StudioPath: 
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 3307753961
+    data2: 735801093
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3028719797341368136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/exploration_sounds/drawbridge_raise
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/exploration_sounds/drawbridge_raise
+  Guid:
+    Data1: 506205966
+    Data2: 1078022170
+    Data3: -577994075
+    Data4: -1641599107
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5914
+--- !u!114 &-2631756795797895723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/combat_sounds/player_uses_magic
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/combat_sounds/player_uses_magic
+  Guid:
+    Data1: -397648168
+    Data2: 1215341923
+    Data3: 435261099
+    Data4: 1893391669
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2958
+--- !u!114 &-1824821913091239286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,36 +248,16 @@ MonoBehaviour:
   Name: SequenceStep03
   StudioPath: 
   Min: 0
-  Max: 17
-  Default: 17
+  Max: 8
+  Default: 0
   ID:
-    data1: 4065860331
-    data2: 3774888725
+    data1: 101578648
+    data2: 2225618494
   Type: 1
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &4366234092758531765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: fmod/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638473545865128428
-  FileSizes:
-  - Name: Desktop
-    Value: 894
-  Exists: 1
---- !u!114 &6345721665253639461
+--- !u!114 &-1009336909708267240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,27 +267,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/TimeEvents90
+  m_Name: event:/sound_effects/exploration_sounds/player_opens_door_with_pickaxe
   m_EditorClassIdentifier: 
-  Path: event:/TimeEvents90
+  Path: event:/sound_effects/exploration_sounds/player_opens_door_with_pickaxe
   Guid:
-    Data1: 546932880
-    Data2: 1122451562
-    Data3: 1838184107
-    Data4: -1849915117
+    Data1: 756144776
+    Data2: 1300924932
+    Data3: -1732935796
+    Data4: 647020798
   Banks:
-  - {fileID: 204026345990851227}
+  - {fileID: 4120809336208709570}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -3408438598147656275}
-  - {fileID: 7557784515936315342}
-  - {fileID: 1616813994792452382}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2666
---- !u!114 &7557784515936315342
+  Length: 2964
+--- !u!114 &-693023823839471150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,12 +299,576 @@ MonoBehaviour:
   Name: SequenceStep02
   StudioPath: 
   Min: 0
-  Max: 17
-  Default: 17
+  Max: 8
+  Default: 0
   ID:
-    data1: 2594271808
-    data2: 2103380576
+    data1: 3388833275
+    data2: 3378095702
   Type: 1
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-617928944296826833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep06
+  m_EditorClassIdentifier: 
+  Name: SequenceStep06
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 2025136453
+    data2: 2314695992
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-443140825772197928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/important_exploration_sounds/absorbing_rune_essence
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/important_exploration_sounds/absorbing_rune_essence
+  Guid:
+    Data1: 1040491329
+    Data2: 1117312589
+    Data3: 903564433
+    Data4: -1018420524
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 7408563380056034290}
+  - {fileID: -4452952285724076194}
+  - {fileID: 6687724470705687362}
+  - {fileID: 4120809336208709570}
+  EditorEvents:
+  - {fileID: 8031246104108629917}
+  - {fileID: -7532402988590284970}
+  - {fileID: 4380393418731525393}
+  - {fileID: -5943855121974990660}
+  - {fileID: -3028719797341368136}
+  - {fileID: 8108188704976314552}
+  - {fileID: 169134498408695867}
+  - {fileID: -443140825772197928}
+  - {fileID: 1238277919147582378}
+  - {fileID: 3785489562759218015}
+  - {fileID: 6884296016002895880}
+  - {fileID: 1515716891392286841}
+  - {fileID: -4943698698818880496}
+  - {fileID: -1009336909708267240}
+  - {fileID: 3580286554988500556}
+  - {fileID: 1147353189792148967}
+  - {fileID: -7768801585158393214}
+  - {fileID: 7404992146271059493}
+  - {fileID: 3916925478471729064}
+  - {fileID: -2631756795797895723}
+  - {fileID: 1231346455041474794}
+  - {fileID: -8899007612572674001}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -4452952285724076194}
+  StringsBanks:
+  - {fileID: 7408563380056034290}
+  cacheTime: 638474308420829985
+  cacheVersion: 131608
+--- !u!114 &169134498408695867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/exploration_sounds/player_opens_large_door
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/exploration_sounds/player_opens_large_door
+  Guid:
+    Data1: -247848154
+    Data2: 1340604190
+    Data3: 1220421292
+    Data4: -1736873625
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2964
+--- !u!114 &1147353189792148967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/exploration_sounds/player_moves_lever
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/exploration_sounds/player_moves_lever
+  Guid:
+    Data1: -684563812
+    Data2: 1216178985
+    Data3: -1214233432
+    Data4: 1067706806
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1486
+--- !u!114 &1231346455041474794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/exploration_sounds/player_opens_door_with_key
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/exploration_sounds/player_opens_door_with_key
+  Guid:
+    Data1: -1583940372
+    Data2: 1085491056
+    Data3: -145065343
+    Data4: 671346781
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1478
+--- !u!114 &1238277919147582378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/combat_sounds/enemy_hits_player_with_darkness
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/combat_sounds/enemy_hits_player_with_darkness
+  Guid:
+    Data1: -153783476
+    Data2: 1283043493
+    Data3: -1151303257
+    Data4: 88033399
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2958
+--- !u!114 &1515716891392286841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/ambience/level_1_ambience
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/ambience/level_1_ambience
+  Guid:
+    Data1: 1041545045
+    Data2: 1128291921
+    Data3: 408882849
+    Data4: -675912357
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
+--- !u!114 &2924966850426093538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep04
+  m_EditorClassIdentifier: 
+  Name: SequenceStep04
+  StudioPath: 
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 2370721975
+    data2: 1371236248
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3580286554988500556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/exploration_sounds/player_opens_small_door
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/exploration_sounds/player_opens_small_door
+  Guid:
+    Data1: 411178131
+    Data2: 1322313005
+    Data3: -1672756558
+    Data4: 206611633
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1478
+--- !u!114 &3785489562759218015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/combat_sounds/enemy_hits_player_with_cold
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/combat_sounds/enemy_hits_player_with_cold
+  Guid:
+    Data1: -354372273
+    Data2: 1204878103
+    Data3: -781983326
+    Data4: 1946927782
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2964
+--- !u!114 &3827528787922062259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep01
+  m_EditorClassIdentifier: 
+  Name: SequenceStep01
+  StudioPath: 
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 1666535168
+    data2: 3980270336
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3916925478471729064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/combat_sounds/enemy_hits_player_with_steel
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/combat_sounds/enemy_hits_player_with_steel
+  Guid:
+    Data1: 459036623
+    Data2: 1290536984
+    Data3: -1102930010
+    Data4: -1004508828
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1478
+--- !u!114 &4120809336208709570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sound Effects.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/Desktop-PC/Downloads/Master Project/Master Project/Build/Desktop/Sound
+    Effects.bank
+  Name: Sound Effects
+  StudioPath: bank:/Sound Effects
+  lastModified: 638474308420829985
+  FileSizes:
+  - Name: Desktop
+    Value: 1222080
+  Exists: 1
+--- !u!114 &4380393418731525393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music/TimeEvents90
+  m_EditorClassIdentifier: 
+  Path: event:/music/TimeEvents90
+  Guid:
+    Data1: -196761623
+    Data2: 1237711435
+    Data3: 2033839502
+    Data4: -2142124135
+  Banks:
+  - {fileID: 6687724470705687362}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -693023823839471150}
+  - {fileID: -617928944296826833}
+  - {fileID: -3730568627254376956}
+  - {fileID: 2924966850426093538}
+  - {fileID: -1824821913091239286}
+  - {fileID: 3827528787922062259}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5333
+--- !u!114 &6687724470705687362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/Desktop-PC/Downloads/Master Project/Master Project/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638474301993828913
+  FileSizes:
+  - Name: Desktop
+    Value: 3054240
+  Exists: 1
+--- !u!114 &6884296016002895880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/player_movement/player_movement_carpet
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/player_movement/player_movement_carpet
+  Guid:
+    Data1: 620213586
+    Data2: 1110489689
+    Data3: 2102035079
+    Data4: -1155381531
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 378
+--- !u!114 &7404992146271059493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/player_movement/player_movement_stone
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/player_movement/player_movement_stone
+  Guid:
+    Data1: 2029914562
+    Data2: 1319456963
+    Data3: 871382671
+    Data4: 1185786966
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 374
+--- !u!114 &7408563380056034290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/Desktop-PC/Downloads/Master Project/Master Project/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638474301967297575
+  FileSizes:
+  - Name: Desktop
+    Value: 2310
+  Exists: 1
+--- !u!114 &8031246104108629917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music/Level_1_ExplorationMusic
+  m_EditorClassIdentifier: 
+  Path: event:/music/Level_1_ExplorationMusic
+  Guid:
+    Data1: -1394145735
+    Data2: 1202680866
+    Data3: -714789741
+    Data4: 2080158445
+  Banks:
+  - {fileID: 6687724470705687362}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 115200
+--- !u!114 &8108188704976314552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sound_effects/ambience/level_2_ambience
+  m_EditorClassIdentifier: 
+  Path: event:/sound_effects/ambience/level_2_ambience
+  Guid:
+    Data1: -1757638368
+    Data2: 1171424187
+    Data3: -1727882331
+    Data4: -2020470740
+  Banks:
+  - {fileID: 4120809336208709570}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
