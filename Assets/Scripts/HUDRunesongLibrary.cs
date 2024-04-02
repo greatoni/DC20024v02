@@ -7,7 +7,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Events;
 using static RuneSong;
-using MouseCaptureController;
 
 /*
 *//*
@@ -159,14 +158,14 @@ public class HUD
         private Runesong HUDRunesong = new Runesong("HUD");
 
         /*** The listener for the clicks on each interval ***/
-        UnityEvent sequencerClick = new ClickEvent();
+        ClickEvent sequencerClick = new();
 
-        create()
+        void Create()
         {
             
         }
 
-        update()
+        void Update()
         {
 
         }
