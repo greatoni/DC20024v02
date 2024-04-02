@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using Unity.VisualScripting;
-using UnityEngine.UIElements;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.Events;
 using static RuneSong;
+using MouseCaptureController;
 
 /*
 *//*
@@ -31,11 +33,13 @@ public class HUD
         Air
     }
 
-    public class Sequence // : JSO.IndexJSO<int, bool>
+    public class Sequence 
 /*
-    @class Sequence : Dictionary<int, bool>
+    @class Sequence
     @property {int} Capacity
         The maximum number of values is always 8
+    @property {bool[]} sequence
+        holds the sequence of boolean values to determine if a pip is present
     @property {SequenceType} type 
         label to identify the elemental type of the sequence
     @default {SequenceType} _type
@@ -77,8 +81,6 @@ public class HUD
         }
     }
 
-
-
     public class Runesong
     {
         private readonly string alias = "";
@@ -101,6 +103,15 @@ public class HUD
             this.ice = ice;
             this.earth = earth;
             this.air = air;
+        }
+
+        public Runesong(Runesong temp){
+            this.alias = temp.GetAlias();
+            this.neutral = temp.GetSequence(SequenceType.Neutral);
+            this.fire = temp.GetSequence(SequenceType.Fire);
+            this.ice = temp.GetSequence(SequenceType.Ice);
+            this.earth = temp.GetSequence(SequenceType.Earth);
+            this.air = temp.GetSequence(SequenceType.Air);
         }
 
         public string GetAlias()
@@ -127,7 +138,40 @@ public class HUD
             else if (type == SequenceType.Air) this.air = sequence;
             else throw new Exception("Invalid sequence type");
         }
+    
+        public void placePip(SequenceType type, int index)
+        {
+            Sequence sequence = this.GetSequence(type);
+            sequence.SetIndex(index, true);
+        }
+
+        public void removePip(SequenceType type, int index)
+        {
+            Sequence sequence = this.GetSequence(type);
+            sequence.SetIndex(index, false);
+        }
     }
+
+    public class HUDSequencer : MonoBehaviour
+    {
+
+        /*** The Runesong the corresponds to the sequencer on the HUD ***/
+        private Runesong HUDRunesong = new Runesong("HUD");
+
+        /*** The listener for the clicks on each interval ***/
+        UnityEvent sequencerClick = new ClickEvent();
+
+        create()
+        {
+            
+        }
+
+        update()
+        {
+
+        }
+    }
+
 
     public class RunesongLibrary : MonoBehaviour
     {
