@@ -1,52 +1,83 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 using HUD;
 
-namespace JSO {
-    public class IndexJSO<int,T>
-    {
-        int key = get; set;
-        T value = get; set;
-        public IndexJSO(int key, T value)
-        {
-            this.key = key;
-            this.value = value;
-        }
-    }
 
-    public class StringJSO<string,T>
+namespace JavascriptStyleObject
+{
+    public class JSO<TKey, TValue>
     {
-        string key = get; set;
-        T value = get; set;
-        public StringJSO(string key, T value)
+        private List<TKey> keys = new List<TKey>();
+        private List<TValue> values = new List<TValue>();
+
+        private JSO(TKey key, TValue value)
         {
-            this.key = key;
-            this.value = value;
+            keys.Add(key);
+            values.Add(value);
         }
-    }
-    
-    public class CharJSO<char,T>
-    {
-        char key = get; set;
-        T value = get; set;
-        public CharJSO(char key, T value)
+
+        public void Add(TKey key, TValue value)
         {
-            this.key = key;
-            this.value = value;
+            keys.Add(key);
+            values.Add(value);
         }
-    }
-    
-    public class SequenceTypeJSO<SequenceType,T>
-    {
-        SequenceType key = get; set;
-        T value = get; set;
-        public SequenceTypeJSO(SequenceType key, T value)
+
+        public TValue Get(TKey key)
         {
-            this.key = key;
-            this.value = value;
+            for (int i = 0; i < keys.Count; i++)
+            {
+                if (keys[i].Equals(key))
+                {
+                    return values[i];
+                }
+            }
+            throw new KeyNotFoundException($"Key {key} not found.");
+        }
+
+        public void Remove(TKey key)
+        {
+            for (int i = 0; i < keys.Count; i++)
+            {
+                if (keys[i].Equals(key))
+                {
+                    keys.RemoveAt(i);
+                    values.RemoveAt(i);
+                    return;
+                }
+            }
+            throw new KeyNotFoundException($"Key {key} not found.");
+        }
+
+        public class IndexJSO<TValue> : JSO<int, TValue>
+        {
+            public IndexJSO(int key, TValue value) : base(key, value)
+            {
+            }
+        }
+
+        public class StringJSO<T> : JSO<string, T>
+        {
+            public StringJSO(string key, T value) : base(key, value)
+            {
+            }
+        }
+
+        public class CharJSO<T> : JSO<char, T>
+        {
+            public CharJSO(char key, T value) : base(key, value)
+            {
+            }
+        }
+
+        public class SequenceTypeJSO<T> : JSO<SequenceType, T>
+        {
+            public SequenceTypeJSO(SequenceType key, T value) : base(key, value)
+            {
+            }
         }
     }
 }
+
+
 
 

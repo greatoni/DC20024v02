@@ -1,4 +1,3 @@
-using JSO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +10,7 @@ using UnityEngine;
 *//*
 */
 
-namespace HUD
+public class HUD
 /*
 @namespace HUD
 @accessor namespace HUD
