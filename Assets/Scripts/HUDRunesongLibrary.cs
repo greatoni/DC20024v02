@@ -155,19 +155,28 @@ public class HUD
     {
 
         /*** The Runesong the corresponds to the sequencer on the HUD ***/
-        private Runesong HUDRunesong = new Runesong("HUD");
+        Runesong HUDRunesong;
 
         /*** The listener for the clicks on each interval ***/
-        ClickEvent sequencerClick = new();
+        ClickEvent m_Click;
 
-        void Create()
+        void Start()
         {
-            
+            HUDRunesong = new("HUDRunesong");
+
+            if(m_Click == null){
+                m_Click = new();
+            }
+
+            // m_Click.L
         }
 
         void Update()
         {
+            if(Input.GetMouseButtonDown(0))
+            {
 
+            }
         }
     }
 

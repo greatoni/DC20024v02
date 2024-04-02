@@ -16,136 +16,171 @@
             <ui:VisualElement name="slot6" class="slot slot6" style="flex-grow: 1;" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="Bottom" class="bottom" style="bottom: 0; position: absolute;">
+    <ui:VisualElement name="Bottom" class="bottom">
         <ui:VisualElement name="SequenceInput" class="sequence-input">
-            <ui:VisualElement name="Sequencers" class="sequencers" style="height: 60%;">
+            <ui:VisualElement name="Sequencers" class="sequencers" style="height: 60%; background-image: none;">
                 <ui:VisualElement name="neutral" class="sequence sequence-neutral">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                    <ui:VisualElement name="interval_1" class="interval interval_1" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_2" class="interval interval_2" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot3" class="spot3 spot">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_3" class="interval interval_3" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_4" class="interval interval_4" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_5" class="interval interval_5" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_6" class="interval interval_6" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_7" class="interval interval_7" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_8" class="interval interval_8" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="fire" class="sequence sequence-fire" style="flex-grow: 1; flex-direction: row;">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                <ui:VisualElement name="fire" class="sequence sequence-fire">
+                    <ui:VisualElement name="interval_1" class="interval interval_1" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_2" class="interval interval_2" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot3" class="spot3 spot">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_3" class="interval interval_3" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_4" class="interval interval_4" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_5" class="interval interval_5" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_6" class="interval interval_6" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_7" class="interval interval_7" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_8" class="interval interval_8" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="ice" class="sequence sequence-ice">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                    <ui:VisualElement name="interval_1" class="interval interval_1" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_2" class="interval interval_2" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot3" class="spot3 spot">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_3" class="interval interval_3" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_4" class="interval interval_4" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_5" class="interval interval_5" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_6" class="interval interval_6" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_7" class="interval interval_7" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_8" class="interval interval_8" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="earth" class="sequence sequence-earth" style="flex-grow: 1; flex-direction: row;">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                <ui:VisualElement name="earth" class="sequence sequence-earth">
+                    <ui:VisualElement name="interval_1" class="interval interval_1" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_2" class="interval interval_2" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot3" class="spot3 spot">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_3" class="interval interval_3" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_4" class="interval interval_4" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_5" class="interval interval_5" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_6" class="interval interval_6" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_7" class="interval interval_7" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_8" class="interval interval_8" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="air" class="sequence sequence-air" style="flex-grow: 1; flex-direction: row;">
-                    <ui:VisualElement name="spot1" class="spot spot1" style="flex-grow: 1;">
+                <ui:VisualElement name="air" class="sequence sequence-air">
+                    <ui:VisualElement name="interval_1" class="interval interval_1" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot2" class="spot spot2" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_2" class="interval interval_2" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot3" class="spot3 spot">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_3" class="interval interval_3" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot4" class="spot spot4" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_4" class="interval interval_4" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot5" class="spot spot5" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_5" class="interval interval_5" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot6" class="spot spot6" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_6" class="interval interval_6" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot7" class="spot spot7" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_7" class="interval interval_7" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="spot8" class="spot spot8" style="flex-grow: 1;">
+                    <ui:VisualElement name="Fret" class="fret" />
+                    <ui:VisualElement name="interval_8" class="interval interval_8" style="flex-grow: 1;">
                         <ui:VisualElement name="Pip" class="pip hidden" />
                     </ui:VisualElement>
                 </ui:VisualElement>
