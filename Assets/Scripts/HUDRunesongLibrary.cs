@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Events;
 using static RuneSong;
+using static RuneEffect;
 
 /*
 *//*
@@ -20,10 +21,10 @@ public class HUD
 */
 {
     public enum SequenceType 
-/*
+    /*
     @enum SequenceType
         used to keep track of the elemental type of a sequence
-*/
+    */
     {
         Neutral,
         Fire,
