@@ -1061,7 +1061,7 @@ MonoBehaviour:
         m_MethodName: SendSequenceToGlobalSequencer
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: f16e4fc11c3c0c745b9575832cb9669a, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: 851f69070b8b96848ac868689437efea, type: 2}
           m_ObjectArgumentAssemblyTypeName: MemorizedRuneSong, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3102,10 +3102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acolytes:
-  - {fileID: 11400000, guid: 292b51a2767f0f34bad0bedec12a6e03, type: 2}
-  - {fileID: 11400000, guid: 9c1e3aa1dc2f79440a47fcc7ff9fe03e, type: 2}
+  - {fileID: 11400000, guid: b596fd09315043243934eee6235d7ee0, type: 2}
+  - {fileID: 11400000, guid: 1ab4504a81e2f6a4cb66fb81eb3de974, type: 2}
   spirits:
-  - {fileID: 11400000, guid: f16e4fc11c3c0c745b9575832cb9669a, type: 2}
+  - {fileID: 11400000, guid: 851f69070b8b96848ac868689437efea, type: 2}
   acolytesBool:
   - Neutral: 0100000001000100
     Fire: 0000000000000000
@@ -10031,7 +10031,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   memorySlotSequence:
-  - {fileID: 11400000, guid: 9c1e3aa1dc2f79440a47fcc7ff9fe03e, type: 2}
+  - {fileID: 11400000, guid: b596fd09315043243934eee6235d7ee0, type: 2}
   sequencerGlobal: {fileID: 1071576994}
   player: {fileID: 555462594}
 --- !u!1 &1823254208
@@ -11922,7 +11922,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   memorySlotSequence:
-  - {fileID: 11400000, guid: 292b51a2767f0f34bad0bedec12a6e03, type: 2}
+  - {fileID: 11400000, guid: 1ab4504a81e2f6a4cb66fb81eb3de974, type: 2}
   sequencerGlobal: {fileID: 1071576994}
   player: {fileID: 555462594}
 --- !u!1 &2134811252

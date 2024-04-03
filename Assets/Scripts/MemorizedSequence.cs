@@ -5,7 +5,7 @@ using System.Linq;
 
 
 
-[CreateAssetMenu(fileName = "Sequence", menuName = "ScriptableObjects/MemorizedSequence", order = 1)]
+[CreateAssetMenu(fileName = "Sequence", menuName = "ScriptableObjects/MemorizedSequenceOld", order = 1)]
 public class MemorizedSequence : ScriptableObject
 {
     public SequenceRow[] sequence = new SequenceRow[5];
