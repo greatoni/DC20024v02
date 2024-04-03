@@ -5,7 +5,6 @@
 
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace zombisoft
 {
@@ -106,9 +105,6 @@ namespace zombisoft
 		private float yAngle;
 		private Quaternion curRot;
 		private Quaternion desiredRot;
-
-
-		public UnityEvent OnMeetingEnemy,OnStepForward;
 
 		//==============================================================
 		// Start
@@ -287,12 +283,6 @@ namespace zombisoft
 				if ((hit.transform.tag == "Obsticle" || hit.transform.tag == "Enemy" || hit.transform.tag == "TmpCollider")) // Is it an obsticle..
 				{
 					Debug.DrawRay(transform.position, endPos * hit.distance, Color.yellow); // Debug
-					if (hit.transform.tag == "Enemy") 
-					{
-						hit.transform.GetComponent<EnemyDamageSequences>().SendEnemyToGlobal();
-						OnMeetingEnemy.Invoke();
-						print("enemy"); 
-					}
 					return true;
 				}
 				else
@@ -440,7 +430,7 @@ namespace zombisoft
 
 				yield return null;
 			}
-			OnStepForward.Invoke();
+
 			moveState = moveStateIdle;
 		}
 

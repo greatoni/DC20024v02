@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -285,4 +285,62 @@ public class SequencerWeapon : MonoBehaviour
     }
 
 }
-*/
+
+[System.Serializable]
+public class SequenceRow
+{
+    Dictionary<int, Step> Row = new Dictionary<int, Step>();
+    public StepEffect rowEffect;
+    public int rowLevel = 1;
+    public void SetStepInRow(int index, Step step)
+    {
+        if (Row.TryAdd(index, step)) Debug.Log("added successfully");
+    }
+
+    public Step GetStepFromRow(int index)
+    {
+        Step newStep = new Step();
+        if (Row.TryGetValue(index, out newStep))
+        {
+            return newStep;
+        }
+        return null;
+    }
+
+    public void RemoveStepFromRow(int index)
+    {
+        Row.Remove(index);
+    }
+
+}
+
+[System.Serializable]
+public class Step
+{
+    public StepEffect stepEffect = StepEffect.neutral;
+}
+
+[System.Serializable]
+public enum StepEffect
+{
+    air,
+    fire,
+    earth,
+    ice,
+    neutral
+}
+
+public class Chord
+{
+    public List<StepEffect> effects = new List<StepEffect>();
+}
+
+public enum Combos
+{
+    fireIce,
+    fireAir,
+    fireEarth,
+    IceAir,
+    IceEarth,
+    EarthAir
+}

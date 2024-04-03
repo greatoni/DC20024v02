@@ -5,10 +5,12 @@ using System.Linq;
 
 
 
-[CreateAssetMenu(fileName = "Sequence", menuName = "ScriptableObjects/MemorizedSequenceOld", order = 1)]
+[CreateAssetMenu(fileName = "Sequence", menuName = "ScriptableObjects/MemorizedSequence", order = 1)]
 public class MemorizedSequence : ScriptableObject
 {
     public SequenceRow[] sequence = new SequenceRow[5];
+    public StepEffect[] roweffects = new StepEffect[5];
+    public int[] baseRowDamage = new int[5];
     public int numberCellsInSequence = 16;
 
     public void WriteToSequence(SequenceRow[] sequenceFromTable)
@@ -24,7 +26,7 @@ public class MemorizedSequence : ScriptableObject
         {
             for(int i = 0; i < numberCellsInSequence; i++)
             {
-                if (sequenceFromTable[s].GetStepFromRow(i))
+                if (sequenceFromTable[s].GetStepFromRow(i) != null)
                 {
                     sequence[s].SetStepInRow(i, sequenceFromTable[s].GetStepFromRow(i));
                 }
