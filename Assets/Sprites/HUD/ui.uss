@@ -19,6 +19,7 @@
     border-bottom-left-radius: 8px;
     flex-direction: row;
     min-height: 10px;
+    border-top-width: 4px;
 }
 
 .healthTotal {
@@ -35,8 +36,6 @@
 
 .portrait {
     background-image: var(--portrait);
-    width: 30px;
-    height: 40px;
     margin-right: auto;
     margin-left: auto;
     border-left-color: rgb(0, 0, 255);
@@ -51,10 +50,9 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    max-width: 10%;
-    min-width: 10%;
-    max-height: 100%;
-    min-height: 100%;
+    flex-grow: 1;
+    min-width: 128px;
+    max-width: 256px;
 }
 
 .inventory {
@@ -117,7 +115,7 @@
 .bottom {
     flex-grow: 1;
     flex-direction: row;
-    height: 24%;
+    height: 20%;
     background-color: rgb(51, 51, 255);
     border-left-color: rgb(0, 0, 255);
     border-right-color: rgb(0, 0, 255);
@@ -135,6 +133,7 @@
     width: 100%;
     position: absolute;
     top: 80%;
+    border-bottom-width: 4px;
 }
 
 .sequence-input {
@@ -143,11 +142,7 @@
 }
 
 .sequencers {
-    min-height: 70%;
-    margin-top: 1%;
-    margin-right: 1%;
-    margin-bottom: 1%;
-    margin-left: 1%;
+    min-height: 75%;
 }
 
 .sequence {
@@ -257,15 +252,16 @@
 }
 
 .sequence-commander {
-    margin-top: 1%;
-    margin-right: 1%;
-    margin-bottom: 1%;
-    margin-left: 1%;
-    font-size: 300%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: 2.5%;
+    margin-left: auto;
+    font-size: 125%;
+    width: 100%;
 }
 
 .btn {
-    min-width: 19%;
+    min-width: 20%;
 }
 
 .sequence-run {
@@ -279,10 +275,14 @@ Label {
 }
 
 #unity-text-input {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
 }
 
 .runesong-alias {
-    min-width: 60%;
+    min-height: 200%;
 }
 
 .library {
