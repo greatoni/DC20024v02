@@ -6,8 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Events;
-using static RuneSong;
-using static RuneEffect;
+using static PlayerCharacter;
 
 /*
 *//*
@@ -20,6 +19,75 @@ public class HUD
     using HUD;
 */
 {
+    static readonly PlayerCharacter playerCharacter;
+
+    public HUD()
+    {
+        
+    }
+
+    public class HealthMeter 
+    {
+        
+    }
+
+    public class Inventory
+    {
+        private readonly Item[] items;
+        private readonly int selectedIndex;
+
+        public Inventory()
+        {
+            this.items = new Item[5];
+            this.selectedIndex = 0;
+        }
+    }
+
+    public class Item
+    {
+        private readonly string alias;
+        private readonly string description;
+        private readonly string imagePath;
+
+        public Item(string alias, string description, string imagePath)
+        {
+            this.alias = alias;
+            this.description = description;
+            this.imagePath = imagePath;
+        }
+
+        public string GetAlias()
+        {
+            return this.alias;
+        }
+
+        public string GetDescription()
+        {
+            return this.description;
+        }
+
+        public string GetImagePath()
+        {
+            return this.imagePath;
+        }
+    }
+
+    public class InventoryUI : MonoBehaviour
+    {
+
+
+        void Start()
+        {
+
+        }
+
+        void Update()
+        {
+
+        }
+    }
+
+    
     public enum SequenceType 
     /*
     @enum SequenceType
@@ -213,61 +281,7 @@ public class HUD
 
     }
 
-    public class Inventory
-    {
-        private readonly Item[] items;
-        private readonly int selectedIndex;
-
-        public Inventory()
-        {
-            this.items = new Item[5];
-            this.selectedIndex = 0;
-        }
-    }
-
-    public class Item
-    {
-        private readonly string alias;
-        private readonly string description;
-        private readonly string imagePath;
-
-        public Item(string alias, string description, string imagePath)
-        {
-            this.alias = alias;
-            this.description = description;
-            this.imagePath = imagePath;
-        }
-
-        public string GetAlias()
-        {
-            return this.alias;
-        }
-
-        public string GetDescription()
-        {
-            return this.description;
-        }
-
-        public string GetImagePath()
-        {
-            return this.imagePath;
-        }
-    }
-
-    public class InventoryUI : MonoBehaviour
-    {
-
-
-        void Start()
-        {
-
-        }
-
-        void Update()
-        {
-
-        }
-    }
+    
 
 }
 
