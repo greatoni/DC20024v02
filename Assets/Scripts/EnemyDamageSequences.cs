@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDamageSequences : MonoBehaviour
+public class EnemyDamageSequences : SequencerUser
 {
-    public int Speed = 5;
-    public MemorizedSequence[] memorySlotSequence;
+    public MemorizedRuneSong[] memorySlotSequence;
     public SequencerGlobal sequencerGlobal;
+    public SequencerUser player;
     private bool doesWait = true;
-    private int tickTurnCountDown;
     private int enemyFakeInputDelay;
-    public int howManyTicksInTurn;
     private int howManyTicksWait;
+    private int tickTurnCountDown;
 
     private void Start()
     {
-        howManyTicksWait = howManyTicksInTurn - Speed;
 
-
+        howManyTicksWait = howManyTicksInTurn - speed;
     }
 
     public void CustomUpdateFromMusicTick(string marker) //Turn based actions
@@ -46,7 +44,6 @@ public class EnemyDamageSequences : MonoBehaviour
                 if (tickTurnCountDown == enemyFakeInputDelay)
                 {
                     SendSequenceToGlobalSequencer(memorySlotSequence[0]);
-                    doesWait = true;
                     //RecalculateSpeed();
                     tickTurnCountDown = howManyTicksWait;
                     doesWait = true;
@@ -64,16 +61,26 @@ public class EnemyDamageSequences : MonoBehaviour
 
     public void SendEnemyToGlobal()
     {
-        sequencerGlobal.AddListenerToDetectBeat(this);
-
+        //sequencerGlobal.AddListenerToDetectBeat(this);
     }
 
-    public void SendSequenceToGlobalSequencer(MemorizedSequence sequence)
+    public void SendSequenceToGlobalSequencer(MemorizedRuneSong sequence)
     {
-        QueueSequence sequenceNew = new QueueSequence();
-        sequenceNew.sequence = sequence.sequence;
+        
+        QueuedRunesong sequenceNew = new QueuedRunesong();
+        sequenceNew = sequence.queueSequence;
         sequenceNew.isEnemy = true;
-        sequencerGlobal.AddNewSequenceToQueue(sequenceNew);
+        sequenceNew.target = player;
+        sequenceNew.runesongStarter = this;
+        for (int i = 0; i < 5; i++)
+        {
+            sequenceNew.parameterIndex[i] = fmodIndexes[i];
+        }
+        if (!sequencerGlobal.CheckifQueueStillThere(sequenceNew))
+        {
+            sequencerGlobal.AddNewSequenceToQueue(sequenceNew);
+        }
+            
     }
 
 

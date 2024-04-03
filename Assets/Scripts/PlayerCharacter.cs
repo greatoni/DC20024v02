@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine;using UnityEngine.Events;
 
 public class PlayerCharacter : MonoBehaviour
 {

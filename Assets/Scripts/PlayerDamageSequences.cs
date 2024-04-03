@@ -4,25 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class PlayerDamageSequences : MonoBehaviour
+public class PlayerDamageSequences : SequencerUser
 {
     public int healthMax = 1000;
     public int shieldMax = 200;
     public int speedMax = 5;
     public int rowsDamageModifier = 0; // For imbalance
     public SequencerGlobal SequencerGlobal;
+    
 
-    public MemorizedSequence[] memorizedRuneSong;
+    public MemorizedRuneSong[] memorizedRuneSong;
 
     int burn = 0, burnAmount = 0, frozen = 0, frozenAmount = 0, erosion = 0;
-    int currentHealth, currentShield, speed;
+    int currentHealth, currentShield;
     //BattleMenu battleMenu;
 
     public UnityEvent RecalculateStats; // later it should send integers of players stats to recalculate method on sequencerWEapon
     private bool doesWait = true;
     private int tickTurnCountDown;
     private int howManyTicksWait;
-    public int howManyTicksInTurn = 32;
+    public SequencerUser currentEnemy;
 
     public UnityEvent OnTurnStart, OnTurnEnd;
 
@@ -130,11 +131,18 @@ public class PlayerDamageSequences : MonoBehaviour
             }
         }
     }
-    public void SendSequenceToGlobalSequencer(MemorizedSequence sequence)
+    public void SendSequenceToGlobalSequencer(MemorizedRuneSong sequence)
     {
-        QueueSequence sequenceNew = new QueueSequence();
-        sequenceNew.sequence = sequence.sequence;
+        QueuedRunesong sequenceNew = new QueuedRunesong();
+        sequenceNew = sequence.queueSequence;
         sequenceNew.isEnemy = false;
+        sequenceNew.target = currentEnemy;
+        sequenceNew.runesongStarter = this;
+        for(int i = 0; i < 5; i++)
+        {
+            sequenceNew.parameterIndex[i] = fmodIndexes[i];
+        }
+
         SequencerGlobal.AddNewSequenceToQueue(sequenceNew);
     }
     // Frozen state
