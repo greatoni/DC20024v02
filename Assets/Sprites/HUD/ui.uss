@@ -4,8 +4,7 @@
     padding-right: 4px;
     padding-bottom: 8px;
     padding-left: 4px;
-    height: 24%;
-    max-height: 144px;
+    max-height: 10%;
     background-color: rgb(51, 51, 255);
     border-left-color: rgb(0, 0, 255);
     border-right-color: rgb(0, 0, 255);
@@ -19,6 +18,7 @@
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     flex-direction: row;
+    min-height: 10px;
 }
 
 .healthTotal {
@@ -35,8 +35,8 @@
 
 .portrait {
     background-image: var(--portrait);
-    width: auto;
-    height: 64px;
+    width: 30px;
+    height: 40px;
     margin-right: auto;
     margin-left: auto;
     border-left-color: rgb(0, 0, 255);
@@ -51,8 +51,10 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
-    max-width: 64px;
-    min-width: 40px;
+    max-width: 10%;
+    min-width: 10%;
+    max-height: 100%;
+    min-height: 100%;
 }
 
 .inventory {
@@ -141,26 +143,28 @@
 }
 
 .sequencers {
-    cursor: url('project://database/Assets/Sprites/HUD/4k/pip.png?fileID=2800000&guid=bb5f1aab2bb13a5468f9623d22ede6c9&type=3#pip');
-    background-image: url('project://database/Assets/Sprites/HUD/4k/sequencers.png?fileID=2800000&guid=1959a7824ad8bbb45adcd8c1d9d0b9f5&type=3#sequencers');
+    min-height: 70%;
+    margin-top: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
 }
 
 .sequence {
     flex-grow: 1;
     flex-direction: row;
-    height: 20%;
-    max-height: 20%;
     border-right-width: 1px;
     border-bottom-width: 1px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
     border-left-color: rgb(0, 0, 0);
     border-right-color: rgb(0, 0, 0);
     border-top-color: rgb(0, 0, 0);
     border-bottom-color: rgb(0, 0, 0);
     margin-top: 1px;
+    min-height: 20%;
 }
 
 .sequence-neutral {
@@ -226,46 +230,59 @@
 }
 
 .pip {
-    flex-grow: 1;
-    background-image: url('project://database/Assets/Sprites/HUD/4k/pip_active.png?fileID=2800000&guid=4f443ed7c734fdd409cae7e8a54f4e4f&type=3#pip_active');
-    max-width: 40%;
-    padding-right: 30%;
-    padding-left: 30%;
-    margin-left: 20%;
+    max-width: 50%;
+    max-height: 100%;
+    border-top-width: 8px;
+    border-right-width: 8px;
+    border-bottom-width: 8px;
+    border-left-width: 8px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    width: 24%;
+    height: 96%;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
 }
 
 .hidden {
     display: none;
 }
 
-Label {
-    display: none;
-}
-
 .sequence-commander {
-    flex-grow: 1;
-    flex-direction: row;
+    margin-top: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    font-size: 300%;
 }
 
 .btn {
-    font-size: 12px;
-    width: 20%;
-    height: 15%;
+    min-width: 19%;
 }
 
 .sequence-run {
 }
 
+.sequence-save {
+}
+
+Label {
+    display: none;
+}
+
 #unity-text-input {
-    height: 20%;
-    max-height: 24px;
 }
 
 .runesong-alias {
-    width: 51%;
-}
-
-.sequence-save {
+    min-width: 60%;
 }
 
 .library {
