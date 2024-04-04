@@ -5,7 +5,7 @@ using UnityEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static PlayerCharacter;
+// using static PlayerCharacter;
 using QuerySelector;
 
 /*
@@ -67,6 +67,20 @@ Label
 
 namespace HeadsUpDisplay
 {
+    public class PlayerCharacter
+ // Stub for player character class to be implemented later
+    {
+        public int HPMax = 0;
+        public int runeMaxCapacity = 0;
+
+        private int HP = 0;
+
+        public int GetHP()
+        {
+            return HP;
+        }
+    }
+
     public class HUD : MonoBehaviour
     /*
     @namespace HUD
