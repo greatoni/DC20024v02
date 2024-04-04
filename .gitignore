@@ -79,9 +79,6 @@ crashlytics-build.properties
 # Jade's modules
 DC2024.code-workspace
 
-# manifest conflict
-Packages/packages-lock.json
-
 # vscode
 .vsconfig
 .vscode/
