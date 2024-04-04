@@ -15,6 +15,7 @@ public class SequencerUser : MonoBehaviour
     int health, shield, speed;
     int burnTimes, burnAmount;
     int frozenTimes, frozenAmount;
+    int regenerationTimes, regenerationAmount;
 
     public UnityEvent<SequencerUser> SendUser;
 
@@ -123,19 +124,41 @@ public class SequencerUser : MonoBehaviour
     public void SetFrozenState(int amount, int times)
     {
         frozenTimes = times;
-        frozenAmount = speed - amount;
+        frozenAmount = speed + amount;
     }
     public void FrozenState()
     {
         if (frozenTimes > 0)
         {
-            print("frozen");
             speed = frozenAmount;
             frozenTimes--;
+
             //UI update
             if (frozenTimes <= 0)
             {
                 speed = speedMax;
+                //UI update turn off burn state
+            }
+        }
+    }
+
+
+    ///Regeneration state
+    ///
+    public void SetRegenerationState(int amount, int times)
+    {
+        regenerationTimes = times;
+        regenerationAmount = amount;
+    }
+    public void RegenerationState()
+    {
+        if (regenerationTimes > 0)
+        {
+            health += regenerationAmount;
+            regenerationTimes--;
+            //UI update
+            if (regenerationTimes <= 0)
+            {
                 //UI update turn off burn state
             }
         }

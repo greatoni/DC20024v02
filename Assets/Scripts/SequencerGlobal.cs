@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using FMOD.Studio;
 
@@ -20,6 +21,9 @@ public class SequencerGlobal : MonoBehaviour
     //int evenCounter = 0;
     bool battleMusicOn = false;
     public TextMeshProUGUI message, comboMessage;
+    public float turnDelayTime = 1;
+
+    public UnityEvent counterTurnEvent;
 
     private void Start()
     {
@@ -52,7 +56,9 @@ public class SequencerGlobal : MonoBehaviour
             print("start battle music");
             detectBeat.StartBattleMusic(battlemusic[Random.Range(0, battlemusic.Length - 1)]);
             exploreMusicInstance.setParameterByName("EndMusic", 1);
+            
             battleMusicOn = true;
+            StartCoroutine(CounterTurns());
         }
     }
 
@@ -193,27 +199,42 @@ public class SequencerGlobal : MonoBehaviour
         if(evenCounter == 10000) { evenCounter = 0; }*/
     }
 
-
     void OnFinishRuneSong(QueuedRunesong q)
     {
+
         /// Count for target Burn State and Cleansing
         /// 
-        int fireRand = Random.Range(0, 100);
-        if (fireRand < q.occupiedRuneSlotsinRow[Elements.Fire] * 10)
+        if (q.occupiedRuneSlotsinRow[Elements.Fire] > 0)
         {
-            print("BURN !!! " + q.target);
-            q.target.SetBurnState(q.occupiedRuneSlotsinRow[Elements.Fire] *(int)(q.runesongPattern[Elements.Fire].rowBaseDamage*0.5f), 5);
+            int fireRand = Random.Range(0, 100);
+            if (fireRand < q.occupiedRuneSlotsinRow[Elements.Fire] * 10)
+            {
+                print("BURN !!! " + q.target);
+                q.target.SetBurnState(q.occupiedRuneSlotsinRow[Elements.Fire] * (int)(q.runesongPattern[Elements.Fire].rowBaseDamage * 0.5f), 5);
+            }
+            fireRand = Random.Range(0, 100);
+            if (fireRand < q.occupiedRuneSlotsinRow[Elements.Fire] * 10)
+            {
+                q.runesongStarter.Cleansing();
+            }
         }
-        fireRand = Random.Range(0, 100);
-        if (fireRand < q.occupiedRuneSlotsinRow[Elements.Fire] * 10)
+
+        ///
+        /// Ice States 
+        /// 
+
+        if (q.occupiedRuneSlotsinRow[Elements.Ice] > 0)
         {
-            q.runesongStarter.Cleansing();
+            q.target.SetFrozenState(q.occupiedRuneSlotsinRow[Elements.Ice] * 2, 5);
+            q.runesongStarter.SetRegenerationState(q.occupiedRuneSlotsinRow[Elements.Ice]*5, 5); //one point for rune is small number
         }
+
     }
 
     void FinishBattle(EnemyDamageSequences enemy)
     {
         detectBeat.OnMarkerPress.RemoveListener(enemy.CustomUpdateFromMusicTick);
+        StopCoroutine(CounterTurns());
     }
 
 
@@ -264,6 +285,22 @@ public class SequencerGlobal : MonoBehaviour
         comboMessage.text = "";
 
     }
+
+    IEnumerator CounterTurns()
+    {
+        while (battleMusicOn)
+        {
+            counterTurnEvent.Invoke();
+            yield return new WaitForSeconds(turnDelayTime);
+        }
+
+    }
+
+    private void OnDestroy()
+    {
+        counterTurnEvent.RemoveAllListeners();
+    }
+
 }
 
 public class QueuedRunesong

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyDamageSequences : SequencerUser
 {
@@ -12,26 +13,29 @@ public class EnemyDamageSequences : SequencerUser
     private int howManyTicksWait;
     private int tickTurnCountDown;
 
+    public TextMeshProUGUI counterTurnsText;
+
     private void Start()
     {
-        howManyTicksWait = howManyTicksInTurn - speedMax;
+        tickTurnCountDown = speedMax;
     }
 
     public void CustomUpdateFromMusicTick(string marker) //Turn based actions
     {
+        counterTurnsText.text = tickTurnCountDown.ToString();
+
         if (doesWait)
         {
             tickTurnCountDown--;
             //Update progress bar for waiting
+
             if (tickTurnCountDown <= 0)
             {
                 doesWait = false;
-                //RecalculateSpeed();
                 tickTurnCountDown = howManyTicksInTurn;
                 //OnTurnStart.Invoke();
-                enemyFakeInputDelay = Random.Range(0, howManyTicksWait - 1);
+                enemyFakeInputDelay = Random.Range(0, speedMax - 1);
                 ReceiveStartTurn();
-                
             }
         }
         if (!doesWait)
@@ -40,13 +44,10 @@ public class EnemyDamageSequences : SequencerUser
             // if enemy random choice from memorizedSequences 
 
             tickTurnCountDown--;
-
-                //print("send pattern to global");
                 if (tickTurnCountDown == enemyFakeInputDelay)
                 {
                     SendSequenceToGlobalSequencer(memorySlotSequence[0]);
-                    //RecalculateSpeed();
-                    tickTurnCountDown = howManyTicksWait;
+                    tickTurnCountDown = speedMax;
                     doesWait = true;
                 }
             
@@ -54,8 +55,7 @@ public class EnemyDamageSequences : SequencerUser
             if (tickTurnCountDown <= 0)
             {
                 doesWait = true;
-                //RecalculateSpeed();
-                tickTurnCountDown = howManyTicksWait;
+                tickTurnCountDown = speedMax;
             }
         }
     }
