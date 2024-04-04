@@ -206,7 +206,6 @@
 }
 
 .interval_3 {
-    flex-grow: 1;
 }
 
 .interval_4 {

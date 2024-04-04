@@ -12,6 +12,59 @@ using QuerySelector;
 *//*
 */
 
+/*
+.top
+.healthTotal
+.healthCurrent
+.portrait
+.inventory
+.slot
+.slot-selected
+.slot1
+    // background-image: var(--slot1)
+.slot2
+    // background-image: var(--slot2)
+.slot3
+    // background-image: var(--slot3)
+.slot4
+    // background-image: var(--slot4)
+.slot5
+    // background-image: var(--slot5)
+.slot6
+    // background-image: var(--slot6)
+.bottom
+.sequence-input
+.sequencers
+.sequence
+.sequence-neutral
+.sequence-fire
+.sequence-ice
+.sequence-earth
+.sequence-air
+.interval
+.fret
+.interval_1
+.interval_2
+.interval_3
+.interval_4
+.interval_5
+.interval_6
+.interval_7
+.interval_8
+.pip
+.hidden
+.sequence-commander
+.btn
+.sequence-run
+.sequence-save
+Label
+#unity-text-input
+.runesong-alias
+.library
+.catalog
+
+*/
+
 namespace HeadsUpDisplay
 {
     public class HUD : MonoBehaviour
@@ -27,11 +80,20 @@ namespace HeadsUpDisplay
         readonly VisualElement inventory;
         readonly VisualElement sequencer;
         readonly VisualElement library;
+        readonly PlayerCharacter player;
+
+        Dictionary<string, int> attributes = new();
+
         public HUD()
         {
             QSelector = new QSelector(GetComponent<UIDocument>());
-            totalHealth = QSelector.First(".health-total");
-            totalHealth = QSelector.First(".health-current");
+            totalHealth = QSelector.First(".healthTotal");
+            totalHealth = QSelector.First(".healthCurrent");
+            inventory = QSelector.First(".inventory");
+            sequencer = QSelector.First(".sequence-input");
+            library = QSelector.First(".library");
+
+            player = GetComponent<PlayerCharacter>();
         }
 
         /*
@@ -80,6 +142,22 @@ namespace HeadsUpDisplay
         .library
         .catalog
         */
+        
+        // Start is called before the first frame update
+        void Start()
+        {
+            attributes.Add("HealthTotal", player.HPMax);
+            attributes.Add("HealthCurrent", player.HPMax);
+            attributes.Add("RuneTotal", player.runeMaxCapacity);
+            attributes.Add("RuneCurrent", player.runeMaxCapacity);
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            attributes["HealthCurrent"] = player.getHP();
+        }
+        
         public class HealthMeter 
         {
             
