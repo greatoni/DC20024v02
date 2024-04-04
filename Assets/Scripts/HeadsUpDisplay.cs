@@ -155,7 +155,7 @@ namespace HeadsUpDisplay
         // Update is called once per frame
         void Update()
         {
-            attributes["HealthCurrent"] = player.getHP();
+            attributes["HealthCurrent"] = player.GetHP();
         }
         
         public class HealthMeter 
