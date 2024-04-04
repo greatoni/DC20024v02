@@ -75,8 +75,7 @@ namespace HeadsUpDisplay
     */
     {
         readonly QSelector QSelector;
-        readonly VisualElement totalHealth;
-        readonly VisualElement currentHealth;
+        readonly HealthMeter health;
         readonly VisualElement inventory;
         readonly VisualElement sequencer;
         readonly VisualElement library;
@@ -87,8 +86,7 @@ namespace HeadsUpDisplay
         public HUD()
         {
             QSelector = new QSelector(GetComponent<UIDocument>());
-            totalHealth = QSelector.First(".healthTotal");
-            totalHealth = QSelector.First(".healthCurrent");
+            health = new HealthMeter(QSelector.First(".health-total"));
             inventory = QSelector.First(".inventory");
             sequencer = QSelector.First(".sequence-input");
             library = QSelector.First(".library");
@@ -156,11 +154,27 @@ namespace HeadsUpDisplay
         void Update()
         {
             attributes["HealthCurrent"] = player.GetHP();
+
         }
         
         public class HealthMeter 
         {
-            
+            VisualElement healthTotal;
+            VisualElement healthCurrent;
+
+            public HealthMeter(VisualElement healthTotal)
+            {
+                this.healthTotal = healthTotal;
+                this.healthCurrent = healthTotal.Q(".health-current");
+            }
+
+            void Update(int healthCurrent, int healthTotal)
+            {
+                int width = 100 * healthCurrent / healthTotal;
+
+                this.healthCurrent.style.width = width;
+            }
+
         }
 
         public class Inventory
