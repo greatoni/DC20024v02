@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Sprites/HUD/ui.uss?fileID=7433441132597879392&amp;guid=6801f9bb72574da419890ed682e611b9&amp;type=3#ui" />
-    <ui:VisualElement name="Top" class="top" style="top: 0; position: absolute; flex-direction: row; width: 100%; max-height: 64px; height: 10%;">
+    <ui:VisualElement name="Top" class="top">
         <ui:VisualElement name="healthTotal" class="healthTotal" style="flex-grow: 1;">
             <ui:VisualElement name="healthCurrent" class="healthCurrent" style="flex-grow: 1;" />
         </ui:VisualElement>
@@ -185,10 +185,10 @@
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="SequenceCommander" class="sequence-commander" style="max-height: 24px;">
-                <ui:Button text="Execute" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SequenceRun" tooltip="Click to use this sequence" class="sequence-run btn" />
+            <ui:VisualElement name="SequenceCommander" class="sequence-commander" style="max-height: 15%; flex-direction: row; min-height: 15%;">
+                <ui:Button text="Execute" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SequenceRun" tooltip="Click to use this sequence" class="btn" />
                 <ui:TextField picking-mode="Ignore" label="Runesong Alias" value="Runesong Alias" name="Runesong-Alias" class="runesong-alias" />
-                <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SequenceSave" tooltip="Click to use this sequence" class="sequence-save btn" />
+                <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SequenceSave" tooltip="Click to use this sequence" class="btn" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Library" class="library" style="flex-grow: 1;">
