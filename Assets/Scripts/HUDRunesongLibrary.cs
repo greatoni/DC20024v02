@@ -5,9 +5,8 @@ using UnityEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.Events;
 using static PlayerCharacter;
-using UnityEditor.UIElements;
+using QuerySelector;
 
 /*
 *//*
@@ -15,32 +14,25 @@ using UnityEditor.UIElements;
 
 namespace HeadsUpDisplay
 {
-    public class HUD
+    public class HUD : MonoBehaviour
     /*
     @namespace HUD
     @accessor namespace HUD
         using HUD;
     */
     {
-        static readonly PlayerCharacter playerCharacter;
-
+        readonly QSelector QSelector;
+        readonly VisualElement totalHealth;
+        readonly VisualElement currentHealth;
+        readonly VisualElement inventory;
+        readonly VisualElement sequencer;
+        readonly VisualElement library;
         public HUD()
         {
-            
+            QSelector = new QSelector(GetComponent<UIDocument>());
+            totalHealth = QSelector.First(".health-total");
+            totalHealth = QSelector.First(".health-current");
         }
-
-        // List<VisualElement> ClassSelector(string selector)
-        // {
-        //     List<VisualElement> elements = new List<VisualElement>();
-
-        //     return elements;
-        // }
-
-        // VisualElement QuerySelectorSingle(string selector)
-        // {
-        //     VisualElement element = new();
-        //     return element;
-        // }
 
         /*
         HUD SELECTORS
@@ -282,7 +274,7 @@ namespace HeadsUpDisplay
             }
         }
 
-        public class HUDSequencer : MonoBehaviour
+        public class Sequencer : MonoBehaviour
         {
 
             /*** The Runesong the corresponds to the sequencer on the HUD ***/
