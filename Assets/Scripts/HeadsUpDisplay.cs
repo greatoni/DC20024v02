@@ -5,7 +5,7 @@ using UnityEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static PlayerCharacter;
+// using static PlayerCharacter;
 using QuerySelector;
 
 /*
@@ -74,6 +74,18 @@ namespace HeadsUpDisplay
         using HUD;
     */
     {
+        public class PlayerCharacter
+        {
+            public int HPMax = 0;
+            public int runeMaxCapacity = 0;
+            private int HP = 0;
+
+            public int GetHP()
+            {
+                return this.HP;
+            }
+        }
+
         readonly QSelector QSelector;
         readonly HealthMeter health;
         readonly VisualElement inventory;
