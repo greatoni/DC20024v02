@@ -5,8 +5,7 @@ using UnityEngine;
 public class gameManager : MonoBehaviour
 {
     public static gameManager gm;
-
-    public PlayerCharacter pc;
+    public static bool newGame = true; // newGame became false if autosave have been made
 
     public level1Concierge levelConcierge;
 
@@ -24,7 +23,6 @@ public class gameManager : MonoBehaviour
         }
 
         levelConcierge = GetComponentInChildren<level1Concierge>();
-        pc = GetComponent<PlayerCharacter>();
     }
 
     // Start is called before the first frame update

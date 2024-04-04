@@ -77,8 +77,8 @@ crashlytics-build.properties
 *.lnk
 
 # Jade's modules
-DC2024.code-workspace
+sh/
+.gitmodules
 
 # vscode
-.vsconfig
 .vscode/
