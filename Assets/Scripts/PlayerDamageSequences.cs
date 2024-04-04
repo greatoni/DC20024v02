@@ -8,11 +8,8 @@ public class PlayerDamageSequences : SequencerUser
 {
 
     public SequencerGlobal SequencerGlobal;
-    
-
     public MemorizedRuneSong[] memorizedRuneSong;
 
-    int burn = 0, burnAmount = 0, frozen = 0, frozenAmount = 0, erosion = 0;
     //BattleMenu battleMenu;
 
     public UnityEvent RecalculateStats; // later it should send integers of players stats to recalculate method on sequencerWEapon
@@ -42,6 +39,7 @@ public class PlayerDamageSequences : SequencerUser
                 //RecalculateSpeed();
                 tickTurnCountDown = howManyTicksInTurn;
                 OnTurnStart.Invoke();
+                ReceiveStartTurn();
             }
         }
         if (!doesWait)
@@ -66,6 +64,7 @@ public class PlayerDamageSequences : SequencerUser
     {
         // If damage only at turn start
         BurnState();
+        FrozenState();
     }
 
     public void ReceiveTick()
@@ -77,25 +76,9 @@ public class PlayerDamageSequences : SequencerUser
     }
 
     // method of calculation of chord damage
-    public void SetBurnState(int amount, int times)
-    {
-        burn = times;
-        burnAmount = amount;
-    }
 
-    void BurnState()
-    {
-        if (burn > 0)
-        {
-            healthMax -= burnAmount;
-            burn--;
-            //UI update
-            if (burn <= 0)
-            {
-                //UI update turn off burn state
-            }
-        }
-    }
+
+
     public void SendSequenceToGlobalSequencer(MemorizedRuneSong sequence)
     {
         QueuedRunesong sequenceNew = new QueuedRunesong();

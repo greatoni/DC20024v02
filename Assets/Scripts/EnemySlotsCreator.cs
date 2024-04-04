@@ -18,10 +18,12 @@ public class EnemySlotsCreator : MonoBehaviour
         for(int i = 0; i < acolytes.Length; i++)
         {
             acolytes[i].WriteToSequence(ConvertEnemySequenceToSequence(acolytesBool[i]).runesongPattern);
+            acolytes[i].CountIntervals();
         }
         for (int i = 0; i < spirits.Length; i++)
         {
             spirits[i].WriteToSequence(ConvertEnemySequenceToSequence(spiritsBool[i]).runesongPattern);
+            spirits[i].CountIntervals();
         }
     }
 

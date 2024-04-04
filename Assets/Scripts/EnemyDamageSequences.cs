@@ -30,6 +30,8 @@ public class EnemyDamageSequences : SequencerUser
                 tickTurnCountDown = howManyTicksInTurn;
                 //OnTurnStart.Invoke();
                 enemyFakeInputDelay = Random.Range(0, howManyTicksWait - 1);
+                ReceiveStartTurn();
+                
             }
         }
         if (!doesWait)
@@ -58,6 +60,13 @@ public class EnemyDamageSequences : SequencerUser
         }
     }
 
+
+    public void ReceiveStartTurn()
+    {
+        // If damage only at turn start
+        BurnState();
+        FrozenState();
+    }
     public void SendEnemyToGlobal()
     {
         //sequencerGlobal.AddListenerToDetectBeat(this);

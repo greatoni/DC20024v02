@@ -17,7 +17,7 @@ public class SequencerGlobal : MonoBehaviour
     Dictionary<QueuedRunesong, List<Elements>> hitList = new Dictionary<QueuedRunesong, List<Elements>>();
     public FMODUnity.EventReference[] battlemusic, sfx, combo;
     private EventInstance exploreMusicInstance, elementSfx, comboSFX;
-    int evenCounter = 0;
+    //int evenCounter = 0;
     bool battleMusicOn = false;
     public TextMeshProUGUI message, comboMessage;
 
@@ -68,16 +68,21 @@ public class SequencerGlobal : MonoBehaviour
         //Check for enemy and players enemies
         foreach (QueuedRunesong r in savedSongsForNextStep)
         {
-            if (hitList[r].Contains(Elements.Air) && hitList[r].Contains(Elements.Ice))
+/*            if (hitList[r].Contains(Elements.Air) && hitList[r].Contains(Elements.Ice))
             {
                 //PlayCombo(combo[0]);
+               
                 StartCoroutine(PrintTextCombo(Elements.Air, Elements.Ice));
-            }
+            }*/
             foreach (Elements e in hitList[r])
             {
                 /*                if (r.isEnemy) { print("player damaged"); }
                                 else { print("enemy damaged"); }
                                 print(e + " damage " + r.target);*/
+                ////
+                ////This switch statement is alternative to play sfx from fmod 
+                ///
+
                /* switch (e)
                 {
                     case Elements.Neutral:
@@ -96,6 +101,7 @@ public class SequencerGlobal : MonoBehaviour
                         PlayElement(sfx[4]);
                         break;
                 }*/
+
                 StartCoroutine(PrintText(e, r));
             }
             hitList[r].Clear();
@@ -168,7 +174,7 @@ public class SequencerGlobal : MonoBehaviour
                                 break;
                         }
                         detectBeat.SetParameterToInstance(nameParameter, 1);
-                        Debug.Log("Parameter " + nameParameter);
+                        //Debug.Log("Parameter " + nameParameter);
                     }                                                                               
                 }
                 queueCounters[q] = queueCounters[q]+1;
@@ -176,12 +182,33 @@ public class SequencerGlobal : MonoBehaviour
             }
             else
             {
+                print("Sequence finished");
+                //Count possibility of bonus damage
+                OnFinishRuneSong(q);
                 queueCounters.Remove(q);
             }
         }
 
-        evenCounter++;
-        if(evenCounter == 10000) { evenCounter = 0; }
+/*        evenCounter++;
+        if(evenCounter == 10000) { evenCounter = 0; }*/
+    }
+
+
+    void OnFinishRuneSong(QueuedRunesong q)
+    {
+        /// Count for target Burn State and Cleansing
+        /// 
+        int fireRand = Random.Range(0, 100);
+        if (fireRand < q.occupiedRuneSlotsinRow[Elements.Fire] * 10)
+        {
+            print("BURN !!! " + q.target);
+            q.target.SetBurnState(q.occupiedRuneSlotsinRow[Elements.Fire] *(int)(q.runesongPattern[Elements.Fire].rowBaseDamage*0.5f), 5);
+        }
+        fireRand = Random.Range(0, 100);
+        if (fireRand < q.occupiedRuneSlotsinRow[Elements.Fire] * 10)
+        {
+            q.runesongStarter.Cleansing();
+        }
     }
 
     void FinishBattle(EnemyDamageSequences enemy)
@@ -246,7 +273,7 @@ public class QueuedRunesong
     public SequencerUser target;
     public SequencerUser runesongStarter;
     public Dictionary<ChordTypes, int> chordsPresent = new Dictionary<ChordTypes, int>();
-    public Dictionary<Elements, int> emptyRuneSlotsinRow = new Dictionary<Elements, int>();
+    public Dictionary<Elements, int> occupiedRuneSlotsinRow = new Dictionary<Elements, int>();
     public int[] parameterIndex = new int[5];
 
     public void MakeParameterIndexes(int endNumber)
@@ -297,7 +324,7 @@ public class SequenceRow
         }
     }
 
-    public int GetDictioneryCount()
+    public int GetDictionaryCount()
     {
         foreach(int  i in Row.Keys)
         {

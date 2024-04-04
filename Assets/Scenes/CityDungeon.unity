@@ -879,6 +879,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
+      propertyPath: OnStepForward.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
       propertyPath: OnMeetingEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -891,6 +895,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 555462595}
     - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
+      propertyPath: OnStepForward.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 555462594}
+    - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
       propertyPath: OnMeetingEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1071576994}
@@ -900,6 +908,10 @@ PrefabInstance:
       objectReference: {fileID: 1071576994}
     - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
       propertyPath: OnStepForward.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
+      propertyPath: OnStepForward.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
@@ -915,6 +927,10 @@ PrefabInstance:
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
+      propertyPath: OnStepForward.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetFrozenState
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
       propertyPath: OnMeetingEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartBattle
       objectReference: {fileID: 0}
@@ -927,6 +943,10 @@ PrefabInstance:
       value: FMODUnity.StudioEventEmitter, FMODUnity
       objectReference: {fileID: 0}
     - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
+      propertyPath: OnStepForward.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SequencerUser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
       propertyPath: OnMeetingEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SequencerGlobal, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -936,6 +956,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
       propertyPath: OnStepForward.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
+      propertyPath: OnStepForward.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4806292595337936573, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
@@ -2737,24 +2761,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a65a617d065ef244a29803b2876c98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
-  shield: 200
-  speed: 0
-  howManyTicksInTurn: 32
-  fmodIndexes: 0100000002000000030000000400000005000000
-  SendUser:
-    m_PersistentCalls:
-      m_Calls: []
   healthMax: 1000
   shieldMax: 200
   speedMax: 5
+  howManyTicksInTurn: 32
+  fmodIndexes: 0100000002000000030000000400000005000000
   rowsDamageModifier: 0
+  SendUser:
+    m_PersistentCalls:
+      m_Calls: []
   SequencerGlobal: {fileID: 1071576994}
   memorizedRuneSong: []
   RecalculateStats:
     m_PersistentCalls:
       m_Calls: []
-  currentEnemy: {fileID: 0}
+  currentEnemy: {fileID: 2090439029}
   OnTurnStart:
     m_PersistentCalls:
       m_Calls: []
@@ -3038,7 +3059,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f16e4fc11c3c0c745b9575832cb9669a, type: 2}
   acolytesBool:
   - Neutral: 0100000001000100
-    Fire: 0000000000000000
+    Fire: 0100000100000000
     Ice: 0000000000000000
     Earth: 0000000000000000
     Air: 0000000000000000
@@ -5131,11 +5152,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff55bfaf74a1cd4da180db56589d561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
-  shield: 200
-  speed: 8
+  healthMax: 1000
+  shieldMax: 200
+  speedMax: 6
   howManyTicksInTurn: 16
   fmodIndexes: 0b0000000c0000000d0000000e0000000f000000
+  rowsDamageModifier: 0
   SendUser:
     m_PersistentCalls:
       m_Calls: []
@@ -11893,11 +11915,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff55bfaf74a1cd4da180db56589d561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
-  shield: 200
-  speed: 8
+  healthMax: 1000
+  shieldMax: 200
+  speedMax: 6
   howManyTicksInTurn: 16
   fmodIndexes: 060000000700000008000000090000000a000000
+  rowsDamageModifier: 0
   SendUser:
     m_PersistentCalls:
       m_Calls: []
