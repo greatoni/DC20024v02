@@ -9,23 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 091b576de66483742a53122ff91d6513, type: 3}
+  m_Script: {fileID: 11500000, guid: 52b974f88b0a820479c0c768744a977d, type: 3}
   m_Name: Spirit01
   m_EditorClassIdentifier: 
-  sequence:
-  - rowEffect: 0
-    rowLevel: 1
-    rowBaseDamage: 10
-  - rowEffect: 0
-    rowLevel: 1
-    rowBaseDamage: 10
-  - rowEffect: 0
-    rowLevel: 1
-    rowBaseDamage: 10
-  - rowEffect: 0
-    rowLevel: 1
-    rowBaseDamage: 10
-  - rowEffect: 0
-    rowLevel: 1
-    rowBaseDamage: 10
   numberCellsInSequence: 16

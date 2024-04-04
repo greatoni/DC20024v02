@@ -12,7 +12,7 @@ public enum SequenceType {
     Earth,
     Air
 }
-
+/*
 public class Sequence : Dictionary<int,bool> {
     public SequenceType type;
     private readonly SequenceType _type = SequenceType.Neutral;
@@ -79,28 +79,17 @@ public class RunesongLibrary : MonoBehaviour
         library.Add(runesong.GetAlias(), runesong);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
-}
+}*/
 
 
 public class HUD : EditorWindow
 
     {
-        void OnGUI () {
-            // The actual window code goes here
-            var hud = 
-           }
-    }
+      void OnGUI () {
+          // The actual window code goes here
+         // var hud = 
+         }
+}
 
