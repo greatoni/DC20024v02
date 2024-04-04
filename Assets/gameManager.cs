@@ -5,7 +5,7 @@ using UnityEngine;
 public class gameManager : MonoBehaviour
 {
     public static gameManager gm;
-
+    public static bool newGame = true; // newGame became false if autosave have been made
 
     public level1Concierge levelConcierge;
 

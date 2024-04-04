@@ -26,7 +26,7 @@ public class runePillar : MonoBehaviour
 
             if (pillarCollider.Raycast(ray, out hit, distanceToPillar))
             {
-                pc.RefillAllValues();
+                //pc.RefillAllValues();
             }
 
         }

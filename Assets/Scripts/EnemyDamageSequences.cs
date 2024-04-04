@@ -6,7 +6,7 @@ public class EnemyDamageSequences : SequencerUser
 {
     public MemorizedRuneSong[] memorySlotSequence;
     public SequencerGlobal sequencerGlobal;
-    public SequencerUser player;
+    public SequencerUser player; // for testing
     private bool doesWait = true;
     private int enemyFakeInputDelay;
     private int howManyTicksWait;
@@ -14,8 +14,7 @@ public class EnemyDamageSequences : SequencerUser
 
     private void Start()
     {
-
-        howManyTicksWait = howManyTicksInTurn - speed;
+        howManyTicksWait = howManyTicksInTurn - speedMax;
     }
 
     public void CustomUpdateFromMusicTick(string marker) //Turn based actions
