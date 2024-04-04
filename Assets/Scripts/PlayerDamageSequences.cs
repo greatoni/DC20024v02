@@ -68,6 +68,11 @@ public class PlayerDamageSequences : SequencerUser
         }
     } 
 
+
+    public void RefillAllValues()
+    {
+
+    }
     public int GetCurrentHealth()
     {
         return currentHealth;
