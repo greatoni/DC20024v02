@@ -10,6 +10,9 @@ public class customLever : MonoBehaviour
     public Collider leverCollider;
     public float distanceToLever = 5.0f;
 
+    public Camera cutsceneCam;
+    public Animator BridgeAnim;
+
     private Camera cam;
 
     // Start is called before the first frame update
@@ -33,11 +36,14 @@ public class customLever : MonoBehaviour
                 {
                     gameManager.gm.levelConcierge.switchBool("DrawbridgeActivated", true);
                     gameObject.GetComponent<SpriteRenderer>().sprite = leverDown;
+
+                    BridgeAnim.SetBool("LeverDown", true);
                 }
                 else
                 {
                     gameManager.gm.levelConcierge.switchBool("DrawbridgeActivated", false);
                     gameObject.GetComponent<SpriteRenderer>().sprite = leverUp;
+                    BridgeAnim.SetBool("LeverDown", false);
                 }
 
             }
