@@ -956,7 +956,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4806292596414026188, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
       insertIndex: 0
-      addedObject: {fileID: 341123635}
+      addedObject: {fileID: 3685546961818231673}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4806292595337936574, guid: 0ef26db73bf2483428e98977ed85b4b9, type: 3}
       insertIndex: 3
@@ -1768,10 +1768,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
-    - target: {fileID: 1509108368648169460, guid: abd0b9dee7d9b1e40b5ff484ce15bb1a, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3685546961486152011, guid: abd0b9dee7d9b1e40b5ff484ce15bb1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1817,11 +1813,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abd0b9dee7d9b1e40b5ff484ce15bb1a, type: 3}
---- !u!4 &341123635 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3685546961486152011, guid: abd0b9dee7d9b1e40b5ff484ce15bb1a, type: 3}
-  m_PrefabInstance: {fileID: 341123634}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &385447474
 GameObject:
   m_ObjectHideFlags: 0
@@ -11547,6 +11538,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f66134cc84a0ee4ca549691d48d648f, type: 3}
+--- !u!4 &3685546961818231673 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3685546961486152011, guid: abd0b9dee7d9b1e40b5ff484ce15bb1a, type: 3}
+  m_PrefabInstance: {fileID: 341123634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8932533922063090437
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3685546961486152011}
   - component: {fileID: 6735527940345221861}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
