@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="11health" src="project://database/Assets/UI/HUD/11health.uxml?fileID=9197481963319205126&amp;guid=e67d1239476daa14292f0ced52a7248a&amp;type=3#11health" />
+    <ui:Template name="12portrait" src="project://database/Assets/UI/HUD/12portrait.uxml?fileID=9197481963319205126&amp;guid=e53ce00c9cc1b8646be81a68781df32a&amp;type=3#12portrait" />
+    <ui:Template name="13inventory" src="project://database/Assets/UI/HUD/13inventory.uxml?fileID=9197481963319205126&amp;guid=fe694ece44387254e8eec45edaccaebd&amp;type=3#13inventory" />
+    <ui:Template name="21sequencer" src="project://database/Assets/UI/HUD/21sequencer.uxml?fileID=9197481963319205126&amp;guid=4f089ff2e9bda2744913253877dae443&amp;type=3#21sequencer" />
+    <ui:Template name="22library" src="project://database/Assets/UI/HUD/22library.uxml?fileID=9197481963319205126&amp;guid=4508cbe2826aebd4689d6a1c67f6e809&amp;type=3#22library" />
+    <Style src="project://database/Assets/UI/HUD/hud.uss?fileID=7433441132597879392&amp;guid=6801f9bb72574da419890ed682e611b9&amp;type=3#hud" />
+    <ui:VisualElement name="top" class="top" style="flex-grow: 1; max-width: 100%;">
+        <ui:Instance template="11health" name="11health" class="third" />
+        <ui:Instance template="12portrait" name="12portrait" class="third" />
+        <ui:Instance template="13inventory" name="13inventory" class="third" />
+    </ui:VisualElement>
+    <ui:VisualElement name="bottom" class="bottom" style="flex-grow: 1;">
+        <ui:Instance template="21sequencer" name="21sequencer" class="third" style="width: 33%;" />
+        <ui:Instance template="22library" name="22library" class="third library" />
+    </ui:VisualElement>
+</ui:UXML>

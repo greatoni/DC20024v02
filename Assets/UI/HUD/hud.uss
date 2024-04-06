@@ -1,10 +1,16 @@
+.third {
+    width: auto;
+    min-width: 33%;
+    max-width: 33%;
+    height: 100%;
+}
+
 .top {
     flex-grow: 1;
     padding-top: 4px;
     padding-right: 4px;
     padding-bottom: 8px;
     padding-left: 4px;
-    max-height: 10%;
     background-color: rgb(51, 51, 255);
     border-left-color: rgb(0, 0, 255);
     border-right-color: rgb(0, 0, 255);
@@ -18,14 +24,15 @@
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     flex-direction: row;
-    min-height: 10px;
     border-top-width: 4px;
+    height: 10%;
+    max-height: 10%;
 }
 
 .healthTotal {
     flex-grow: 1;
     background-image: url('project://database/Assets/Sprites/HUD/4k/healthTotal.png?fileID=2800000&guid=275b46d50af759b47832d9568eaba257&type=3#healthTotal');
-    max-width: 33%;
+    width: 100%;
 }
 
 .healthCurrent {
@@ -138,11 +145,9 @@
 
 .sequence-input {
     flex-grow: 1;
-    max-width: 33%;
 }
 
 .sequencers {
-    min-height: 75%;
 }
 
 .sequence {
@@ -158,8 +163,8 @@
     border-right-color: rgb(0, 0, 0);
     border-top-color: rgb(0, 0, 0);
     border-bottom-color: rgb(0, 0, 0);
-    margin-top: 1px;
-    min-height: 20%;
+    min-height: 17%;
+    margin-bottom: 1%;
 }
 
 .sequence-neutral {
@@ -173,10 +178,6 @@
 .sequence-ice {
     flex-grow: 1;
     flex-direction: row;
-    margin-top: 1px;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
     background-color: rgb(0, 0, 255);
 }
 
@@ -224,8 +225,7 @@
 }
 
 .pip {
-    max-width: 50%;
-    max-height: 100%;
+    max-width: 25%;
     border-top-width: 8px;
     border-right-width: 8px;
     border-bottom-width: 8px;
@@ -234,16 +234,20 @@
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
     border-bottom-left-radius: 16px;
-    margin-top: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    width: 24%;
-    height: 96%;
+    width: 25%;
     border-left-color: rgb(0, 0, 0);
     border-right-color: rgb(0, 0, 0);
     border-top-color: rgb(0, 0, 0);
     border-bottom-color: rgb(0, 0, 0);
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 2px;
+    max-height: 90%;
+    height: 90%;
+    min-height: 90%;
 }
 
 .hidden {
@@ -251,12 +255,11 @@
 }
 
 .sequence-commander {
-    margin-top: auto;
-    margin-right: auto;
-    margin-bottom: 2.5%;
-    margin-left: auto;
     font-size: 125%;
     width: 100%;
+    height: 20%;
+    min-height: 20%;
+    margin-top: 3%;
 }
 
 .btn {
@@ -264,9 +267,15 @@
 }
 
 .sequence-run {
+    min-width: 70%;
+    margin-right: 3%;
+    margin-left: 0;
 }
 
 .sequence-save {
+    min-width: 25%;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 Label {
