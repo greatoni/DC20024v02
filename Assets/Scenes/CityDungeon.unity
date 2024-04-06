@@ -2897,7 +2897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthMax: 1000
   shieldMax: 200
-  speedMax: 5
+  speedMax: 50
   howManyTicksInTurn: 32
   fmodIndexes: 0100000002000000030000000400000005000000
   rowsDamageModifier: 0

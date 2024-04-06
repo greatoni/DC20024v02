@@ -16,6 +16,7 @@ public class SequencerUser : MonoBehaviour
     int burnTimes, burnAmount;
     int frozenTimes, frozenAmount;
     int regenerationTimes, regenerationAmount;
+    int erosionTimes, erosionAmount;
 
     public UnityEvent<SequencerUser> SendUser;
 
@@ -35,8 +36,7 @@ public class SequencerUser : MonoBehaviour
         }
     }
 
-    public void SetMainCharacterStatsFromSave(
-                                                int healthSaved, 
+    public void SetMainCharacterStatsFromSave(  int healthSaved, 
                                                 int shieldSaved, 
                                                 int speedSaved)
     {
@@ -48,16 +48,16 @@ public class SequencerUser : MonoBehaviour
 
     public int DamageHealth(int amount)
     {
-        if (shield > 0)
-        {
-           amount = amount - DamageShield(amount);
-        }
 
-        shield = Mathf.Clamp(shield, 0, shieldMax);
         if (amount > 0)
         {
-            health -= amount;
-            health = Mathf.Clamp(health, 0, healthMax);
+            int passShield = shield - amount;
+            
+            if (passShield < 0)
+            {
+                health += passShield;
+                health = Mathf.Clamp(health, 0, healthMax);
+            }
         }
         RefreshHUD(); // refresh health bar
         return health;
@@ -66,9 +66,8 @@ public class SequencerUser : MonoBehaviour
     public int DamageShield(int amount)
     {
         shield -= amount;
-
         RefreshHUD(); // refresh shield it needs to clamp to zero in hud
-        //shield = Mathf.Clamp(shield, 0, shieldMax);
+        shield = Mathf.Clamp(shield, 0, shieldMax);
         return shield;
     }
 
@@ -90,7 +89,7 @@ public class SequencerUser : MonoBehaviour
 
     public void ChangeSequencerRowsDamage(int amount)
     {
-        rowsDamageModifier += amount;
+        rowsDamageModifier += amount; //Galvanization and imbalance 
     }
 
     public void RefreshHUD()
@@ -109,9 +108,23 @@ public class SequencerUser : MonoBehaviour
     /// Burn on start of the each turn 
     /// 
 
-    public void Cleansing()
+    public void Cleansing(SequencerUserStates state)
     {
-        SetBurnState(0, 0);
+        switch (state)
+        {
+            case SequencerUserStates.Burn:
+                SetBurnState(0, 0);
+                break;
+            case SequencerUserStates.Frozen:
+                SetFrozenState(0, 0);
+                break;
+            case SequencerUserStates.Erosion:
+                shield = shieldMax;
+                break;
+            case SequencerUserStates.Imbalance:
+                rowsDamageModifier = 0;
+                break;
+        }
         //UI update
     }
 
@@ -181,8 +194,15 @@ public class SequencerUser : MonoBehaviour
         }
     }
 
+}
 
-    ///
-    /// Erosion
-    ///
+
+public enum SequencerUserStates
+{
+    Burn,
+    Frozen,
+    Regeneration,
+    Erosion,
+    Imbalance,
+    Galvanization
 }

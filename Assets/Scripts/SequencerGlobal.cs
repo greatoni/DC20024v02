@@ -215,7 +215,10 @@ public class SequencerGlobal : MonoBehaviour
             fireRand = Random.Range(0, 100);
             if (fireRand < q.occupiedRuneSlotsinRow[Elements.Fire] * 10)
             {
-                q.runesongStarter.Cleansing();
+                q.runesongStarter.Cleansing(SequencerUserStates.Burn);
+                q.runesongStarter.Cleansing(SequencerUserStates.Frozen);
+                q.runesongStarter.Cleansing(SequencerUserStates.Erosion);
+                q.runesongStarter.Cleansing(SequencerUserStates.Imbalance);
             }
         }
 
