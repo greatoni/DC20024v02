@@ -11,7 +11,7 @@
         <ui:Instance template="13inventory" name="13inventory" class="third" />
     </ui:VisualElement>
     <ui:VisualElement name="bottom" class="bottom" style="flex-grow: 1;">
-        <ui:Instance template="21sequencer" name="21sequencer" class="third" style="width: 33%;" />
+        <ui:Instance template="21sequencer" name="21sequencer" class="third" style="flex-grow: 1;" />
         <ui:Instance template="22library" name="22library" class="third library" />
     </ui:VisualElement>
 </ui:UXML>
