@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Sprites/HUD/ui.uss?fileID=7433441132597879392&amp;guid=6801f9bb72574da419890ed682e611b9&amp;type=3#ui" />
+    <ui:VisualElement name="inventory" class="inventory">
+        <ui:VisualElement name="slot1" class="slot slot1 slot-selected" />
+        <ui:VisualElement name="slot2" class="slot slot2" style="flex-grow: 1;" />
+        <ui:VisualElement name="slot3" class="slot slot3" style="flex-grow: 1;" />
+        <ui:VisualElement name="slot4" class="slot slot4" style="flex-grow: 1;" />
+        <ui:VisualElement name="slot5" class="slot slot5" style="flex-grow: 1;" />
+        <ui:VisualElement name="slot6" class="slot slot6" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>
