@@ -46,17 +46,29 @@ public class SequencerUser : MonoBehaviour
     }
 
 
-    public int ChangeHealth(int amount)
+    public int DamageHealth(int amount)
     {
-        health += amount;
-        health = Mathf.Clamp(health, 0, healthMax);
+        if (shield > 0)
+        {
+           amount = amount - DamageShield(amount);
+        }
+
+        shield = Mathf.Clamp(shield, 0, shieldMax);
+        if (amount > 0)
+        {
+            health -= amount;
+            health = Mathf.Clamp(health, 0, healthMax);
+        }
+        RefreshHUD(); // refresh health bar
         return health;
     }
 
-    public int ChangeShield(int amount)
+    public int DamageShield(int amount)
     {
-        shield += amount;
-        shield = Mathf.Clamp(shield, 0, shield);
+        shield -= amount;
+
+        RefreshHUD(); // refresh shield it needs to clamp to zero in hud
+        //shield = Mathf.Clamp(shield, 0, shieldMax);
         return shield;
     }
 
@@ -79,6 +91,11 @@ public class SequencerUser : MonoBehaviour
     public void ChangeSequencerRowsDamage(int amount)
     {
         rowsDamageModifier += amount;
+    }
+
+    public void RefreshHUD()
+    {
+
     }
 
 
@@ -163,4 +180,9 @@ public class SequencerUser : MonoBehaviour
             }
         }
     }
+
+
+    ///
+    /// Erosion
+    ///
 }
