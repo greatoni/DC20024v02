@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class SequencerUser : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class SequencerUser : MonoBehaviour
     int regenerationShieldTimes, regenerationShieldAmount;
     int galvinTimes, galvinAmount;
 
-
+    public TextMeshPro healthBar;
 
     public HashSet<SequencerUserStates> characterStatesList = new HashSet<SequencerUserStates>();
 
@@ -44,6 +45,7 @@ public class SequencerUser : MonoBehaviour
             shield = shieldMax;
             speed = speedMax;
         }
+
     }
 
     public void SetMainCharacterStatsFromSave(  int healthSaved, 
@@ -123,6 +125,8 @@ public class SequencerUser : MonoBehaviour
     public void RefreshHUD()
     {
 
+        if (health > 0 && healthBar!=null) { healthBar.text = health.ToString(); }
+        
     }
 
 
@@ -178,7 +182,6 @@ public class SequencerUser : MonoBehaviour
         }
         //UI update
     }
-
 
     public void SetBurnState(int amount, int times)
     {
@@ -273,8 +276,8 @@ public class SequencerUser : MonoBehaviour
     ///
     public void SetGalvinizationState(int amount, int times)
     {
-        galvinTimes = times;
-        galvinAmount = amount;
+        //galvinTimes = times;
+        //galvinAmount = amount;
     }
     public void GalvinizationState()
     {

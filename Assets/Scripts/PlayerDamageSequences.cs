@@ -22,6 +22,7 @@ public class PlayerDamageSequences : SequencerUser
 
     private void Start()
     {
+        OnNewGameStart();
         death.AddListener(OnPlayerDeath);
     }
 

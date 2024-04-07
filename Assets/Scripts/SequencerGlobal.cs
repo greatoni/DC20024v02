@@ -84,7 +84,7 @@ public class SequencerGlobal : MonoBehaviour
             {
                 r.target.DamageHealth(r.runesongStarter.GetDamageWithModifier(r, e));
 
-
+                print(r.runesongStarter.GetDamageWithModifier(r, e) + " " + e);
 
                 /*                if (r.isEnemy) { print("player damaged"); }
                                 else { print("enemy damaged"); }

@@ -14,11 +14,14 @@ public class EnemyDamageSequences : SequencerUser
 
     public TextMeshProUGUI counterTurnsText;
 
+
     private void Start()
     {
+        OnNewGameStart();
         sequencerGlobal = FindAnyObjectByType<SequencerGlobal>(); 
         death.AddListener(OnEnemyDeath);
         tickTurnCountDown = speedMax;
+        
     }
 
     public void CustomUpdateFromMusicTick() //Turn based actions
