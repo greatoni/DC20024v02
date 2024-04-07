@@ -3066,7 +3066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a65a617d065ef244a29803b2876c98d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthMax: 1000
+  healthMax: 100000
   shieldMax: 200
   speedMax: 50
   howManyTicksInTurn: 32
@@ -3374,7 +3374,7 @@ MonoBehaviour:
     Earth: 0000000000000000
     Air: 0000000000000000
   - Neutral: 0000000000000000
-    Fire: 0000000000000000
+    Fire: 0100000100000000
     Ice: 0000000000000000
     Earth: 0100010001000000
     Air: 0000000000000000
@@ -3384,7 +3384,7 @@ MonoBehaviour:
     Ice: 0100010001000100
     Earth: 0000000000000000
     Air: 0100000001000100
-  baseRowDamage: 0100000001000000010000000100000001000000
+  baseRowDamage: 0500000009000000050000000700000006000000
 --- !u!4 &609158392
 Transform:
   m_ObjectHideFlags: 0

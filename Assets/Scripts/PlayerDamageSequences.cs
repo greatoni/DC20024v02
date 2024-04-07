@@ -66,6 +66,9 @@ public class PlayerDamageSequences : SequencerUser
         // If damage only at turn start
         BurnState();
         FrozenState();
+        GalvinizationState();
+        RegenerationState();
+        RegenerationShieldState();
     }
 
     public void ReceiveTick()

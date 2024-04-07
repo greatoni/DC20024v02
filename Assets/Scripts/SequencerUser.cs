@@ -91,6 +91,7 @@ public class SequencerUser : MonoBehaviour
     {
         shieldModifier = modifier;
         shield += shieldModifier;
+        print("shield now"+shield);
         RefreshHUD(); // Maybe it's good to use events for it
     }
 
@@ -114,6 +115,8 @@ public class SequencerUser : MonoBehaviour
 
     public int GetDamageWithModifier(QueuedRunesong q, Elements e)
     {
+        print("damage modifier" + rowsDamageModifier);
+        if (rowsDamageModifier > q.runesongPattern[e].rowBaseDamage) return 0;
         return q.runesongPattern[e].rowBaseDamage + rowsDamageModifier;
     }
 
@@ -207,6 +210,7 @@ public class SequencerUser : MonoBehaviour
     ///
     public void SetFrozenState(int amount, int times)
     {
+        print("frozen " + amount);
         frozenTimes = times;
         frozenAmount = speed + amount;
     }

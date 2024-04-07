@@ -74,43 +74,12 @@ public class SequencerGlobal : MonoBehaviour
         //Check for enemy and players enemies
         foreach (QueuedRunesong r in savedSongsForNextStep)
         {
-/*            if (hitList[r].Contains(Elements.Air) && hitList[r].Contains(Elements.Ice))
-            {
-                //PlayCombo(combo[0]);
-               
-                StartCoroutine(PrintTextCombo(Elements.Air, Elements.Ice));
-            }*/
+
             foreach (Elements e in hitList[r])
             {
                 r.target.DamageHealth(r.runesongStarter.GetDamageWithModifier(r, e));
 
                 print(r.runesongStarter.GetDamageWithModifier(r, e) + " " + e);
-
-                /*                if (r.isEnemy) { print("player damaged"); }
-                                else { print("enemy damaged"); }
-                                print(e + " damage " + r.target);*/
-                ////
-                ////This switch statement is alternative to play sfx from fmod 
-                ///
-
-               /* switch (e)
-                {
-                    case Elements.Neutral:
-                        PlayElement(sfx[0]);
-                        break;
-                    case Elements.Fire:
-                        PlayElement(sfx[1]);
-                        break;
-                    case Elements.Ice:
-                        PlayElement(sfx[2]);
-                        break;
-                    case Elements.Earth:
-                        PlayElement(sfx[3]);
-                        break;
-                    case Elements.Air:
-                        PlayElement(sfx[4]);
-                        break;
-                }*/
 
                 StartCoroutine(PrintText(e, r));
             }
@@ -213,7 +182,7 @@ public class SequencerGlobal : MonoBehaviour
             int fireRand = Random.Range(0, 100);
             if (fireRand < q.occupiedRuneSlotsinRow[Elements.Fire] * 10)
             {
-                //print("BURN !!! " + q.target);
+                print("BURN !!! " + q.target);
                 q.target.SetBurnState(q.occupiedRuneSlotsinRow[Elements.Fire] * (int)(q.runesongPattern[Elements.Fire].rowBaseDamage * 0.5f), 5);
             }
             fireRand = Random.Range(0, 100);
@@ -233,7 +202,7 @@ public class SequencerGlobal : MonoBehaviour
         if (q.occupiedRuneSlotsinRow[Elements.Ice] > 0)
         {
             q.target.SetFrozenState(q.occupiedRuneSlotsinRow[Elements.Ice] * 2, 5);
-            q.runesongStarter.SetRegenerationState(q.occupiedRuneSlotsinRow[Elements.Ice]*5, 5); //one point for rune is small number
+            q.runesongStarter.SetRegenerationState(q.occupiedRuneSlotsinRow[Elements.Ice] * 5, 5); //one point for rune is small number
         }
 
         ///
@@ -243,6 +212,7 @@ public class SequencerGlobal : MonoBehaviour
 
         if (q.occupiedRuneSlotsinRow[Elements.Earth] > 0)
         {
+            print("Erosion " + q.target);
             q.runesongStarter.SetShieldModifier(q.occupiedRuneSlotsinRow[Elements.Earth]);
             q.target.DamageShield(q.occupiedRuneSlotsinRow[Elements.Earth]);
         }
@@ -316,7 +286,8 @@ public class SequencerGlobal : MonoBehaviour
         if (q.chordsPresent[ChordTypes.IceAir] > 0)
         {
             q.runesongStarter.SetGalvinizationState(q.chordsPresent[ChordTypes.IceAir], 5);
-            q.target.ChangeSequencerRowsDamage(q.target.ReturnStatesPoints(SequencerUserStates.Frozen));
+            print("frozen points " + q.target.ReturnStatesPoints(SequencerUserStates.Frozen));
+            q.target.ChangeSequencerRowsDamage(-q.target.ReturnStatesPoints(SequencerUserStates.Frozen));
         }
 
 
@@ -501,3 +472,38 @@ public enum SequencerUserStates
     Imbalance,
     Galvinization
 }
+
+
+/*            if (hitList[r].Contains(Elements.Air) && hitList[r].Contains(Elements.Ice))
+            {
+                //PlayCombo(combo[0]);
+               
+                StartCoroutine(PrintTextCombo(Elements.Air, Elements.Ice));
+            }*/
+
+
+/*                if (r.isEnemy) { print("player damaged"); }
+                else { print("enemy damaged"); }
+                print(e + " damage " + r.target);*/
+////
+////This switch statement is alternative to play sfx from fmod 
+///
+
+/* switch (e)
+ {
+     case Elements.Neutral:
+         PlayElement(sfx[0]);
+         break;
+     case Elements.Fire:
+         PlayElement(sfx[1]);
+         break;
+     case Elements.Ice:
+         PlayElement(sfx[2]);
+         break;
+     case Elements.Earth:
+         PlayElement(sfx[3]);
+         break;
+     case Elements.Air:
+         PlayElement(sfx[4]);
+         break;
+ }*/
