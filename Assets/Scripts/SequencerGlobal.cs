@@ -82,6 +82,10 @@ public class SequencerGlobal : MonoBehaviour
             }*/
             foreach (Elements e in hitList[r])
             {
+                r.target.DamageHealth(r.runesongStarter.GetDamageWithModifier(r, e));
+
+
+
                 /*                if (r.isEnemy) { print("player damaged"); }
                                 else { print("enemy damaged"); }
                                 print(e + " damage " + r.target);*/
@@ -209,7 +213,7 @@ public class SequencerGlobal : MonoBehaviour
             int fireRand = Random.Range(0, 100);
             if (fireRand < q.occupiedRuneSlotsinRow[Elements.Fire] * 10)
             {
-                print("BURN !!! " + q.target);
+                //print("BURN !!! " + q.target);
                 q.target.SetBurnState(q.occupiedRuneSlotsinRow[Elements.Fire] * (int)(q.runesongPattern[Elements.Fire].rowBaseDamage * 0.5f), 5);
             }
             fireRand = Random.Range(0, 100);
@@ -232,23 +236,121 @@ public class SequencerGlobal : MonoBehaviour
             q.runesongStarter.SetRegenerationState(q.occupiedRuneSlotsinRow[Elements.Ice]*5, 5); //one point for rune is small number
         }
 
+        ///
+        /// Earth states
+        ///
+
+
+        if (q.occupiedRuneSlotsinRow[Elements.Earth] > 0)
+        {
+            q.runesongStarter.SetShieldModifier(q.occupiedRuneSlotsinRow[Elements.Earth]);
+            q.target.DamageShield(q.occupiedRuneSlotsinRow[Elements.Earth]);
+        }
+
+        ///
+        /// Air States
+        ///
+
+        if (q.occupiedRuneSlotsinRow[Elements.Air] > 0)
+        {
+            q.runesongStarter.SetGalvinizationState(q.occupiedRuneSlotsinRow[Elements.Air], 1);
+            q.target.ChangeSequencerRowsDamage(-q.occupiedRuneSlotsinRow[Elements.Air]);
+        }
+
+        ///
+        /// Fire + Ice
+        ///
+        if (q.chordsPresent[ChordTypes.FireIce] > 0)
+        {
+            int fireIceRand = Random.Range(0, 100);
+            if (fireIceRand < q.chordsPresent[ChordTypes.FireIce] * 10)
+            {
+                q.runesongStarter.Cleansing(SequencerUserStates.Frozen);
+            }
+            q.target.SetBurnState((int)(q.chordsPresent[ChordTypes.FireIce] * q.runesongPattern[Elements.Fire].rowBaseDamage * 0.5f), 1);
+            q.target.SetFrozenState(q.chordsPresent[ChordTypes.FireIce], 5);
+        }
+
+        ///
+        /// Fire + Earth
+        ///
+        if (q.chordsPresent[ChordTypes.FireEarth] > 0)
+        {
+            int fireEarthRand = Random.Range(0, 100);
+            if (fireEarthRand < q.chordsPresent[ChordTypes.FireEarth] * 10)
+            {
+                q.runesongStarter.Cleansing(SequencerUserStates.Erosion);
+            }
+
+            //What it wll be Erosion points
+        }
+
+
+        ///
+        /// Fire + Air
+        ///
+        if (q.chordsPresent[ChordTypes.FireAir] > 0)
+        {
+            int fireAirRand = Random.Range(0, 100);
+            if (fireAirRand < q.chordsPresent[ChordTypes.FireAir] * 10)
+            {
+                q.runesongStarter.Cleansing(SequencerUserStates.Imbalance);
+            }
+
+            q.target.DamageHealth(q.chordsPresent[ChordTypes.FireAir] * q.runesongPattern[Elements.Air].rowBaseDamage);
+        }
+
+        ///
+        /// Ice + Earth
+        ///
+        if (q.chordsPresent[ChordTypes.IceEarth] > 0)
+        {
+            q.runesongStarter.SetRegenerationShieldState(q.chordsPresent[ChordTypes.IceEarth], 5);
+            q.target.ChangeSequencerRowsDamage(-q.chordsPresent[ChordTypes.IceEarth]);
+        }
+
+
+        ///
+        /// Ice + Air 
+        ///
+        if (q.chordsPresent[ChordTypes.IceAir] > 0)
+        {
+            q.runesongStarter.SetGalvinizationState(q.chordsPresent[ChordTypes.IceAir], 5);
+            q.target.ChangeSequencerRowsDamage(q.target.ReturnStatesPoints(SequencerUserStates.Frozen));
+        }
+
+
+        ///
+        /// Earth + Air
+        ///
+        if (q.chordsPresent[ChordTypes.EarthAir] > 0)
+        {
+            q.runesongStarter.ChangeSequencerRowsDamage(q.chordsPresent[ChordTypes.EarthAir]); //Instead of galvinization
+            q.target.DamageHealth(q.target.ReturnStatesPoints(SequencerUserStates.Erosion));
+
+        }
+
     }
 
     void FinishBattle(EnemyDamageSequences enemy)
     {
-        detectBeat.OnMarkerPress.RemoveListener(enemy.CustomUpdateFromMusicTick);
+        detectBeat.OnMarkerPress.RemoveAllListeners(); // It means I need to add every battle participants to this event at the astart of battle
         StopCoroutine(CounterTurns());
     }
 
 
-    public void AddListenerToDetectBeat(EnemyDamageSequences enemy)
+    public void AddListenerToTurnCounter(EnemyDamageSequences enemy)
     {
         if (!battleMusicOn)
         {
             print("add listener");
-            detectBeat.OnMarkerPress.AddListener(enemy.CustomUpdateFromMusicTick);
+            counterTurnEvent.AddListener(enemy.CustomUpdateFromMusicTick);
         }
+    }
 
+    public void RemoveListenerFromTurnCounter(EnemyDamageSequences enemy)
+    {
+        counterTurnEvent.RemoveListener(enemy.CustomUpdateFromMusicTick);
     }
 
     public void AddNewSequenceToQueue(QueuedRunesong queueMember)
@@ -387,4 +489,15 @@ public class SequenceRow
         Row.Remove(index);
     }
 
+}
+
+[System.Serializable]
+public enum SequencerUserStates
+{
+    Burn,
+    Frozen,
+    Regeneration,
+    Erosion,
+    Imbalance,
+    Galvinization
 }

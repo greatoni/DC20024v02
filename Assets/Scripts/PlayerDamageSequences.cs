@@ -22,10 +22,10 @@ public class PlayerDamageSequences : SequencerUser
 
     private void Start()
     {
-
+        death.AddListener(OnPlayerDeath);
     }
 
-    public void CustomUpdateFromMusicTick(string marker) //Turn based actions
+    public void CustomUpdateFromMusicTick() //Turn based actions
     {
         if (doesWait)
         {
@@ -77,7 +77,10 @@ public class PlayerDamageSequences : SequencerUser
 
     // method of calculation of chord damage
 
-
+    public void OnPlayerDeath()
+    {
+        print("player is dead");
+    }
 
     public void SendSequenceToGlobalSequencer(MemorizedRuneSong sequence)
     {

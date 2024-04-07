@@ -10,17 +10,18 @@ public class EnemyDamageSequences : SequencerUser
     public SequencerUser player; // for testing
     private bool doesWait = true;
     private int enemyFakeInputDelay;
-    private int howManyTicksWait;
     private int tickTurnCountDown;
 
     public TextMeshProUGUI counterTurnsText;
 
     private void Start()
     {
+        sequencerGlobal = FindAnyObjectByType<SequencerGlobal>(); 
+        death.AddListener(OnEnemyDeath);
         tickTurnCountDown = speedMax;
     }
 
-    public void CustomUpdateFromMusicTick(string marker) //Turn based actions
+    public void CustomUpdateFromMusicTick() //Turn based actions
     {
         counterTurnsText.text = tickTurnCountDown.ToString();
 
@@ -61,6 +62,13 @@ public class EnemyDamageSequences : SequencerUser
     }
 
 
+    public void OnEnemyDeath()
+    {
+        print("Enemy is dead");
+        sequencerGlobal.RemoveListenerFromTurnCounter(this);
+        gameObject.SetActive(false);
+    }
+
     public void ReceiveStartTurn()
     {
         // If damage only at turn start
@@ -69,7 +77,7 @@ public class EnemyDamageSequences : SequencerUser
     }
     public void SendEnemyToGlobal()
     {
-        //sequencerGlobal.AddListenerToDetectBeat(this);
+        sequencerGlobal.AddListenerToTurnCounter(this);
     }
 
     public void SendSequenceToGlobalSequencer(MemorizedRuneSong sequence)

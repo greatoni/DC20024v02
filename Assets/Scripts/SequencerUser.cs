@@ -11,14 +11,24 @@ public class SequencerUser : MonoBehaviour
     public int howManyTicksInTurn;
     public int[] fmodIndexes = new int[5]; //this indexes used to make different characters to use different events inside fmod
     public int rowsDamageModifier = 0; // For imbalance
+    public int shieldModifier = 0;
 
     int health, shield, speed;
     int burnTimes, burnAmount;
     int frozenTimes, frozenAmount;
     int regenerationTimes, regenerationAmount;
-    int erosionTimes, erosionAmount;
+    int regenerationShieldTimes, regenerationShieldAmount;
+    int galvinTimes, galvinAmount;
+
+
+
+    public HashSet<SequencerUserStates> characterStatesList = new HashSet<SequencerUserStates>();
 
     public UnityEvent<SequencerUser> SendUser;
+
+    public UnityEvent death;
+
+
 
     public void SendUserOnClick() 
         //in Inspector if you link method(SequencerUser user) from any script to SendUser this method will get Sequencer user object
@@ -59,6 +69,10 @@ public class SequencerUser : MonoBehaviour
                 health = Mathf.Clamp(health, 0, healthMax);
             }
         }
+        if (health <= 0)
+        {
+            death.Invoke();
+        }
         RefreshHUD(); // refresh health bar
         return health;
     }
@@ -67,8 +81,15 @@ public class SequencerUser : MonoBehaviour
     {
         shield -= amount;
         RefreshHUD(); // refresh shield it needs to clamp to zero in hud
-        shield = Mathf.Clamp(shield, 0, shieldMax);
+        shield = Mathf.Clamp(shield, 0, shieldMax + shieldModifier);
         return shield;
+    }
+
+    public void SetShieldModifier(int modifier)
+    {
+        shieldModifier = modifier;
+        shield += shieldModifier;
+        RefreshHUD(); // Maybe it's good to use events for it
     }
 
     public int ChangeSpeed(int amount)
@@ -78,13 +99,20 @@ public class SequencerUser : MonoBehaviour
         return speed;
     }
 
-    public int GetCurrentHealth()
+    public int GetCurrentHealth(out int max)
     {
+        max = healthMax;
         return health;
     }
-    public int GetCurrentSpeed()
+    public int GetCurrentSpeed(out int max)
     {
+        max = speedMax;
         return speed;
+    }
+
+    public int GetDamageWithModifier(QueuedRunesong q, Elements e)
+    {
+        return q.runesongPattern[e].rowBaseDamage + rowsDamageModifier;
     }
 
     public void ChangeSequencerRowsDamage(int amount)
@@ -98,12 +126,35 @@ public class SequencerUser : MonoBehaviour
     }
 
 
+    public int ReturnStatesPoints(SequencerUserStates state)
+    {
+        switch (state)
+        {
+            case SequencerUserStates.Burn:
+                return burnAmount;
+                
+            case SequencerUserStates.Frozen:
+                return frozenAmount;
+                
+            case SequencerUserStates.Regeneration:
+                break;
+            case SequencerUserStates.Erosion:
+                return shieldModifier;
+                
+            case SequencerUserStates.Imbalance:
+                break;
+            case SequencerUserStates.Galvinization:
+                break;
+        }
+        return 0;
+    }
+
     /// Status effects
     /// 
     /// There are burn, frozen, erosion, galvanisation, frostbite, imbalance states
     /// These states can be at the same time
     /// 
- 
+
     ///
     /// Burn on start of the each turn 
     /// 
@@ -119,7 +170,7 @@ public class SequencerUser : MonoBehaviour
                 SetFrozenState(0, 0);
                 break;
             case SequencerUserStates.Erosion:
-                shield = shieldMax;
+                shield = shieldMax+ shieldModifier;
                 break;
             case SequencerUserStates.Imbalance:
                 rowsDamageModifier = 0;
@@ -185,6 +236,7 @@ public class SequencerUser : MonoBehaviour
         if (regenerationTimes > 0)
         {
             health += regenerationAmount;
+            health = Mathf.Clamp(health, 0, healthMax);
             regenerationTimes--;
             //UI update
             if (regenerationTimes <= 0)
@@ -194,15 +246,50 @@ public class SequencerUser : MonoBehaviour
         }
     }
 
+    ///Regeneration state
+    ///
+    public void SetRegenerationShieldState(int amount, int times)
+    {
+        regenerationShieldTimes = times;
+        regenerationShieldAmount = amount;
+    }
+    public void RegenerationShieldState()
+    {
+        if (regenerationShieldTimes > 0)
+        {
+            shield += regenerationShieldAmount;
+            shield = Mathf.Clamp(health, 0, shieldMax+shieldModifier);
+            regenerationShieldTimes--;
+            //UI update
+            if (regenerationShieldTimes <= 0)
+            {
+                //UI update turn off burn state
+            }
+        }
+    }
+
+    ///
+    /// Galvanization state
+    ///
+    public void SetGalvinizationState(int amount, int times)
+    {
+        galvinTimes = times;
+        galvinAmount = amount;
+    }
+    public void GalvinizationState()
+    {
+        if (galvinTimes > 0)
+        {
+            rowsDamageModifier = galvinAmount;
+            galvinTimes--;
+            //UI update
+            if (galvinTimes <= 0)
+            {
+                rowsDamageModifier = 0;
+                //UI update turn off burn state
+            }
+        }
+    }
 }
 
 
-public enum SequencerUserStates
-{
-    Burn,
-    Frozen,
-    Regeneration,
-    Erosion,
-    Imbalance,
-    Galvanization
-}
