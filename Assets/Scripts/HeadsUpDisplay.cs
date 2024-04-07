@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 // using static PlayerCharacter;
 using QuerySelector;
+using UnityEditor.UIElements;
 
 /*
 *//*
@@ -91,19 +92,19 @@ namespace HeadsUpDisplay
         readonly VisualElement inventory;
         readonly VisualElement sequencer;
         readonly VisualElement library;
-        readonly PlayerCharacter player;
+        readonly PlayerCharacter player = new();
 
-        Dictionary<string, int> attributes = new();
+        readonly Dictionary<string, int> attributes = new();
 
         public HUD()
         {
             QSelector = new QSelector(GetComponent<UIDocument>());
-            health = new HealthMeter(QSelector.First(".health-total"));
+            health = new HealthMeter(player.HPMax, QSelector.First(".health-total"), QSelector.First(".health-current"));
             inventory = QSelector.First(".inventory");
             sequencer = QSelector.First(".sequence-input");
             library = QSelector.First(".library");
 
-            player = GetComponent<PlayerCharacter>();
+            // player = GetComponent<PlayerCharacter>();
         }
 
         /*
@@ -156,35 +157,32 @@ namespace HeadsUpDisplay
         // Start is called before the first frame update
         void Start()
         {
-            attributes.Add("HealthTotal", player.HPMax);
-            attributes.Add("HealthCurrent", player.HPMax);
-            attributes.Add("RuneTotal", player.runeMaxCapacity);
-            attributes.Add("RuneCurrent", player.runeMaxCapacity);
         }
 
         // Update is called once per frame
         void Update()
         {
-            attributes["HealthCurrent"] = player.GetHP();
-
         }
         
         public class HealthMeter 
         {
-            VisualElement healthTotal;
-            VisualElement healthCurrent;
+            private readonly int healthTotal;
+            private readonly VisualElement healthBar;
+            private VisualElement healthBarCurrent;
 
-            public HealthMeter(VisualElement healthTotal)
+            public HealthMeter(int healthTotal, VisualElement healthBarCurrent, VisualElement healthBar)
             {
                 this.healthTotal = healthTotal;
-                this.healthCurrent = healthTotal.Q(".health-current");
+                this.healthBar = healthBar;
+                this.healthBarCurrent = healthBarCurrent;
             }
 
             void Update(int healthCurrent, int healthTotal)
             {
-                int width = 100 * healthCurrent / healthTotal;
-
-                this.healthCurrent.style.width = width;
+                int factor = 100 * healthCurrent / healthTotal;
+                int maxWidth = 256;
+                int currentWidth = maxWidth * factor / 100;
+                // healthBarCurrent.style.width = currentWidth.ToString() + "px";
             }
 
         }
@@ -382,20 +380,19 @@ namespace HeadsUpDisplay
         {
 
             /*** The Runesong the corresponds to the sequencer on the HUD ***/
-            Runesong HUDRunesong;
+            Runesong runeSongInProgress;
 
             /*** The listener for the clicks on each interval ***/
             ClickEvent m_Click;
 
             void Start()
             {
-                HUDRunesong = new("HUDRunesong");
+                runeSongInProgress = new("Runesong");
 
                 if(m_Click == null){
                     m_Click = new();
                 }
 
-                // m_Click.L
             }
 
             void Update()
