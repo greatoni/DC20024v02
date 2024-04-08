@@ -116,7 +116,7 @@ public class SequencerUser : MonoBehaviour
     public int GetDamageWithModifier(QueuedRunesong q, Elements e)
     {
         print("damage modifier" + rowsDamageModifier);
-        if (rowsDamageModifier > q.runesongPattern[e].rowBaseDamage) return 0;
+        if ((rowsDamageModifier + q.runesongPattern[e].rowBaseDamage) <0) return 0;
         return q.runesongPattern[e].rowBaseDamage + rowsDamageModifier;
     }
 
@@ -141,7 +141,7 @@ public class SequencerUser : MonoBehaviour
                 return burnAmount;
                 
             case SequencerUserStates.Frozen:
-                return frozenAmount;
+                return frozenAmount - speed;
                 
             case SequencerUserStates.Regeneration:
                 break;
@@ -200,6 +200,7 @@ public class SequencerUser : MonoBehaviour
             //UI update
             if (burnTimes <= 0)
             {
+                burnAmount = 0;
                 //UI update turn off burn state
             }
         }
@@ -224,6 +225,7 @@ public class SequencerUser : MonoBehaviour
             //UI update
             if (frozenTimes <= 0)
             {
+                frozenAmount = 0;
                 speed = speedMax;
                 //UI update turn off burn state
             }
@@ -248,6 +250,7 @@ public class SequencerUser : MonoBehaviour
             //UI update
             if (regenerationTimes <= 0)
             {
+                regenerationAmount = 0;
                 //UI update turn off burn state
             }
         }
@@ -270,6 +273,7 @@ public class SequencerUser : MonoBehaviour
             //UI update
             if (regenerationShieldTimes <= 0)
             {
+                regenerationShieldAmount = 0;
                 //UI update turn off burn state
             }
         }

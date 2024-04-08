@@ -276,7 +276,9 @@ public class SequencerGlobal : MonoBehaviour
         if (q.chordsPresent[ChordTypes.IceEarth] > 0)
         {
             q.runesongStarter.SetRegenerationShieldState(q.chordsPresent[ChordTypes.IceEarth], 5);
-            q.target.ChangeSequencerRowsDamage(-q.chordsPresent[ChordTypes.IceEarth]);
+            print("ice + earth points " + q.chordsPresent[ChordTypes.IceEarth]);
+            q.target.ChangeSequencerRowsDamage(-q.chordsPresent[ChordTypes.IceEarth]); 
+            // This inable weak enemy to deal damage at al, it will be good to randomize this 
         }
 
 
@@ -288,6 +290,7 @@ public class SequencerGlobal : MonoBehaviour
             q.runesongStarter.SetGalvinizationState(q.chordsPresent[ChordTypes.IceAir], 5);
             print("frozen points " + q.target.ReturnStatesPoints(SequencerUserStates.Frozen));
             q.target.ChangeSequencerRowsDamage(-q.target.ReturnStatesPoints(SequencerUserStates.Frozen));
+            
         }
 
 
