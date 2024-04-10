@@ -8,9 +8,7 @@ using UnityEngine.UIElements;
 using QuerySelector;
 using UnityEditor.UIElements;
 
-/*
-*//*
-*/
+
 
 /*
 .top
@@ -64,7 +62,6 @@ Label
 .catalog
 
 */
-
 namespace HeadsUpDisplay
 {
     public class HUD : MonoBehaviour
@@ -75,23 +72,42 @@ namespace HeadsUpDisplay
     */
     {
         public class PlayerCharacter
+        /*
+        @class PlayerCharacter
+            stub class for the player character
+        */
         {
-            public int HPMax = 0;
-            public int runeMaxCapacity = 0;
+            public int HPMax = 512;
+            public int runeMaxCapacity = 64;
             private int HP = 0;
 
             public int GetHP()
             {
                 return this.HP;
             }
+
+            public void Start()
+            {
+                this.HP = HPMax;
+            }
+
+            public void Update()
+            {
+                this.DecrementHP(1);
+            }
+
+            public void DecrementHP(int damage)
+            {
+                this.HP -= damage;
+            }
         }
 
-        readonly QSelector QSelector;
-        readonly HealthMeter health;
-        readonly VisualElement inventory;
-        readonly VisualElement sequencer;
-        readonly VisualElement library;
-        readonly PlayerCharacter player = new();
+        private readonly QSelector QSelector;
+        private readonly HealthMeter health;
+        private readonly VisualElement inventory;
+        private readonly VisualElement sequencer;
+        private readonly VisualElement library;
+        private readonly PlayerCharacter player = new();
 
         readonly Dictionary<string, int> attributes = new();
 
@@ -106,53 +122,6 @@ namespace HeadsUpDisplay
             // player = GetComponent<PlayerCharacter>();
         }
 
-        /*
-        HUD SELECTORS
-        .top
-        .healthTotal
-        .healthCurrent
-        .portrait
-        .inventory
-        .slot
-        .slot-selected
-        .slot1
-        .slot2
-        .slot3
-        .slot4
-        .slot5
-        .slot6
-        .bottom
-        .sequence-input
-        .disabled
-        .sequencers
-        .sequence
-        .sequence-neutral
-        .sequence-fire
-        .sequence-ice
-        .sequence-earth
-        .sequence-air
-        .interval
-        .fret
-        .interval_1
-        .interval_2
-        .interval_3
-        .interval_4
-        .interval_5
-        .interval_6
-        .interval_7
-        .interval_8
-        .pip
-        .hidden
-        .sequnce-commander
-        .btn
-        .sequence-run
-        Label
-        #unity-text-input
-        .runesong-alias
-        .library
-        .catalog
-        */
-        
         // Start is called before the first frame update
         void Start()
         {
@@ -165,13 +134,11 @@ namespace HeadsUpDisplay
         
         public class HealthMeter 
         {
-            private readonly int healthTotal;
             private readonly VisualElement healthBar;
-            private VisualElement healthBarCurrent;
+            private readonly VisualElement healthBarCurrent;
 
             public HealthMeter(int healthTotal, VisualElement healthBarCurrent, VisualElement healthBar)
             {
-                this.healthTotal = healthTotal;
                 this.healthBar = healthBar;
                 this.healthBarCurrent = healthBarCurrent;
             }
@@ -241,7 +208,6 @@ namespace HeadsUpDisplay
 
             }
         }
-
         
         public enum SequenceType 
         /*
@@ -402,7 +368,6 @@ namespace HeadsUpDisplay
                 }
             }
         }
-
 
         public class RunesongLibrary : MonoBehaviour
         {
