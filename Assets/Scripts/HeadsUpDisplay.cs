@@ -5,7 +5,6 @@ using UnityEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
-// using static PlayerCharacter;
 using QuerySelector;
 using UnityEditor.UIElements;
 
@@ -182,7 +181,7 @@ namespace HeadsUpDisplay
                 int factor = 100 * healthCurrent / healthTotal;
                 int maxWidth = 256;
                 int currentWidth = maxWidth * factor / 100;
-                // healthBarCurrent.style.width = currentWidth.ToString() + "px";
+                // healthBarCurrent.RectTransform.sizeDelta = new Length(currentWidth, LengthUnit.Pixel);
             }
 
         }
@@ -436,7 +435,19 @@ namespace HeadsUpDisplay
 
         }
 
-        
+        public enum StatusEffects
+        {
+            burn,
+            frostbite,
+            galvanization,
+            frozen
+        }        
+
+        public class Enemy : MonoBehaviour
+        {
+            
+        }
+
 
     }
 }
