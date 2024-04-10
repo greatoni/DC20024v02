@@ -288,9 +288,9 @@ namespace zombisoft
 				{
 					Debug.DrawRay(transform.position, endPos * hit.distance, Color.yellow); // Debug
 					if (hit.transform.tag == "Enemy") 
-					{ 
+					{
+						hit.transform.GetComponent<EnemyDamageSequences>().SendEnemyToGlobal();
 						OnMeetingEnemy.Invoke();
-						hit.transform.GetComponent<EnemyDamageSequences>().SendEnemyToGlobal() ; 
 						print("enemy"); 
 					}
 					return true;

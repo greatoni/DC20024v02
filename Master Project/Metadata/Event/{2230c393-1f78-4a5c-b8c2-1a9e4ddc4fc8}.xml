@@ -385,6 +385,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{f556c119-9e10-4990-9cf7-b6cf475f16fb}</destination>
+			<destination>{f53511bf-4792-4321-a0c0-3f8d6c2d223e}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{0cdb8e8c-b57e-43bd-980e-d4cd538a385f}</destination>
@@ -402,6 +403,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{5768c197-9575-4bd7-a228-84caac336536}</destination>
+			<destination>{c5c016c4-fcd6-4e4a-a08d-489a3e7bd78b}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{0cdb8e8c-b57e-43bd-980e-d4cd538a385f}</destination>
@@ -419,6 +421,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{57a36646-3258-4fde-9c3f-ef5d61f70d09}</destination>
+			<destination>{c3d32436-a4a3-466a-a9b1-22436ce3dbaa}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{0cdb8e8c-b57e-43bd-980e-d4cd538a385f}</destination>
@@ -436,6 +439,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{9e753d05-7b44-4b6a-a5d0-97157b6e302b}</destination>
+			<destination>{f4841b78-40d9-44fc-8092-6005f48d3c18}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{0cdb8e8c-b57e-43bd-980e-d4cd538a385f}</destination>
@@ -453,6 +457,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{8c5d3f24-490d-45ef-a5ee-121077cf228a}</destination>
+			<destination>{21f89ab8-1a51-4f4c-b59c-a18ba120250c}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{0cdb8e8c-b57e-43bd-980e-d4cd538a385f}</destination>
@@ -470,6 +475,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{ea796250-cb65-41dd-9b3d-711301085c8c}</destination>
+			<destination>{d1de74ea-4e1c-4bbf-b652-8dbc46fd52d5}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{0cdb8e8c-b57e-43bd-980e-d4cd538a385f}</destination>
@@ -487,6 +493,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{c0e91183-1943-4e05-b611-a85888c5dc8d}</destination>
+			<destination>{020156a8-0a03-484b-96d9-fae96f2e28aa}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{0cdb8e8c-b57e-43bd-980e-d4cd538a385f}</destination>
@@ -504,6 +511,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{d9ed875e-182e-4780-a547-f1265f87ff82}</destination>
+			<destination>{4e73f4f7-130d-4c5a-b585-0bc2d23d5fd9}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{0cdb8e8c-b57e-43bd-980e-d4cd538a385f}</destination>
@@ -539,6 +547,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{5320b5ff-ca23-4bfe-a398-1bdd1e10990f}</destination>
+			<destination>{69565844-6002-4fe2-a9de-e7aa9a59014a}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{7a5778be-a699-4797-bfbe-af2f3695d221}</destination>
@@ -560,6 +569,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{0d83f8cd-ec44-42c8-a21c-fdd067472274}</destination>
+			<destination>{6df0d440-7a45-432a-8d4c-c5041deba021}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{7a5778be-a699-4797-bfbe-af2f3695d221}</destination>
@@ -581,6 +591,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{db0df559-6917-4932-ac20-0f276c8a07a0}</destination>
+			<destination>{15a9e5c3-fad7-43b9-bdfa-abcdbca06762}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{7a5778be-a699-4797-bfbe-af2f3695d221}</destination>
@@ -602,6 +613,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{90814b29-a48e-4d47-8c6c-4c9d45a3f79e}</destination>
+			<destination>{e8a9fb8b-7900-4b06-ac53-1b20e6f121c0}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{7a5778be-a699-4797-bfbe-af2f3695d221}</destination>
@@ -623,6 +635,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{2d030f8f-3d08-470a-8f1f-b5158dd37c4f}</destination>
+			<destination>{8e203fce-9ad1-4109-864c-6777a34ed171}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{7a5778be-a699-4797-bfbe-af2f3695d221}</destination>
@@ -644,6 +657,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{ed3c2e71-98d2-49ee-9605-2b52c2c8e81d}</destination>
+			<destination>{a4607137-0a6a-482a-9e73-31a794582919}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{7a5778be-a699-4797-bfbe-af2f3695d221}</destination>
@@ -665,6 +679,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{18b16d7b-1bb2-4235-b382-a6d4dc36a521}</destination>
+			<destination>{e809aa6d-a815-4b94-b114-5aa06b46cfb5}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{7a5778be-a699-4797-bfbe-af2f3695d221}</destination>
@@ -686,6 +701,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{9c7adc33-03c5-4b8f-88c7-50815bf3a930}</destination>
+			<destination>{d90bdfbd-3aa8-44f7-ba3e-0ea12e26a4aa}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{7a5778be-a699-4797-bfbe-af2f3695d221}</destination>
@@ -714,6 +730,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{d2db9164-e160-4a3e-b52c-f1a00f4ce67e}</destination>
+			<destination>{7350440f-8b74-44b0-b932-66d2debf0deb}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{d874e175-04cd-4f88-823a-b74c35cb84d8}</destination>
@@ -731,6 +748,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{e5da3e4f-1a93-485b-b606-f7872e19b255}</destination>
+			<destination>{1df4d9f8-c611-4ffd-b5c8-c6f20784d0b9}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{d874e175-04cd-4f88-823a-b74c35cb84d8}</destination>
@@ -748,6 +766,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{13166c21-4cb4-4ac8-9318-11fb014ae5c8}</destination>
+			<destination>{78f873dc-7fa1-4ea0-b160-aa0f5be39f5f}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{d874e175-04cd-4f88-823a-b74c35cb84d8}</destination>
@@ -765,6 +784,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{2c7520cf-8693-4cd0-9585-38dc73fe4a4c}</destination>
+			<destination>{de230c83-92de-4973-8910-3790c1ae1d78}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{d874e175-04cd-4f88-823a-b74c35cb84d8}</destination>
@@ -782,6 +802,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{3c898da6-c662-4014-85f6-dc3a2818a2c9}</destination>
+			<destination>{53907292-97db-4693-b43e-fafcff25e29c}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{d874e175-04cd-4f88-823a-b74c35cb84d8}</destination>
@@ -799,6 +820,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{f8a2f2de-5613-4ea1-9d0b-f9a78d0b48a4}</destination>
+			<destination>{e321d8ec-fd78-41f1-9937-014a29d70907}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{d874e175-04cd-4f88-823a-b74c35cb84d8}</destination>
@@ -816,6 +838,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{6f98d93b-f5d1-4334-a8b0-f54939624b70}</destination>
+			<destination>{70bbe0a3-aff9-4df5-bcaf-ce6bb82d444e}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{d874e175-04cd-4f88-823a-b74c35cb84d8}</destination>
@@ -833,6 +856,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{40afc6ff-1f0e-4118-92ed-dc5883226e7f}</destination>
+			<destination>{2b5f3cfa-96c6-4cbf-8dfc-64e281d6259e}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{d874e175-04cd-4f88-823a-b74c35cb84d8}</destination>
@@ -861,6 +885,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{61582c46-7e2f-455e-95b4-a5953e9647d0}</destination>
+			<destination>{41c7a290-33b5-401d-b252-48fa3db34f62}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{b24cc9be-6300-4bef-848c-7ead1ac0a8f7}</destination>
@@ -878,6 +903,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{279a66cd-e878-4434-8245-ff2ffa484184}</destination>
+			<destination>{1976da4a-de3d-4037-8e95-3ca0ac00b924}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{b24cc9be-6300-4bef-848c-7ead1ac0a8f7}</destination>
@@ -895,6 +921,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{1c4f08ac-392f-4a50-8f20-f8f67a35a2c8}</destination>
+			<destination>{749269a4-d268-4bbc-a47d-30eddfcac0f3}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{b24cc9be-6300-4bef-848c-7ead1ac0a8f7}</destination>
@@ -912,6 +939,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{ff480511-ad2d-457e-a49b-83779ed8e5a6}</destination>
+			<destination>{28c71d53-8374-44e3-b25b-e87bc4273a19}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{b24cc9be-6300-4bef-848c-7ead1ac0a8f7}</destination>
@@ -929,6 +957,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{00c75c8f-d140-4a5e-acbc-39c10b850364}</destination>
+			<destination>{e58aec88-60c2-4e4e-960b-60e08eb9b479}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{b24cc9be-6300-4bef-848c-7ead1ac0a8f7}</destination>
@@ -946,6 +975,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{3d30e0de-76e6-4411-91ce-117fb633c9ca}</destination>
+			<destination>{d8a2abbc-6b46-4964-8c44-54aa73813bef}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{b24cc9be-6300-4bef-848c-7ead1ac0a8f7}</destination>
@@ -963,6 +993,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{0db9ba54-6af6-49c7-86fc-5ef973b1b426}</destination>
+			<destination>{28b2df2e-0b4f-427f-b1c5-a7ede9a4ab3e}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{b24cc9be-6300-4bef-848c-7ead1ac0a8f7}</destination>
@@ -980,6 +1011,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{e42d9090-5c0a-4b39-b7da-1003e58b5260}</destination>
+			<destination>{b4977737-31ba-41bf-8edf-f8aeb0206632}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{b24cc9be-6300-4bef-848c-7ead1ac0a8f7}</destination>
@@ -1008,6 +1040,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{4b26698b-d478-4eac-88ba-c12efa67793c}</destination>
+			<destination>{8a1d365b-d685-42e4-80fc-5ae072f1d941}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{8d24e3c4-3942-4571-ad6f-1267f55c7223}</destination>
@@ -1025,6 +1058,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{f5e93b4b-fe55-4d31-85c4-62bca4ac3180}</destination>
+			<destination>{e536d4b6-8a82-4058-a871-eeb447a85f92}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{8d24e3c4-3942-4571-ad6f-1267f55c7223}</destination>
@@ -1042,6 +1076,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{a8ded3d8-7d41-4f96-aa35-ad9480ea9441}</destination>
+			<destination>{b0b55c10-d86f-4737-bec3-1c718f0c9ec8}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{8d24e3c4-3942-4571-ad6f-1267f55c7223}</destination>
@@ -1059,6 +1094,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{cb4af27e-43ff-4306-b350-7f692c4a83ef}</destination>
+			<destination>{003f1021-2352-476a-ae0d-abc0f1ba84a2}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{8d24e3c4-3942-4571-ad6f-1267f55c7223}</destination>
@@ -1076,6 +1112,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{13a27a7d-e6d4-477c-97bc-27257aaab364}</destination>
+			<destination>{34271baf-bb06-4859-b8df-6548c1d68cfb}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{8d24e3c4-3942-4571-ad6f-1267f55c7223}</destination>
@@ -1093,6 +1130,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{2fff3f37-4944-447c-807c-1e86eae0ee53}</destination>
+			<destination>{e279223e-8eee-4921-90a4-4513c769e23e}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{8d24e3c4-3942-4571-ad6f-1267f55c7223}</destination>
@@ -1110,6 +1148,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{b048ca5c-531a-4547-8fce-12bcef88a824}</destination>
+			<destination>{4fc63027-e277-4098-9652-a0c6370727ba}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{8d24e3c4-3942-4571-ad6f-1267f55c7223}</destination>
@@ -1127,6 +1166,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{05947273-33e6-4eb5-8b09-69a780f6879f}</destination>
+			<destination>{68f785e4-4208-4580-88f4-0d0a5f7f8731}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{8d24e3c4-3942-4571-ad6f-1267f55c7223}</destination>
@@ -1352,6 +1392,11 @@
 			<destination>{fdbddee1-bdff-46d4-b4d5-ef8c10ba2649}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{f53511bf-4792-4321-a0c0-3f8d6c2d223e}">
+		<relationship name="parameter">
+			<destination>{fe67b92a-2cbc-4844-807a-71b811f0edb8}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{393a8949-7ca3-4fbc-b487-fe180bfc1830}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1369,6 +1414,11 @@
 	<object class="ParameterProperty" id="{5768c197-9575-4bd7-a228-84caac336536}">
 		<relationship name="parameter">
 			<destination>{fdbddee1-bdff-46d4-b4d5-ef8c10ba2649}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{c5c016c4-fcd6-4e4a-a08d-489a3e7bd78b}">
+		<relationship name="parameter">
+			<destination>{fe67b92a-2cbc-4844-807a-71b811f0edb8}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{0817a09d-30ee-4abb-8107-a44a8bc9ffb6}">
@@ -1390,6 +1440,11 @@
 			<destination>{fdbddee1-bdff-46d4-b4d5-ef8c10ba2649}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{c3d32436-a4a3-466a-a9b1-22436ce3dbaa}">
+		<relationship name="parameter">
+			<destination>{fe67b92a-2cbc-4844-807a-71b811f0edb8}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{d730d6a1-6fbd-449b-986e-de9342b29450}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1407,6 +1462,11 @@
 	<object class="ParameterProperty" id="{9e753d05-7b44-4b6a-a5d0-97157b6e302b}">
 		<relationship name="parameter">
 			<destination>{fdbddee1-bdff-46d4-b4d5-ef8c10ba2649}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{f4841b78-40d9-44fc-8092-6005f48d3c18}">
+		<relationship name="parameter">
+			<destination>{fe67b92a-2cbc-4844-807a-71b811f0edb8}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{5cf68c09-4039-4a42-8b25-1f4d612ad4f8}">
@@ -1428,6 +1488,11 @@
 			<destination>{fdbddee1-bdff-46d4-b4d5-ef8c10ba2649}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{21f89ab8-1a51-4f4c-b59c-a18ba120250c}">
+		<relationship name="parameter">
+			<destination>{fe67b92a-2cbc-4844-807a-71b811f0edb8}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{18924e22-ba22-4068-974c-b98a70d50715}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1445,6 +1510,11 @@
 	<object class="ParameterProperty" id="{ea796250-cb65-41dd-9b3d-711301085c8c}">
 		<relationship name="parameter">
 			<destination>{fdbddee1-bdff-46d4-b4d5-ef8c10ba2649}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{d1de74ea-4e1c-4bbf-b652-8dbc46fd52d5}">
+		<relationship name="parameter">
+			<destination>{fe67b92a-2cbc-4844-807a-71b811f0edb8}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{70235338-e66d-4ad5-a1f7-cd382deb7b97}">
@@ -1466,6 +1536,11 @@
 			<destination>{fdbddee1-bdff-46d4-b4d5-ef8c10ba2649}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{020156a8-0a03-484b-96d9-fae96f2e28aa}">
+		<relationship name="parameter">
+			<destination>{fe67b92a-2cbc-4844-807a-71b811f0edb8}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{e2768546-1e78-49d1-aa34-4c90ea71808e}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1483,6 +1558,11 @@
 	<object class="ParameterProperty" id="{d9ed875e-182e-4780-a547-f1265f87ff82}">
 		<relationship name="parameter">
 			<destination>{fdbddee1-bdff-46d4-b4d5-ef8c10ba2649}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{4e73f4f7-130d-4c5a-b585-0bc2d23d5fd9}">
+		<relationship name="parameter">
+			<destination>{fe67b92a-2cbc-4844-807a-71b811f0edb8}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{ce68a4e9-d85d-4ba9-bfa6-b5ab29570898}">
@@ -1518,6 +1598,11 @@
 			<destination>{4767eacc-9fc7-4e84-9b9c-95b92565307c}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{69565844-6002-4fe2-a9de-e7aa9a59014a}">
+		<relationship name="parameter">
+			<destination>{bdb5dd67-a9f5-4ef0-8578-66a59b9321fa}</destination>
+		</relationship>
+	</object>
 	<object class="RandomizerModulator" id="{84b7224e-3086-4371-80b1-be3cb923dd35}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>
@@ -1546,6 +1631,11 @@
 	<object class="ParameterProperty" id="{0d83f8cd-ec44-42c8-a21c-fdd067472274}">
 		<relationship name="parameter">
 			<destination>{4767eacc-9fc7-4e84-9b9c-95b92565307c}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{6df0d440-7a45-432a-8d4c-c5041deba021}">
+		<relationship name="parameter">
+			<destination>{bdb5dd67-a9f5-4ef0-8578-66a59b9321fa}</destination>
 		</relationship>
 	</object>
 	<object class="RandomizerModulator" id="{c50b2f4e-181c-42f2-9097-84ae9f2ecbab}">
@@ -1578,6 +1668,11 @@
 			<destination>{4767eacc-9fc7-4e84-9b9c-95b92565307c}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{15a9e5c3-fad7-43b9-bdfa-abcdbca06762}">
+		<relationship name="parameter">
+			<destination>{bdb5dd67-a9f5-4ef0-8578-66a59b9321fa}</destination>
+		</relationship>
+	</object>
 	<object class="RandomizerModulator" id="{f8ffc0d5-bbf6-43df-8cbb-9e58c2fb80bf}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>
@@ -1606,6 +1701,11 @@
 	<object class="ParameterProperty" id="{90814b29-a48e-4d47-8c6c-4c9d45a3f79e}">
 		<relationship name="parameter">
 			<destination>{4767eacc-9fc7-4e84-9b9c-95b92565307c}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{e8a9fb8b-7900-4b06-ac53-1b20e6f121c0}">
+		<relationship name="parameter">
+			<destination>{bdb5dd67-a9f5-4ef0-8578-66a59b9321fa}</destination>
 		</relationship>
 	</object>
 	<object class="RandomizerModulator" id="{caf7ed1e-f94d-4119-82f6-2060f4c52203}">
@@ -1638,6 +1738,11 @@
 			<destination>{4767eacc-9fc7-4e84-9b9c-95b92565307c}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{8e203fce-9ad1-4109-864c-6777a34ed171}">
+		<relationship name="parameter">
+			<destination>{bdb5dd67-a9f5-4ef0-8578-66a59b9321fa}</destination>
+		</relationship>
+	</object>
 	<object class="RandomizerModulator" id="{4aef9a33-86f8-41f0-8711-2c44411c2c00}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>
@@ -1666,6 +1771,11 @@
 	<object class="ParameterProperty" id="{ed3c2e71-98d2-49ee-9605-2b52c2c8e81d}">
 		<relationship name="parameter">
 			<destination>{4767eacc-9fc7-4e84-9b9c-95b92565307c}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{a4607137-0a6a-482a-9e73-31a794582919}">
+		<relationship name="parameter">
+			<destination>{bdb5dd67-a9f5-4ef0-8578-66a59b9321fa}</destination>
 		</relationship>
 	</object>
 	<object class="RandomizerModulator" id="{ae19b291-469f-425f-a66c-7bf6413ad9fa}">
@@ -1698,6 +1808,11 @@
 			<destination>{4767eacc-9fc7-4e84-9b9c-95b92565307c}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{e809aa6d-a815-4b94-b114-5aa06b46cfb5}">
+		<relationship name="parameter">
+			<destination>{bdb5dd67-a9f5-4ef0-8578-66a59b9321fa}</destination>
+		</relationship>
+	</object>
 	<object class="RandomizerModulator" id="{83038e37-1ef9-47ff-9582-a499e91b375c}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>
@@ -1728,6 +1843,11 @@
 			<destination>{4767eacc-9fc7-4e84-9b9c-95b92565307c}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{d90bdfbd-3aa8-44f7-ba3e-0ea12e26a4aa}">
+		<relationship name="parameter">
+			<destination>{bdb5dd67-a9f5-4ef0-8578-66a59b9321fa}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{caa71282-00a7-4fc2-9559-d9130249b010}">
 		<relationship name="effects">
 			<destination>{e74bb1c2-1679-46f0-9956-4cffe9ceab57}</destination>
@@ -1753,6 +1873,11 @@
 			<destination>{7cf65475-e9dd-481d-a95c-f860b7e323b3}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{7350440f-8b74-44b0-b932-66d2debf0deb}">
+		<relationship name="parameter">
+			<destination>{bb01e2ad-6454-44cd-b9ce-75c7b1b0496e}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{98ac4585-3e70-4901-892c-6659f89f28d1}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1770,6 +1895,11 @@
 	<object class="ParameterProperty" id="{e5da3e4f-1a93-485b-b606-f7872e19b255}">
 		<relationship name="parameter">
 			<destination>{7cf65475-e9dd-481d-a95c-f860b7e323b3}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{1df4d9f8-c611-4ffd-b5c8-c6f20784d0b9}">
+		<relationship name="parameter">
+			<destination>{bb01e2ad-6454-44cd-b9ce-75c7b1b0496e}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{35e1d520-8655-4206-b5a0-4edd18fe1a4c}">
@@ -1791,6 +1921,11 @@
 			<destination>{7cf65475-e9dd-481d-a95c-f860b7e323b3}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{78f873dc-7fa1-4ea0-b160-aa0f5be39f5f}">
+		<relationship name="parameter">
+			<destination>{bb01e2ad-6454-44cd-b9ce-75c7b1b0496e}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{9291bc51-3f7c-4a7b-ae3b-9fa739074a8b}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1808,6 +1943,11 @@
 	<object class="ParameterProperty" id="{2c7520cf-8693-4cd0-9585-38dc73fe4a4c}">
 		<relationship name="parameter">
 			<destination>{7cf65475-e9dd-481d-a95c-f860b7e323b3}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{de230c83-92de-4973-8910-3790c1ae1d78}">
+		<relationship name="parameter">
+			<destination>{bb01e2ad-6454-44cd-b9ce-75c7b1b0496e}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{cc6624c5-68d2-485f-b32f-4a250730346e}">
@@ -1829,6 +1969,11 @@
 			<destination>{7cf65475-e9dd-481d-a95c-f860b7e323b3}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{53907292-97db-4693-b43e-fafcff25e29c}">
+		<relationship name="parameter">
+			<destination>{bb01e2ad-6454-44cd-b9ce-75c7b1b0496e}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{8db1dc04-5232-4b33-a5a9-a197e4bf30d1}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1846,6 +1991,11 @@
 	<object class="ParameterProperty" id="{f8a2f2de-5613-4ea1-9d0b-f9a78d0b48a4}">
 		<relationship name="parameter">
 			<destination>{7cf65475-e9dd-481d-a95c-f860b7e323b3}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{e321d8ec-fd78-41f1-9937-014a29d70907}">
+		<relationship name="parameter">
+			<destination>{bb01e2ad-6454-44cd-b9ce-75c7b1b0496e}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{e6186db1-e6d2-431e-8013-07e39e5d1ed6}">
@@ -1867,6 +2017,11 @@
 			<destination>{7cf65475-e9dd-481d-a95c-f860b7e323b3}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{70bbe0a3-aff9-4df5-bcaf-ce6bb82d444e}">
+		<relationship name="parameter">
+			<destination>{bb01e2ad-6454-44cd-b9ce-75c7b1b0496e}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{ac0dbbbe-7781-47dd-9dcf-f7bcf80b92ad}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1884,6 +2039,11 @@
 	<object class="ParameterProperty" id="{40afc6ff-1f0e-4118-92ed-dc5883226e7f}">
 		<relationship name="parameter">
 			<destination>{7cf65475-e9dd-481d-a95c-f860b7e323b3}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{2b5f3cfa-96c6-4cbf-8dfc-64e281d6259e}">
+		<relationship name="parameter">
+			<destination>{bb01e2ad-6454-44cd-b9ce-75c7b1b0496e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{b6d92452-768d-409d-ad75-b5f92724149f}">
@@ -1911,6 +2071,11 @@
 			<destination>{5d386497-4b16-4e56-9533-8a3dcf48ff2f}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{41c7a290-33b5-401d-b252-48fa3db34f62}">
+		<relationship name="parameter">
+			<destination>{5aae0e44-06d9-409e-ab8c-39967e03a053}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{29560e85-638d-4f16-8272-342f70acbf21}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1928,6 +2093,11 @@
 	<object class="ParameterProperty" id="{279a66cd-e878-4434-8245-ff2ffa484184}">
 		<relationship name="parameter">
 			<destination>{5d386497-4b16-4e56-9533-8a3dcf48ff2f}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{1976da4a-de3d-4037-8e95-3ca0ac00b924}">
+		<relationship name="parameter">
+			<destination>{5aae0e44-06d9-409e-ab8c-39967e03a053}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{ad9f0623-3373-4e93-95ea-aae0873e006e}">
@@ -1949,6 +2119,11 @@
 			<destination>{5d386497-4b16-4e56-9533-8a3dcf48ff2f}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{749269a4-d268-4bbc-a47d-30eddfcac0f3}">
+		<relationship name="parameter">
+			<destination>{5aae0e44-06d9-409e-ab8c-39967e03a053}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{892af86f-6b77-4db7-b0f5-ef288374ca99}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -1966,6 +2141,11 @@
 	<object class="ParameterProperty" id="{ff480511-ad2d-457e-a49b-83779ed8e5a6}">
 		<relationship name="parameter">
 			<destination>{5d386497-4b16-4e56-9533-8a3dcf48ff2f}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{28c71d53-8374-44e3-b25b-e87bc4273a19}">
+		<relationship name="parameter">
+			<destination>{5aae0e44-06d9-409e-ab8c-39967e03a053}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{bf256237-330b-47af-9407-29497b527908}">
@@ -1987,6 +2167,11 @@
 			<destination>{5d386497-4b16-4e56-9533-8a3dcf48ff2f}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{e58aec88-60c2-4e4e-960b-60e08eb9b479}">
+		<relationship name="parameter">
+			<destination>{5aae0e44-06d9-409e-ab8c-39967e03a053}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{c95b81a2-3800-49d2-b358-f318822d09c5}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -2004,6 +2189,11 @@
 	<object class="ParameterProperty" id="{3d30e0de-76e6-4411-91ce-117fb633c9ca}">
 		<relationship name="parameter">
 			<destination>{5d386497-4b16-4e56-9533-8a3dcf48ff2f}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{d8a2abbc-6b46-4964-8c44-54aa73813bef}">
+		<relationship name="parameter">
+			<destination>{5aae0e44-06d9-409e-ab8c-39967e03a053}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{1e8c4cc9-384b-47ed-be7a-7d07c788ae7c}">
@@ -2025,6 +2215,11 @@
 			<destination>{5d386497-4b16-4e56-9533-8a3dcf48ff2f}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{28b2df2e-0b4f-427f-b1c5-a7ede9a4ab3e}">
+		<relationship name="parameter">
+			<destination>{5aae0e44-06d9-409e-ab8c-39967e03a053}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{c8f93a0f-33b1-4516-9b1c-a4f682ead821}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -2042,6 +2237,11 @@
 	<object class="ParameterProperty" id="{e42d9090-5c0a-4b39-b7da-1003e58b5260}">
 		<relationship name="parameter">
 			<destination>{5d386497-4b16-4e56-9533-8a3dcf48ff2f}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{b4977737-31ba-41bf-8edf-f8aeb0206632}">
+		<relationship name="parameter">
+			<destination>{5aae0e44-06d9-409e-ab8c-39967e03a053}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{5be4418e-ffcf-401b-a7ff-e4174450be9d}">
@@ -2069,6 +2269,11 @@
 			<destination>{5e1992a4-95e1-47f6-a544-ddbd009e2716}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{8a1d365b-d685-42e4-80fc-5ae072f1d941}">
+		<relationship name="parameter">
+			<destination>{9c88f5cb-33b3-4cdf-91de-112f247cc6de}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{150f54e1-5efe-4480-8095-376484343840}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -2086,6 +2291,11 @@
 	<object class="ParameterProperty" id="{f5e93b4b-fe55-4d31-85c4-62bca4ac3180}">
 		<relationship name="parameter">
 			<destination>{5e1992a4-95e1-47f6-a544-ddbd009e2716}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{e536d4b6-8a82-4058-a871-eeb447a85f92}">
+		<relationship name="parameter">
+			<destination>{9c88f5cb-33b3-4cdf-91de-112f247cc6de}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{87cbc681-132f-4355-b2bd-ca3b68d66b5a}">
@@ -2107,6 +2317,11 @@
 			<destination>{5e1992a4-95e1-47f6-a544-ddbd009e2716}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{b0b55c10-d86f-4737-bec3-1c718f0c9ec8}">
+		<relationship name="parameter">
+			<destination>{9c88f5cb-33b3-4cdf-91de-112f247cc6de}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{22670c9c-cbf3-480e-8f9a-7fd86ed871de}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -2124,6 +2339,11 @@
 	<object class="ParameterProperty" id="{cb4af27e-43ff-4306-b350-7f692c4a83ef}">
 		<relationship name="parameter">
 			<destination>{5e1992a4-95e1-47f6-a544-ddbd009e2716}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{003f1021-2352-476a-ae0d-abc0f1ba84a2}">
+		<relationship name="parameter">
+			<destination>{9c88f5cb-33b3-4cdf-91de-112f247cc6de}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{52326e4d-bf25-4e9b-95fd-b3cd123c214d}">
@@ -2145,6 +2365,11 @@
 			<destination>{5e1992a4-95e1-47f6-a544-ddbd009e2716}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{34271baf-bb06-4859-b8df-6548c1d68cfb}">
+		<relationship name="parameter">
+			<destination>{9c88f5cb-33b3-4cdf-91de-112f247cc6de}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{8a6b9e95-f2cb-4503-8082-0e8efe620d07}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -2162,6 +2387,11 @@
 	<object class="ParameterProperty" id="{2fff3f37-4944-447c-807c-1e86eae0ee53}">
 		<relationship name="parameter">
 			<destination>{5e1992a4-95e1-47f6-a544-ddbd009e2716}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{e279223e-8eee-4921-90a4-4513c769e23e}">
+		<relationship name="parameter">
+			<destination>{9c88f5cb-33b3-4cdf-91de-112f247cc6de}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{73567d2b-8790-4e0a-bdc5-733b5c4030e7}">
@@ -2183,6 +2413,11 @@
 			<destination>{5e1992a4-95e1-47f6-a544-ddbd009e2716}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterProperty" id="{4fc63027-e277-4098-9652-a0c6370727ba}">
+		<relationship name="parameter">
+			<destination>{9c88f5cb-33b3-4cdf-91de-112f247cc6de}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{3ffc82a9-e36d-4626-8b7d-8b90ced4ce24}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -2200,6 +2435,11 @@
 	<object class="ParameterProperty" id="{05947273-33e6-4eb5-8b09-69a780f6879f}">
 		<relationship name="parameter">
 			<destination>{5e1992a4-95e1-47f6-a544-ddbd009e2716}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{68f785e4-4208-4580-88f4-0d0a5f7f8731}">
+		<relationship name="parameter">
+			<destination>{9c88f5cb-33b3-4cdf-91de-112f247cc6de}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{8b4e3abf-8195-49df-9ef2-e6a1935ac6a8}">

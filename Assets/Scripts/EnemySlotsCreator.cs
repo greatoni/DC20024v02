@@ -9,7 +9,7 @@ public class EnemySlotsCreator : MonoBehaviour
     /// This class is for generating memory slots for enemies 
     /// Scriptable objects used here placed on enemies sequencerWeapon scripts
     /// </summary>
-    public MemorizedSequence[] acolytes, spirits; // Should be the same as enemy sequences
+    public MemorizedRuneSong[] acolytes, spirits; // Should be the same as enemy sequences
     public EnemySequence[] acolytesBool, spiritsBool;// Should be the same as enemy MemorizedSequence
     public int[] baseRowDamage = new int[5];
     // Start is called before the first frame update
@@ -17,64 +17,75 @@ public class EnemySlotsCreator : MonoBehaviour
     {
         for(int i = 0; i < acolytes.Length; i++)
         {
-            acolytes[i].WriteToSequence(ConvertEnemySequenceToSequence(acolytesBool[i]));
+            acolytes[i].WriteToSequence(ConvertEnemySequenceToSequence(acolytesBool[i]).runesongPattern);
+            acolytes[i].CountIntervals();
         }
         for (int i = 0; i < spirits.Length; i++)
         {
-            spirits[i].WriteToSequence(ConvertEnemySequenceToSequence(spiritsBool[i]));
+            spirits[i].WriteToSequence(ConvertEnemySequenceToSequence(spiritsBool[i]).runesongPattern);
+            spirits[i].CountIntervals();
         }
     }
 
-    SequenceRow[] ConvertEnemySequenceToSequence(EnemySequence boolSequences)
+    QueuedRunesong ConvertEnemySequenceToSequence(EnemySequence boolSequences)
     {
 
-        SequenceRow[] newSequencer = new SequenceRow[5];
-        for(int i = 0; i < newSequencer.Length; i++)
+        QueuedRunesong newSequencer = new QueuedRunesong();
+        int count = 0;
+
+        foreach (Elements i in System.Enum.GetValues(typeof(Elements)))
         {
-            newSequencer[i] = new SequenceRow();
-            newSequencer[i].rowBaseDamage = baseRowDamage[i];
+            newSequencer.runesongPattern[i] = new SequenceRow();
+            newSequencer.runesongPattern[i].rowBaseDamage = baseRowDamage[count];
+            count++;
         }
 
         for (int i = 0; i < boolSequences.Neutral.Length; i++)
         {
             if (boolSequences.Neutral[i])
             {
-                newSequencer[0].SetStepInRow(i*2, true);
+                newSequencer.runesongPattern[Elements.Neutral].SetStepInRow(i*2, true);
             }
         }
         for (int i = 0; i < boolSequences.Fire.Length; i++)
         {
             if (boolSequences.Fire[i])
             {
-                newSequencer[1].SetStepInRow(i * 2, true);
+                newSequencer.runesongPattern[Elements.Fire].SetStepInRow(i * 2, true);
             }
         }
         for (int i = 0; i < boolSequences.Ice.Length; i++)
         {
             if (boolSequences.Ice[i])
             {
-                newSequencer[2].SetStepInRow(i * 2, true);
+                newSequencer.runesongPattern[Elements.Ice].SetStepInRow(i * 2, true);
             }
         }
         for (int i = 0; i < boolSequences.Earth.Length; i++)
         {
             if (boolSequences.Earth[i])
             {
-                newSequencer[3].SetStepInRow(i * 2, true);
+                newSequencer.runesongPattern[Elements.Earth].SetStepInRow(i * 2, true);
             }
         }
         for (int i = 0; i < boolSequences.Air.Length; i++)
         {
             if (boolSequences.Air[i])
             {
-                newSequencer[4].SetStepInRow(i * 2, true);
+                newSequencer.runesongPattern[Elements.Air].SetStepInRow(i * 2, true);
             }
         }
-
+        //print(newSequencer.runesongPattern[Elements.Neutral].GetDictioneryCount().ToString());
         return newSequencer;
-
     }
+}
 
-
-
+[System.Serializable]
+public class EnemySequence
+{
+    public bool[] Neutral = new bool[8];
+    public bool[] Fire = new bool[8];
+    public bool[] Ice = new bool[8];
+    public bool[] Earth = new bool[8];
+    public bool[] Air = new bool[8];
 }

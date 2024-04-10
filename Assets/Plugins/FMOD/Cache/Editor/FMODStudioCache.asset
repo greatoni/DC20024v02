@@ -1,25 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9165612084194168972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: Master Project/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638480324028088219
-  FileSizes:
-  - Name: Desktop
-    Value: 3056096
-  Exists: 1
 --- !u!114 &-9005898692293256158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,7 +19,7 @@ MonoBehaviour:
     Data3: 871382671
     Data4: 1185786966
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -47,6 +27,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 374
+--- !u!114 &-8821782699140260044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep09
+  m_EditorClassIdentifier: 
+  Name: SequenceStep09
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 2256665488
+    data2: 549109996
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8733093350081599421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +75,26 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-8455282305525812835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Master Project/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638478313007299223
+  FileSizes:
+  - Name: Desktop
+    Value: 128896
+  Exists: 1
 --- !u!114 &-8230496939860241613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +114,7 @@ MonoBehaviour:
     Data3: -1151303257
     Data4: 88033399
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -98,6 +122,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2958
+--- !u!114 &-7873898131161102394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep0115
+  m_EditorClassIdentifier: 
+  Name: SequenceStep0115
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 3381948300
+    data2: 154273368
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7358459710588537712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +165,7 @@ MonoBehaviour:
     Data3: -714789741
     Data4: 2080158445
   Banks:
-  - {fileID: -9165612084194168972}
+  - {fileID: -3843889077320741082}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -126,6 +174,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 129600
+--- !u!114 &-7333831965746854877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Air
+  m_EditorClassIdentifier: 
+  Path: event:/Air
+  Guid:
+    Data1: -2006750765
+    Data2: 1222560242
+    Data3: 747538324
+    Data4: 996298267
+  Banks:
+  - {fileID: 7858017665859225485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7232784204260449136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +220,7 @@ MonoBehaviour:
     Data3: 1659205795
     Data4: 1738164862
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -172,7 +247,7 @@ MonoBehaviour:
     Data3: -1727882331
     Data4: -2020470740
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -180,6 +255,293 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
+--- !u!114 &-6830280926457929097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ice
+  m_EditorClassIdentifier: 
+  Path: event:/Ice
+  Guid:
+    Data1: 1994210256
+    Data2: 1271744225
+    Data3: 815278494
+    Data4: -1692854375
+  Banks:
+  - {fileID: 7858017665859225485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5747748848489837133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Neutral
+  m_EditorClassIdentifier: 
+  Path: event:/Neutral
+  Guid:
+    Data1: 1542115965
+    Data2: 1223288995
+    Data3: -1412656478
+    Data4: -1000103431
+  Banks:
+  - {fileID: 7858017665859225485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5647180831654601524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep012
+  m_EditorClassIdentifier: 
+  Name: SequenceStep012
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 2857556296
+    data2: 2221857556
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5324715358697804708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep02
+  m_EditorClassIdentifier: 
+  Name: SequenceStep02
+  StudioPath: 
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 3388833275
+    data2: 3378095702
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5255768581525255780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep09
+  m_EditorClassIdentifier: 
+  Name: SequenceStep09
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 2256665488
+    data2: 549109996
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4660924770688710746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep07
+  m_EditorClassIdentifier: 
+  Name: SequenceStep07
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1779407058
+    data2: 1137643277
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4016349687513359340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fire
+  m_EditorClassIdentifier: 
+  Path: event:/Fire
+  Guid:
+    Data1: 522337503
+    Data2: 1335623295
+    Data3: 483587469
+    Data4: -2137768165
+  Banks:
+  - {fileID: 7858017665859225485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3856732481626960744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep07
+  m_EditorClassIdentifier: 
+  Name: SequenceStep07
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1779407058
+    data2: 1137643277
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3843889077320741082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Master Project/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638478313007779524
+  FileSizes:
+  - Name: Desktop
+    Value: 3063488
+  Exists: 1
+--- !u!114 &-3721704868702651399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music/TimeEvents90 2
+  m_EditorClassIdentifier: 
+  Path: event:/music/TimeEvents90 2
+  Guid:
+    Data1: 2065511670
+    Data2: 1120421348
+    Data3: 162421159
+    Data4: 1247045243
+  Banks:
+  - {fileID: -8455282305525812835}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5324715358697804708}
+  - {fileID: 5797184470339975105}
+  - {fileID: 3271865400320893154}
+  - {fileID: 4694052537341817739}
+  - {fileID: -3500664609798920995}
+  - {fileID: 9157571563337545013}
+  - {fileID: -5255768581525255780}
+  - {fileID: -4660924770688710746}
+  - {fileID: 714700133259185893}
+  - {fileID: 5152300298156135928}
+  - {fileID: -7873898131161102394}
+  - {fileID: 3137900959418456309}
+  - {fileID: 5142095573616982507}
+  - {fileID: -5647180831654601524}
+  - {fileID: -2442057814419769124}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5333
+--- !u!114 &-3500664609798920995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep01
+  m_EditorClassIdentifier: 
+  Name: SequenceStep01
+  StudioPath: 
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 1666535168
+    data2: 3980270336
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3120335393661649670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +561,7 @@ MonoBehaviour:
     Data3: -577994075
     Data4: -1641599107
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -226,7 +588,7 @@ MonoBehaviour:
     Data3: 903564433
     Data4: -1018420524
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -253,7 +615,7 @@ MonoBehaviour:
     Data3: 435261099
     Data4: 1893391669
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -261,6 +623,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2958
+--- !u!114 &-2442057814419769124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep011
+  m_EditorClassIdentifier: 
+  Name: SequenceStep011
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 160325580
+    data2: 3790339998
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2321366658115407624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +666,7 @@ MonoBehaviour:
     Data3: -1102930010
     Data4: -1004508828
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -288,7 +674,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1478
---- !u!114 &-2321180424689423592
+--- !u!114 &-2056290692192768541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,16 +683,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep010
   m_EditorClassIdentifier: 
-  Path: Master Project/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638480324026261718
-  FileSizes:
-  - Name: Desktop
-    Value: 2362
+  Name: SequenceStep010
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 4223840355
+    data2: 1536005220
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &-1272340580609308552
 MonoBehaviour:
@@ -351,7 +741,7 @@ MonoBehaviour:
     Data3: -145065343
     Data4: 671346781
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -372,10 +762,10 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2321180424689423592}
-  - {fileID: 5254968435678139867}
-  - {fileID: -9165612084194168972}
-  - {fileID: 5999524585209793322}
+  - {fileID: 6255564148950824333}
+  - {fileID: -8455282305525812835}
+  - {fileID: -3843889077320741082}
+  - {fileID: 7858017665859225485}
   EditorEvents:
   - {fileID: -7358459710588537712}
   - {fileID: 3516140812873969727}
@@ -399,12 +789,18 @@ MonoBehaviour:
   - {fileID: -2705946855034675403}
   - {fileID: -598689895032262058}
   - {fileID: -7232784204260449136}
+  - {fileID: -3721704868702651399}
+  - {fileID: 2093156099065479465}
+  - {fileID: -5747748848489837133}
+  - {fileID: -6830280926457929097}
+  - {fileID: -7333831965746854877}
+  - {fileID: -4016349687513359340}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5254968435678139867}
+  - {fileID: -8455282305525812835}
   StringsBanks:
-  - {fileID: -2321180424689423592}
-  cacheTime: 638480324028327552
+  - {fileID: 6255564148950824333}
+  cacheTime: 638478313007879356
   cacheVersion: 131608
 --- !u!114 &273582056198755284
 MonoBehaviour:
@@ -449,7 +845,7 @@ MonoBehaviour:
     Data3: 927858595
     Data4: 232604220
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -457,6 +853,78 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4444
+--- !u!114 &367989502245926031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep01_Even
+  m_EditorClassIdentifier: 
+  Name: SequenceStep01_Even
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1622502173
+    data2: 3668950425
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &395680202687214201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep08
+  m_EditorClassIdentifier: 
+  Name: SequenceStep08
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 4257397368
+    data2: 2859668046
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &714700133259185893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep08
+  m_EditorClassIdentifier: 
+  Name: SequenceStep08
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 4257397368
+    data2: 2859668046
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &1501212783227655613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,7 +944,7 @@ MonoBehaviour:
     Data3: -1214233432
     Data4: 1067706806
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -508,6 +976,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2093156099065479465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Earth
+  m_EditorClassIdentifier: 
+  Path: event:/Earth
+  Guid:
+    Data1: 41174855
+    Data2: 1226363581
+    Data3: 1175050684
+    Data4: 1538748722
+  Banks:
+  - {fileID: 7858017665859225485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2625088420020083867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,7 +1022,7 @@ MonoBehaviour:
     Data3: 1141963702
     Data4: -740911937
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -535,6 +1030,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 373
+--- !u!114 &3137900959418456309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep013
+  m_EditorClassIdentifier: 
+  Name: SequenceStep013
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 3355992438
+    data2: 2494707460
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3138536936516349219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +1073,7 @@ MonoBehaviour:
     Data3: 408882849
     Data4: -675912357
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -562,6 +1081,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
+--- !u!114 &3271865400320893154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep05
+  m_EditorClassIdentifier: 
+  Name: SequenceStep05
+  StudioPath: 
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 3307753961
+    data2: 735801093
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3482687636707020210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +1124,7 @@ MonoBehaviour:
     Data3: 1220421292
     Data4: -1736873625
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -608,7 +1151,7 @@ MonoBehaviour:
     Data3: -866366306
     Data4: -1174682491
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -635,7 +1178,7 @@ MonoBehaviour:
     Data3: 1810748045
     Data4: -1464614071
   Banks:
-  - {fileID: -9165612084194168972}
+  - {fileID: -3843889077320741082}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -662,7 +1205,7 @@ MonoBehaviour:
     Data3: -1732935796
     Data4: 647020798
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -689,7 +1232,7 @@ MonoBehaviour:
     Data3: 2033839502
     Data4: -2142124135
   Banks:
-  - {fileID: -9165612084194168972}
+  - {fileID: -3843889077320741082}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -700,10 +1243,15 @@ MonoBehaviour:
   - {fileID: 7853595547077929696}
   - {fileID: -8733093350081599421}
   - {fileID: -1272340580609308552}
+  - {fileID: -8821782699140260044}
+  - {fileID: -2056290692192768541}
+  - {fileID: 367989502245926031}
+  - {fileID: 395680202687214201}
+  - {fileID: -3856732481626960744}
   MinDistance: 1
   MaxDistance: 20
   Length: 5333
---- !u!114 &5254968435678139867
+--- !u!114 &4694052537341817739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -712,18 +1260,94 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep03
   m_EditorClassIdentifier: 
-  Path: Master Project/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638480324024037926
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
+  Name: SequenceStep03
+  StudioPath: 
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 101578648
+    data2: 2225618494
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
---- !u!114 &5999524585209793322
+--- !u!114 &5142095573616982507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep014
+  m_EditorClassIdentifier: 
+  Name: SequenceStep014
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 1942793397
+    data2: 190814860
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5152300298156135928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep06
+  m_EditorClassIdentifier: 
+  Name: SequenceStep06
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 2025136453
+    data2: 2314695992
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5797184470339975105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep04
+  m_EditorClassIdentifier: 
+  Name: SequenceStep04
+  StudioPath: 
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 2370721975
+    data2: 1371236248
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6255564148950824333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -733,15 +1357,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Sound Effects.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: Master Project/Build/Desktop/Sound Effects.bank
-  Name: Sound Effects
-  StudioPath: bank:/Sound Effects
-  lastModified: 638480324028327552
+  Path: Master Project/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638478313007319226
   FileSizes:
   - Name: Desktop
-    Value: 1221792
+    Value: 2928
   Exists: 1
 --- !u!114 &6297322260717408211
 MonoBehaviour:
@@ -788,7 +1412,7 @@ MonoBehaviour:
     Data3: -1672756558
     Data4: 206611633
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -815,7 +1439,7 @@ MonoBehaviour:
     Data3: 2102035079
     Data4: -1155381531
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -847,6 +1471,26 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7858017665859225485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Sound Effects.bank
+  m_EditorClassIdentifier: 
+  Path: Master Project/Build/Desktop/Sound Effects.bank
+  Name: Sound Effects
+  StudioPath: bank:/Sound Effects
+  lastModified: 638478313007879356
+  FileSizes:
+  - Name: Desktop
+    Value: 1300992
+  Exists: 1
 --- !u!114 &7982496261682169384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,7 +1510,7 @@ MonoBehaviour:
     Data3: -781983326
     Data4: 1946927782
   Banks:
-  - {fileID: 5999524585209793322}
+  - {fileID: 7858017665859225485}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -894,6 +1538,30 @@ MonoBehaviour:
   ID:
     data1: 3307753961
     data2: 735801093
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &9157571563337545013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90 2/SequenceStep010
+  m_EditorClassIdentifier: 
+  Name: SequenceStep010
+  StudioPath: 
+  Min: 0
+  Max: 4
+  Default: 0
+  ID:
+    data1: 4223840355
+    data2: 1536005220
   Type: 1
   IsGlobal: 0
   Labels: []

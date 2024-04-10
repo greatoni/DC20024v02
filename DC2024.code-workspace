@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Bash/BashBoilerplates"
+		}
+	],
+	"settings": {
+		"dotnet.defaultSolution": "DC2024v02.sln"
+	}
+}
