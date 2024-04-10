@@ -145,10 +145,7 @@ namespace HeadsUpDisplay
 
             void Update(int healthCurrent, int healthTotal)
             {
-                int factor = 100 * healthCurrent / healthTotal;
-                int maxWidth = 256;
-                int currentWidth = maxWidth * factor / 100;
-                // healthBarCurrent.RectTransform.sizeDelta = new Length(currentWidth, LengthUnit.Pixel);
+                int factor = 100 * healthCurrent / healthTotal / 100;
             }
 
         }
