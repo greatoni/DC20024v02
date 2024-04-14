@@ -7,8 +7,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using QuerySelector;
 using UnityEditor.UIElements;
-
-
+using UnityEngine.SceneManagement;
+using static PlayerDamageSequences;
 
 /*
 .top
@@ -64,20 +64,6 @@ Label
 */
 namespace HeadsUpDisplay
 {
-    public class PlayerCharacter
- // Stub for player character class to be implemented later
-    {
-        public int HPMax = 0;
-        public int runeMaxCapacity = 0;
-
-        private int HP = 0;
-
-        public int GetHP()
-        {
-            return HP;
-        }
-    }
-
     public class HUD : MonoBehaviour
     /*
     @namespace HUD
@@ -85,55 +71,29 @@ namespace HeadsUpDisplay
         using HUD;
     */
     {
-        public class PlayerCharacter
-        /*
-        @class PlayerCharacter
-            stub class for the player character
-        */
-        {
-            public int HPMax = 512;
-            public int runeMaxCapacity = 64;
-            private int HP = 0;
-
-            public int GetHP()
-            {
-                return this.HP;
-            }
-
-            public void Start()
-            {
-                this.HP = HPMax;
-            }
-
-            public void Update()
-            {
-                this.DecrementHP(1);
-            }
-
-            public void DecrementHP(int damage)
-            {
-                this.HP -= damage;
-            }
-        }
-
         private readonly QSelector QSelector;
+        private readonly PlayerDamageSequences player;
         private readonly HealthMeter health;
+        // private readonly Portrait portrait;
         private readonly VisualElement inventory;
         private readonly VisualElement sequencer;
         private readonly VisualElement library;
-        private readonly PlayerCharacter player = new();
 
         readonly Dictionary<string, int> attributes = new();
 
         public HUD()
         {
+            foreach(GameObject obj in SceneManager.GetActiveScene().GetRootGameObjects())
+            {
+                if(obj.name == "Player") player = obj.GetComponent<PlayerDamageSequences>();
+            }
+
             QSelector = new QSelector(GetComponent<UIDocument>());
-            health = new HealthMeter(player.HPMax, QSelector.First(".health-total"), QSelector.First(".health-current"));
+            health = new HealthMeter(player.healthMax, QSelector.First(".health-total"), QSelector.First(".health-current"));
+            // portrait = new Portrait(QSelector.First(".portrait"));
             inventory = QSelector.First(".inventory");
             sequencer = QSelector.First(".sequence-input");
             library = QSelector.First(".library");
-
-            // player = GetComponent<PlayerCharacter>();
         }
 
         // Start is called before the first frame update
@@ -155,11 +115,14 @@ namespace HeadsUpDisplay
             {
                 this.healthBar = healthBar;
                 this.healthBarCurrent = healthBarCurrent;
+
             }
 
             void Update(int healthCurrent, int healthTotal)
             {
-                int factor = 100 * healthCurrent / healthTotal / 100;
+                int factor = 100 * healthCurrent / healthTotal;
+                Vector3 scale = new(factor / 100.0f , 1.0f, 1.0f);
+                healthBarCurrent.transform.scale.Set(scale.x, scale.y, scale.z);
             }
 
         }
@@ -411,15 +374,7 @@ namespace HeadsUpDisplay
 
         }
 
-        public enum StatusEffects
-        {
-            burn,
-            frostbite,
-            galvanization,
-            frozen
-        }        
-
-        public class Enemy : MonoBehaviour
+        public class EnemyTarget : MonoBehaviour
         {
             
         }

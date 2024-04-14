@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class SequencerUser : MonoBehaviour
+/*
+@class SequencerUser
+    is roughly equivalent to a character or enemy in combat.
+*/
 {
     public int healthMax = 1000;
     public int shieldMax = 200;
