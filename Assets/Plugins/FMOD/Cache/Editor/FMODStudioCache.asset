@@ -318,9 +318,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/TimeEvents90/SequenceStep01
+  m_Name: parameter:/TimeEvents90/SequenceStep06
   m_EditorClassIdentifier: 
-  Name: SequenceStep01
+  Name: SequenceStep06
   StudioPath: 
   Min: 0
   Max: 8
@@ -712,8 +712,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/TimeEvents90/SequenceStep04
   m_EditorClassIdentifier: 
   Path: Master Project/Build/Desktop/Master.bank
   Name: Master

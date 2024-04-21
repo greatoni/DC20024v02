@@ -24,6 +24,8 @@ public class runePillar : MonoBehaviour
 
             if (pillarCollider.Raycast(ray, out hit, distanceToPillar))
             {
+                Debug.Log(hit);
+                Debug.Log("Refilled all values");
                 gameManager.gm.pc.RefillAllValues();
             }
 
