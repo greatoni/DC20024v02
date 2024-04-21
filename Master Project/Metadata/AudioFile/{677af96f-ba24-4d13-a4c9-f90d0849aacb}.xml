@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{677af96f-ba24-4d13-a4c9-f90d0849aacb}">
+		<property name="assetPath">
+			<value>Door Unlock With Key/Door Unlock With Key 2  No Reverb.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.9645351473922901</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a7d6c7b2-ebe0-49eb-ba90-6c9a1e10c593}</destination>
+		</relationship>
+	</object>
+</objects>

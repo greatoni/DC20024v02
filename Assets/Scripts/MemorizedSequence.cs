@@ -9,8 +9,6 @@ using System.Linq;
 public class MemorizedSequence : ScriptableObject
 {
     public SequenceRow[] sequence = new SequenceRow[5];
-    public StepEffect[] roweffects = new StepEffect[5];
-    public int[] baseRowDamage = new int[5];
     public int numberCellsInSequence = 16;
 
     public void WriteToSequence(SequenceRow[] sequenceFromTable)
@@ -26,7 +24,7 @@ public class MemorizedSequence : ScriptableObject
         {
             for(int i = 0; i < numberCellsInSequence; i++)
             {
-                if (sequenceFromTable[s].GetStepFromRow(i) != null)
+                if (sequenceFromTable[s].GetStepFromRow(i))
                 {
                     sequence[s].SetStepInRow(i, sequenceFromTable[s].GetStepFromRow(i));
                 }

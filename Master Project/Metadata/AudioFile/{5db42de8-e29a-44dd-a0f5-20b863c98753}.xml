@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5db42de8-e29a-44dd-a0f5-20b863c98753}">
+		<property name="assetPath">
+			<value>Lever/Lever.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.486077097505669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a7d6c7b2-ebe0-49eb-ba90-6c9a1e10c593}</destination>
+		</relationship>
+	</object>
+</objects>

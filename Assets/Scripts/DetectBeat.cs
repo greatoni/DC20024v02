@@ -39,7 +39,7 @@ public class DetectBeat : MonoBehaviour
 
     void Start()
     {
-        StartBattleMusic(EventName);
+        //StartBattleMusic(EventName);
     }
 
     public void InitializeMusicEvent(FMODUnity.EventReference musicEvent)
@@ -90,10 +90,10 @@ public class DetectBeat : MonoBehaviour
         musicInstance.release();
     }
 
-    void OnGUI()
+/*    void OnGUI()
     {
         GUILayout.Box(String.Format("Current Bar = {0}, Last Marker = {1}", timelineInfo.CurrentMusicBar, (string)timelineInfo.LastMarker));
-    }
+    }*/
 
 
     private void Update()

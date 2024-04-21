@@ -493,9 +493,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:/Users/Desktop-PC/Downloads/Master Project/Master Project/Master
-    Project.fspro
-  sourceBankPath: C:/Users/Desktop-PC/Downloads/Master Project/Master Project/Build
+  sourceProjectPath: Master Project/Master Project.fspro
+  sourceBankPath: Master Project/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

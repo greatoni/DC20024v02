@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{dce05478-4bcb-4abe-9a0e-b8ec530bdb6c}">
+		<property name="assetPath">
+			<value>Door Unlock With Key/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a7d6c7b2-ebe0-49eb-ba90-6c9a1e10c593}</destination>
+		</relationship>
+	</object>
+</objects>

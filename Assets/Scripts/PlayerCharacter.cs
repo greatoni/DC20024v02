@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;using UnityEngine.Events;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerCharacter : MonoBehaviour
 {
     public int HPMax;
     public int armourMax;
     int armourCurrent;
-    int HP;
+    int HP; // I need an accessor method for the HUD to query the current HP. I wrote one and included it, but if you would prefer to do something else, let me know -@jade
     int turnSpeed; //Step to start action
     public int runeMaxCapacity;
     int runeCapacity;
@@ -84,6 +85,11 @@ public class PlayerCharacter : MonoBehaviour
     {
         HP = HPMax;
         runeCapacity = runeMaxCapacity;
+    }
+
+    public int GetHP()
+    {
+        return HP;
     }
 }
 

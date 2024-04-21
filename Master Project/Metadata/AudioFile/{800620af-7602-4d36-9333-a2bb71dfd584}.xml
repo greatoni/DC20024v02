@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{800620af-7602-4d36-9333-a2bb71dfd584}">
+		<property name="assetPath">
+			<value>Functional_Harmony_Exploration (1).wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>60</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a7d6c7b2-ebe0-49eb-ba90-6c9a1e10c593}</destination>
+		</relationship>
+	</object>
+</objects>

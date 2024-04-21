@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{53709c5f-4469-4996-b29e-bede4600f15e}">
+		<property name="assetPath">
+			<value>Drawbridge/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a7d6c7b2-ebe0-49eb-ba90-6c9a1e10c593}</destination>
+		</relationship>
+	</object>
+</objects>
