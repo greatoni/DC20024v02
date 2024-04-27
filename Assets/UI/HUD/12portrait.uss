@@ -1,0 +1,7 @@
+#Portrait {
+    background-image: url('project://database/Assets/Scripts/Sprites/Effects%20Pack%2014/6/20.png?fileID=2800000&guid=8552ed9a21dbfa04b8cb5e6a57332c4f&type=3#20');
+    margin-right: auto;
+    margin-left: auto;
+    width: 28%;
+    height: 100%;
+}

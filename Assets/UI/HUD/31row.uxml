@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="31rune" src="project://database/Assets/UI/HUD/31rune.uxml?fileID=9197481963319205126&amp;guid=60781caeacc7fbb4cbaf0e8017379554&amp;type=3#31rune" />
+    <Style src="project://database/Assets/UI/HUD/31row.uss?fileID=7433441132597879392&amp;guid=426b327638f61ef43ad6b8f9d6c37475&amp;type=3#31row" />
+    <ui:VisualElement name="ElementRow" class="element-row" style="flex-direction: row; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+        <ui:VisualElement name="fret" class="fret" />
+        <ui:Instance template="31rune" name="rune1" class="rune" />
+        <ui:VisualElement name="fret" class="fret" />
+        <ui:Instance template="31rune" name="rune2" class="rune" />
+        <ui:VisualElement name="fret" class="fret" />
+        <ui:Instance template="31rune" name="rune3" class="rune" />
+        <ui:VisualElement name="fret" class="fret" />
+        <ui:Instance template="31rune" name="rune4" class="rune" />
+        <ui:VisualElement name="fret" class="fret" />
+        <ui:Instance template="31rune" name="rune5" class="rune" />
+        <ui:VisualElement name="fret" class="fret" />
+        <ui:Instance template="31rune" name="rune6" class="rune" />
+        <ui:VisualElement name="fret" class="fret" />
+        <ui:Instance template="31rune" name="rune7" class="rune" />
+        <ui:VisualElement name="fret" class="fret" />
+        <ui:Instance template="31rune" name="rune8" class="rune" />
+        <ui:VisualElement name="fret" class="fret" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -9,6 +9,8 @@ using QuerySelector;
 using UnityEditor.UIElements;
 using UnityEngine.SceneManagement;
 using static PlayerDamageSequences;
+using static SequencerUserStates;
+using static Elements;
 
 /*
 .top
@@ -74,7 +76,7 @@ namespace HeadsUpDisplay
         private readonly QSelector QSelector;
         private readonly PlayerDamageSequences player;
         private readonly HealthMeter health;
-        // private readonly Portrait portrait;
+        private readonly VisualElement portrait;
         private readonly VisualElement inventory;
         private readonly VisualElement sequencer;
         private readonly VisualElement library;
@@ -89,7 +91,7 @@ namespace HeadsUpDisplay
             }
 
             QSelector = new QSelector(GetComponent<UIDocument>());
-            health = new HealthMeter(player.healthMax, QSelector.First(".health-total"), QSelector.First(".health-current"));
+            health = new HealthMeter(player.healthMax, QSelector.First(".health-current"));
             // portrait = new Portrait(QSelector.First(".portrait"));
             inventory = QSelector.First(".inventory");
             sequencer = QSelector.First(".sequence-input");
@@ -99,30 +101,36 @@ namespace HeadsUpDisplay
         // Start is called before the first frame update
         void Start()
         {
+
         }
 
         // Update is called once per frame
         void Update()
         {
+            health.Update(player.GetCurrentHealth());
         }
         
         public class HealthMeter 
         {
-            private readonly VisualElement healthBar;
+            private readonly int healthTotal;
             private readonly VisualElement healthBarCurrent;
 
-            public HealthMeter(int healthTotal, VisualElement healthBarCurrent, VisualElement healthBar)
+            public HealthMeter(int healthTotal, VisualElement healthBarCurrent)
             {
-                this.healthBar = healthBar;
+                this.healthTotal = healthTotal;
                 this.healthBarCurrent = healthBarCurrent;
-
             }
 
-            void Update(int healthCurrent, int healthTotal)
+         /* public void Start()
             {
-                int factor = 100 * healthCurrent / healthTotal;
-                Vector3 scale = new(factor / 100.0f , 1.0f, 1.0f);
-                healthBarCurrent.transform.scale.Set(scale.x, scale.y, scale.z);
+
+            } */
+
+            public void Update(int healthCurrent)
+            {
+                int factor = 100 * healthCurrent / this.healthTotal;
+                float noChange = 1.0f;
+                healthBarCurrent.transform.scale.Set(factor/100.0f, noChange, noChange);
             }
 
         }
@@ -183,19 +191,6 @@ namespace HeadsUpDisplay
             }
         }
         
-        public enum SequenceType 
-        /*
-        @enum SequenceType
-            used to keep track of the elemental type of a sequence
-        */
-        {
-            Neutral,
-            Fire,
-            Ice,
-            Earth,
-            Air
-        }
-
         public class Sequence 
     /*
         @class Sequence
@@ -203,22 +198,22 @@ namespace HeadsUpDisplay
             The maximum number of values is always 8
         @property {bool[]} sequence
             holds the sequence of boolean values to determine if a pip is present
-        @property {SequenceType} type 
+        @property {Elements} type 
             label to identify the elemental type of the sequence
-        @default {SequenceType} _type
+        @default {Elements} _type
             default value for the type property is Neutral
     */
         {
-            public SequenceType type;
-            private readonly SequenceType _type = SequenceType.Neutral;
+            public Elements type;
+            private readonly Elements _type = Elements.Neutral;
             private readonly bool[] sequence = new bool[8];
 
-            public Sequence(SequenceType type)
+            public Sequence(Elements type)
             {
                 this.type = type;
             }
 
-            public Sequence(SequenceType type, bool[] sequence)
+            public Sequence(Elements type, bool[] sequence)
             {
                 if(sequence.LongLength != 8)
                 {
@@ -247,11 +242,11 @@ namespace HeadsUpDisplay
         public class Runesong
         {
             private readonly string alias = "";
-            private Sequence neutral = new(SequenceType.Neutral);
-            private Sequence fire = new(SequenceType.Fire);
-            private Sequence ice = new(SequenceType.Ice);
-            private Sequence earth = new(SequenceType.Earth);
-            private Sequence air = new(SequenceType.Air);
+            private Sequence neutral = new(Elements.Neutral);
+            private Sequence fire = new(Elements.Fire);
+            private Sequence ice = new(Elements.Ice);
+            private Sequence earth = new(Elements.Earth);
+            private Sequence air = new(Elements.Air);
 
             public Runesong(string alias)
             {
@@ -270,11 +265,11 @@ namespace HeadsUpDisplay
 
             public Runesong(Runesong temp){
                 this.alias = temp.GetAlias();
-                this.neutral = temp.GetSequence(SequenceType.Neutral);
-                this.fire = temp.GetSequence(SequenceType.Fire);
-                this.ice = temp.GetSequence(SequenceType.Ice);
-                this.earth = temp.GetSequence(SequenceType.Earth);
-                this.air = temp.GetSequence(SequenceType.Air);
+                this.neutral = temp.GetSequence(Elements.Neutral);
+                this.fire = temp.GetSequence(Elements.Fire);
+                this.ice = temp.GetSequence(Elements.Ice);
+                this.earth = temp.GetSequence(Elements.Earth);
+                this.air = temp.GetSequence(Elements.Air);
             }
 
             public string GetAlias()
@@ -282,33 +277,33 @@ namespace HeadsUpDisplay
                 return this.alias;
             }
 
-            public Sequence GetSequence(SequenceType type)
+            public Sequence GetSequence(Elements type)
             {
-                if (type == SequenceType.Neutral) return neutral;
-                else if (type == SequenceType.Fire) return fire;
-                else if (type == SequenceType.Ice) return ice;
-                else if (type == SequenceType.Earth) return earth;
-                else if (type == SequenceType.Air) return air;
+                if (type == Elements.Neutral) return neutral;
+                else if (type == Elements.Fire) return fire;
+                else if (type == Elements.Ice) return ice;
+                else if (type == Elements.Earth) return earth;
+                else if (type == Elements.Air) return air;
                 else throw new Exception("Invalid sequence type");
             }
 
-            public void SetSequence(SequenceType type, Sequence sequence)
+            public void SetSequence(Elements type, Sequence sequence)
             {
-                if (type == SequenceType.Neutral) this.neutral = sequence;
-                else if (type == SequenceType.Fire) this.fire = sequence;
-                else if (type == SequenceType.Ice) this.ice = sequence;
-                else if (type == SequenceType.Earth) this.earth = sequence;
-                else if (type == SequenceType.Air) this.air = sequence;
+                if (type == Elements.Neutral) this.neutral = sequence;
+                else if (type == Elements.Fire) this.fire = sequence;
+                else if (type == Elements.Ice) this.ice = sequence;
+                else if (type == Elements.Earth) this.earth = sequence;
+                else if (type == Elements.Air) this.air = sequence;
                 else throw new Exception("Invalid sequence type");
             }
         
-            public void placePip(SequenceType type, int index)
+            public void placePip(Elements type, int index)
             {
                 Sequence sequence = this.GetSequence(type);
                 sequence.SetIndex(index, true);
             }
 
-            public void removePip(SequenceType type, int index)
+            public void removePip(Elements type, int index)
             {
                 Sequence sequence = this.GetSequence(type);
                 sequence.SetIndex(index, false);

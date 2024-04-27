@@ -1,11 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/HUD/hud.uss?fileID=7433441132597879392&amp;guid=6801f9bb72574da419890ed682e611b9&amp;type=3#hud" />
-    <ui:VisualElement name="inventory" class="inventory">
-        <ui:VisualElement name="slot1" class="slot slot1 slot-selected" />
-        <ui:VisualElement name="slot2" class="slot slot2" style="flex-grow: 1;" />
-        <ui:VisualElement name="slot3" class="slot slot3" style="flex-grow: 1;" />
-        <ui:VisualElement name="slot4" class="slot slot4" style="flex-grow: 1;" />
-        <ui:VisualElement name="slot5" class="slot slot5" style="flex-grow: 1;" />
-        <ui:VisualElement name="slot6" class="slot slot6" style="flex-grow: 1;" />
+    <Style src="project://database/Assets/UI/HUD/hud.uss?fileID=7433441132597879392&amp;guid=08e57850dbe8a7649aa8c85fdfdd7719&amp;type=3#hud" />
+    <Style src="project://database/Assets/UI/HUD/13inventory.uss?fileID=7433441132597879392&amp;guid=432faf13c3612a24a914c3286fafc9d3&amp;type=3#13inventory" />
+    <ui:VisualElement name="InventoryBar">
+        <ui:VisualElement name="item1" class="item item-active" />
+        <ui:VisualElement name="item2" class="item" />
+        <ui:VisualElement name="item3" class="item" />
+        <ui:VisualElement name="item4" class="item" />
+        <ui:VisualElement name="item5" class="item" />
+        <ui:VisualElement name="item6" class="item" />
     </ui:VisualElement>
 </ui:UXML>

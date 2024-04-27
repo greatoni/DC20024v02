@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/Sprites/HUD/ui.uss?fileID=7433441132597879392&amp;guid=6801f9bb72574da419890ed682e611b9&amp;type=3#ui" />
-    <ui:VisualElement name="Bottom" class="bottom">
+    <Style src="project://database/Assets/UI/HUD/31rune.uss?fileID=7433441132597879392&amp;guid=7f97f89e9ba6ded48af2bba04b866368&amp;type=3#31rune" />
+    <ui:VisualElement name="Rune" class="rune-space">
+        <ui:VisualElement name="Pip" class="pip hidden" />
     </ui:VisualElement>
 </ui:UXML>

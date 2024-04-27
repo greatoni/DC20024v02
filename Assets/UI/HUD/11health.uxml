@@ -1,6 +1,15 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/HUD/hud.uss?fileID=7433441132597879392&amp;guid=6801f9bb72574da419890ed682e611b9&amp;type=3#hud" />
-    <ui:VisualElement name="healthTotal" class="healthTotal" style="flex-grow: 1;">
-        <ui:VisualElement name="healthCurrent" class="healthCurrent" style="flex-grow: 1;" />
+    <Style src="project://database/Assets/UI/HUD/hud.uss?fileID=7433441132597879392&amp;guid=08e57850dbe8a7649aa8c85fdfdd7719&amp;type=3#hud" />
+    <Style src="project://database/Assets/UI/HUD/11health.uss?fileID=7433441132597879392&amp;guid=005e44e2c662fdc40ab4dc589fb60e19&amp;type=3#11health" />
+    <ui:VisualElement name="HealthTotal" class="health-bar">
+        <ui:VisualElement name="HealthCurrent" class="health-bar" />
+    </ui:VisualElement>
+    <ui:VisualElement name="StatusBar" class="flex-row">
+        <ui:VisualElement name="Burned" class="status" />
+        <ui:VisualElement name="Frozen" class="status" style="background-image: url(&apos;project://database/Assets/Sprites/UI/status/frozen.png?fileID=2800000&amp;guid=b5653489bf9886c4d98285736c40fd9e&amp;type=3#frozen&apos;);" />
+        <ui:VisualElement name="Regenerate" class="status" />
+        <ui:VisualElement name="Galvanize" class="status" />
+        <ui:VisualElement name="Imbalance" class="status" />
+        <ui:VisualElement name="Erode" class="status" />
     </ui:VisualElement>
 </ui:UXML>

@@ -8,6 +8,7 @@
 		}
 	],
 	"settings": {
-		"dotnet.defaultSolution": "DC2024v02.sln"
+		"dotnet.defaultSolution": "DC2024v02.sln",
+		"liveServer.settings.multiRootWorkspaceName": "DC2024v02"
 	}
 }
