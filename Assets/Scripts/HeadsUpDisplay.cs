@@ -1,12 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
-using QuerySelector;
-using UnityEditor.UIElements;
 using UnityEngine.SceneManagement;
 using static Elements;
 
@@ -22,7 +18,8 @@ namespace HeadsUpDisplay
     */
     {
         static float noChange = 1.0f;
-        public UIDocument HUD_UI;
+        public VisualTreeAsset HUD_UI;
+        private VisualElement root;
         HealthMeter health;
         public HUD()
         {
@@ -33,6 +30,7 @@ namespace HeadsUpDisplay
         void Start()
         {
             this.health = new HealthMeter();
+
         }
 
         // Update is called once per frame
