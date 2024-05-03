@@ -49,7 +49,7 @@ namespace HeadsUpDisplay
             public int healthTotal;
             public readonly VisualElement healthBarCurrent;
 
-            public HealthMeter(VisualElement healthBarCurrent, int healthTotal)
+            public HealthMeter(VisualElement healthBarCurrent, int healthTotal=128)
             {
                 this.healthBarCurrent = healthBarCurrent;
                 this.healthTotal = healthTotal;
