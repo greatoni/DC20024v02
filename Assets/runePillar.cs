@@ -7,11 +7,13 @@ public class runePillar : MonoBehaviour
     private Camera cam;
     public float distanceToPillar = 5f;
     public Collider pillarCollider;
+    public PlayerDamageSequences pc;
 
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
+        
     }
     // Update is called once per frame
     void Update()
@@ -24,9 +26,7 @@ public class runePillar : MonoBehaviour
 
             if (pillarCollider.Raycast(ray, out hit, distanceToPillar))
             {
-                Debug.Log(hit);
-                Debug.Log("Refilled all values");
-                gameManager.gm.pc.RefillAllValues();
+                //pc.RefillAllValues();
             }
 
         }

@@ -1,0 +1,60 @@
+.tracker {
+    border-top-width: 1px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 1px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    flex-grow: 1;
+    height: 12%;
+}
+
+.row {
+    flex-grow: 3;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-width: 1px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 1px;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+}
+
+#Neutral {
+    background-color: rgba(136, 136, 136, 0);
+}
+
+#Fire {
+    background-color: rgb(204, 0, 0);
+}
+
+#Earth {
+    background-color: rgb(51, 153, 51);
+}
+
+#Air {
+    background-color: rgb(204, 204, 0);
+}
+
+#Ice {
+    background-color: rgb(51, 51, 255);
+}
+
+#Commander {
+    flex-grow: 1;
+}

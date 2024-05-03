@@ -1,0 +1,15 @@
+.element-row {
+    flex-direction: row;
+    flex-grow: 1;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.fret {
+    background-color: rgb(102, 102, 102);
+    flex-grow: 1;
+}
+
+.rune {
+    flex-grow: 32;
+}

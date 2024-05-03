@@ -1,0 +1,41 @@
+#InventoryBar {
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.item {
+    border-left-color: rgb(0, 0, 221);
+    border-right-color: rgb(0, 0, 221);
+    border-top-color: rgb(0, 0, 221);
+    border-bottom-color: rgb(0, 0, 221);
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgb(0, 0, 255);
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    flex-grow: 1;
+    width: 28%;
+}
+
+.item-active {
+    border-left-color: rgb(221, 136, 0);
+    border-right-color: rgb(221, 136, 0);
+    border-top-color: rgb(221, 136, 0);
+    border-bottom-color: rgb(221, 136, 0);
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}

@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/HUD/hud.uss?fileID=7433441132597879392&amp;guid=08e57850dbe8a7649aa8c85fdfdd7719&amp;type=3#hud" />
+    <Style src="project://database/Assets/UI/HUD/12portrait.uss?fileID=7433441132597879392&amp;guid=6bb1110c2d5c9864aae3446fac816a15&amp;type=3#12portrait" />
+    <ui:VisualElement name="Portrait" />
+</ui:UXML>

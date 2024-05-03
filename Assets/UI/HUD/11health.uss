@@ -1,0 +1,64 @@
+#HealthTotal {
+    flex-grow: 3;
+    background-color: rgb(255, 0, 0);
+}
+
+#HealthCurrent {
+    background-color: rgb(255, 180, 0);
+    transform-origin: left;
+    scale: 0.75 1;
+    flex-grow: 1;
+}
+
+.health-bar {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#StatusBar {
+    margin-right: auto;
+    margin-left: auto;
+    flex-grow: 5;
+}
+
+.status {
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    flex-grow: 1;
+}
+
+#Burned {
+    background-image: url('project://database/Assets/Sprites/UI/status/burned.png?fileID=2800000&guid=95c8ae31671833e4fb552574f78ac0e4&type=3#burned');
+}
+
+#Frozen {
+    background-image: url('project://database/Assets/Sprites/UI/status/frozen.png?fileID=2800000&guid=b5653489bf9886c4d98285736c40fd9e&type=3#frozen');
+}
+
+#Regenerate {
+    background-image: url('project://database/Assets/Sprites/UI/status/regenerate.png?fileID=2800000&guid=087c99b3d28e5f641bcda7918868d7ae&type=3#regenerate');
+}
+
+#Galvanize {
+    background-image: url('project://database/Assets/Sprites/UI/status/galvanize.png?fileID=2800000&guid=6bc99a444728dce41a5d2f6e4554aa14&type=3#galvanize');
+}
+
+#Imbalance {
+    background-image: url('project://database/Assets/Sprites/UI/status/imbalance.png?fileID=2800000&guid=ac3fd21b1479f6a42b6e1ccb72259af9&type=3#imbalance');
+}
+
+#Erode {
+    background-image: url('project://database/Assets/Sprites/UI/status/erode.png?fileID=2800000&guid=09fbb1f4056ce3748bdcc60e5eefd4f6&type=3#erode');
+}

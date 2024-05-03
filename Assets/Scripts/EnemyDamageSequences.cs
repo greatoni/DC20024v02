@@ -1,38 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class EnemyDamageSequences : MonoBehaviour
+public class EnemyDamageSequences : SequencerUser
 {
-    public int Speed = 5;
-    public MemorizedSequence[] memorySlotSequence;
+    public MemorizedRuneSong[] memorySlotSequence;
     public SequencerGlobal sequencerGlobal;
+    public SequencerUser player; // for testing
     private bool doesWait = true;
-    private int tickTurnCountDown;
     private int enemyFakeInputDelay;
-    public int howManyTicksInTurn;
     private int howManyTicksWait;
+    private int tickTurnCountDown;
+
+    public TextMeshProUGUI counterTurnsText;
 
     private void Start()
     {
-        howManyTicksWait = howManyTicksInTurn - Speed;
-
-
+        tickTurnCountDown = speedMax;
     }
 
     public void CustomUpdateFromMusicTick(string marker) //Turn based actions
     {
+        counterTurnsText.text = tickTurnCountDown.ToString();
+
         if (doesWait)
         {
             tickTurnCountDown--;
             //Update progress bar for waiting
+
             if (tickTurnCountDown <= 0)
             {
                 doesWait = false;
-                //RecalculateSpeed();
                 tickTurnCountDown = howManyTicksInTurn;
                 //OnTurnStart.Invoke();
-                enemyFakeInputDelay = Random.Range(0, howManyTicksWait - 1);
+                enemyFakeInputDelay = Random.Range(0, speedMax - 1);
+                ReceiveStartTurn();
             }
         }
         if (!doesWait)
@@ -41,14 +44,10 @@ public class EnemyDamageSequences : MonoBehaviour
             // if enemy random choice from memorizedSequences 
 
             tickTurnCountDown--;
-
-                //print("send pattern to global");
                 if (tickTurnCountDown == enemyFakeInputDelay)
                 {
                     SendSequenceToGlobalSequencer(memorySlotSequence[0]);
-                    doesWait = true;
-                    //RecalculateSpeed();
-                    tickTurnCountDown = howManyTicksWait;
+                    tickTurnCountDown = speedMax;
                     doesWait = true;
                 }
             
@@ -56,24 +55,40 @@ public class EnemyDamageSequences : MonoBehaviour
             if (tickTurnCountDown <= 0)
             {
                 doesWait = true;
-                //RecalculateSpeed();
-                tickTurnCountDown = howManyTicksWait;
+                tickTurnCountDown = speedMax;
             }
         }
     }
 
+
+    public void ReceiveStartTurn()
+    {
+        // If damage only at turn start
+        BurnState();
+        FrozenState();
+    }
     public void SendEnemyToGlobal()
     {
-        sequencerGlobal.AddListenerToDetectBeat(this);
-
+        //sequencerGlobal.AddListenerToDetectBeat(this);
     }
 
-    public void SendSequenceToGlobalSequencer(MemorizedSequence sequence)
+    public void SendSequenceToGlobalSequencer(MemorizedRuneSong sequence)
     {
-        QueueSequence sequenceNew = new QueueSequence();
-        sequenceNew.sequence = sequence.sequence;
+        
+        QueuedRunesong sequenceNew = new QueuedRunesong();
+        sequenceNew = sequence.queueSequence;
         sequenceNew.isEnemy = true;
-        sequencerGlobal.AddNewSequenceToQueue(sequenceNew);
+        sequenceNew.target = player;
+        sequenceNew.runesongStarter = this;
+        for (int i = 0; i < 5; i++)
+        {
+            sequenceNew.parameterIndex[i] = fmodIndexes[i];
+        }
+        if (!sequencerGlobal.CheckifQueueStillThere(sequenceNew))
+        {
+            sequencerGlobal.AddNewSequenceToQueue(sequenceNew);
+        }
+            
     }
 
 

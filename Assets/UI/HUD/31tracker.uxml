@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="31row" src="project://database/Assets/UI/HUD/31row.uxml?fileID=9197481963319205126&amp;guid=dcb95dfcec4db4a47af3ab2e74953e0f&amp;type=3#31row" />
+    <Style src="project://database/Assets/UI/HUD/31tracker.uss?fileID=7433441132597879392&amp;guid=7e3872e5ccb05674ea5a5aaa030c0b43&amp;type=3#31tracker" />
+    <Style src="project://database/Assets/UI/HUD/31rune.uss?fileID=7433441132597879392&amp;guid=7f97f89e9ba6ded48af2bba04b866368&amp;type=3#31rune" />
+    <Style src="project://database/Assets/UI/HUD/31row.uss?fileID=7433441132597879392&amp;guid=426b327638f61ef43ad6b8f9d6c37475&amp;type=3#31row" />
+    <Style src="project://database/Assets/UI/HUD/hud.uss?fileID=7433441132597879392&amp;guid=08e57850dbe8a7649aa8c85fdfdd7719&amp;type=3#hud" />
+    <ui:Instance template="31row" name="Neutral" class="row" style="background-color: rgb(136, 136, 136);" />
+    <ui:Instance template="31row" name="Fire" class="row" />
+    <ui:Instance template="31row" name="Ice" class="row" />
+    <ui:Instance template="31row" name="Earth" class="row" />
+    <ui:Instance template="31row" name="Air" class="row" />
+    <ui:VisualElement name="Commander" class="flex-row Commander">
+        <ui:Button text="Play" name="Play" style="flex-grow: 7;" />
+        <ui:Button text="Save" name="Save" />
+    </ui:VisualElement>
+</ui:UXML>
