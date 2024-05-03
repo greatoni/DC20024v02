@@ -82,3 +82,5 @@ sh/
 
 # vscode
 .vscode/
+.gitignore
+Assets/Plugins/FMOD/

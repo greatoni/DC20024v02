@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using static Elements;
+using Unity.VisualScripting;
 
 
 
@@ -18,19 +19,22 @@ namespace HeadsUpDisplay
     */
     {
         static float noChange = 1.0f;
-        public VisualTreeAsset HUD_UI;
-        private VisualElement root;
+        [SerializeField]
+        private VisualTreeAsset uxml;
+        [SerializeField]
+        private StyleSheet uss;
+        private readonly VisualElement ROOT;
         HealthMeter health;
         public HUD()
         {
-            
+            this.ROOT = uxml.GetComponent<VisualElement>();
         }
 
         // Start is called before the first frame update
         void Start()
         {
-            this.health = new HealthMeter();
-
+            VisualElement meterElement = this.ROOT.Query<VisualElement>("HealthCurrent");
+            this.health = new HealthMeter(meterElement);
         }
 
         // Update is called once per frame
@@ -44,9 +48,9 @@ namespace HeadsUpDisplay
             private int healthTotal;
             public readonly VisualElement healthBarCurrent;
 
-            public HealthMeter()
+            public HealthMeter(VisualElement healthBarCurrent)
             {
-                
+                this.healthBarCurrent = healthBarCurrent;
             }
 
             public void Start(int healthTotal)
