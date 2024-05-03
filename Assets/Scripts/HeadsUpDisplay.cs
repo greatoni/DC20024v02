@@ -46,7 +46,7 @@ namespace HeadsUpDisplay
         
         public class HealthMeter 
         {
-            private int healthTotal;
+            public int healthTotal;
             public readonly VisualElement healthBarCurrent;
 
             public HealthMeter(VisualElement healthBarCurrent, int healthTotal)
