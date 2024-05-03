@@ -7896,16 +7896,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1509108368648169460, guid: abd0b9dee7d9b1e40b5ff484ce15bb1a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1849158057}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abd0b9dee7d9b1e40b5ff484ce15bb1a, type: 3}
---- !u!1 &1444589884 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1509108368648169460, guid: abd0b9dee7d9b1e40b5ff484ce15bb1a, type: 3}
-  m_PrefabInstance: {fileID: 1444589883}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1446872518
 GameObject:
   m_ObjectHideFlags: 0
@@ -10124,6 +10116,8 @@ MonoBehaviour:
   leverDown: {fileID: 1867195715, guid: 830a586f9254eb343a851718664f812c, type: 3}
   leverCollider: {fileID: 1812861041}
   distanceToLever: 5
+  cutsceneCam: {fileID: 0}
+  BridgeAnim: {fileID: 0}
 --- !u!1 &1814068282
 GameObject:
   m_ObjectHideFlags: 0
@@ -10690,18 +10684,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3685546961486152011, guid: abd0b9dee7d9b1e40b5ff484ce15bb1a, type: 3}
   m_PrefabInstance: {fileID: 1444589883}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1849158057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444589884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96fdb1b915049b489b9d3d9a877bd59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1857849594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4137280692656309341, guid: 0407f7c27c2c4104c921967afb05a4b5, type: 3}

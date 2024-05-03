@@ -25,9 +25,10 @@ namespace HeadsUpDisplay
         private StyleSheet uss;
         private readonly VisualElement ROOT;
         HealthMeter health;
-        public HUD()
+        public HUD(int healthTotal)
         {
             this.ROOT = uxml.GetComponent<VisualElement>();
+            this.health = new HealthMeter(this.ROOT.Query<VisualElement>("HealthCurrent"), healthTotal);
         }
 
         // Start is called before the first frame update
@@ -48,14 +49,14 @@ namespace HeadsUpDisplay
             private int healthTotal;
             public readonly VisualElement healthBarCurrent;
 
-            public HealthMeter(VisualElement healthBarCurrent)
+            public HealthMeter(VisualElement healthBarCurrent, int healthTotal)
             {
                 this.healthBarCurrent = healthBarCurrent;
+                this.healthTotal = healthTotal;
             }
 
-            public void Start(int healthTotal)
-            {
-                this.healthTotal = healthTotal;
+            public void Start()
+            {                
                 healthBarCurrent.transform.scale.Set(HUD.noChange, HUD.noChange, HUD.noChange);
             }
 
